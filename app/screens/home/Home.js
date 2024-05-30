@@ -501,6 +501,7 @@ const Home = () => {
                     <Text style={{ color: 'white', flex: 3, textAlign: 'center', fontFamily: fonts.K2D_B }}>LP</Text>
                 </View>
                 {/* ELEMENTO OF TOP USERS */}
+                {/*getTopUsers()*/}
             </View>
 
             <Text style={{ fontFamily: fonts.AOBOSHI_R, fontSize: 19, color: 'white', marginVertical: 15 }}>CHAMPIONS <Text style={{ fontFamily: fonts.AOBOSHI_B, color: '#FCEFC6' }}>DOMINATING</Text> THE <Text style={{ fontFamily: fonts.AOBOSHI_B, color: '#FCEFC6' }}>LEADERBOARDS</Text></Text>
