@@ -483,6 +483,7 @@ const Home = () => {
                 <Text style={{ fontFamily: fonts.AOBOSHI_R, fontSize: 22, color: 'white' }}>Top Players In The Region</Text>
             </View>
             {/* VIEW OF TOP 5 - 1633 - USERS */}
+            {/* WTF pasa */}
 
             <View
                 style={{
