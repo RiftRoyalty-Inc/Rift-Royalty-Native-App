@@ -677,6 +677,7 @@ const styles = StyleSheet.create({
   },
   tagMidgamePower: {
     backgroundColor: "#4B0082", /* Color índigo oscuro */
+    color:"#fff",
   },
   tagTanky: {
     backgroundColor: "#4682B4", /* Azul acero */
