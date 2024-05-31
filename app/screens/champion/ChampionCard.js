@@ -919,14 +919,14 @@ const ChampionCard = () => {
           {
             name: "Electrocute",
             activeImageUri:
-            require("../../../assets/runes/domination/inactiveElectrocute.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactiveElectrocute.png"),
+            require("../../../assets/runes/domination/active/electrocute.png"),
+            inactiveImageUri: require("../../../assets/runes/domination/inactive/electrocute.png"),
             isActive: true,
           },
           {
             name: "Dark Harvest",
-            activeImageUri: require("../../../assets/runes/domination/activeDarkHarvest.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactiveDarkHarvest.png"),
+            activeImageUri: require("../../../assets/runes/domination/active/darkHarvest.png"),
+            inactiveImageUri: require("../../../assets/runes/domination/inactive/darkHarvest.png"),
             isActive: false,
           },
           // Agrega más objetos de runas principales según sea necesario
@@ -934,8 +934,8 @@ const ChampionCard = () => {
         secondary: [
           {
             name: "Cheap Shot",
-            activeImageUri: require("../../../assets/runes/domination/activeCheapShot.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactiveCheapShot.png"),
+            activeImageUri: require("../../../assets/runes/domination/active/cheapShot.png"),
+            inactiveImageUri: require("../../../assets/runes/domination/inactive/cheapShot.png"),
             isActive: false,
           },
           // Agrega más objetos de runas secundarias según sea necesario
