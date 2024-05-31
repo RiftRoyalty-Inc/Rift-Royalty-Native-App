@@ -885,64 +885,610 @@ const ChampionCard = () => {
 
   //FALTA POR COMPLETAR
   const runes = {
-    general: {
-      statsMod: {
-        attackSpeed: {
-          value: 0.1,
-          imageUri: "https://example.com/attackSpeed.png",
+    statsMod: {
+      slot1: {
+        option1: {
+          name: "Adaptive Force",
+          value: "5.4 AD/9 AP",
+          activeImage: require("../../../assets/runes/stats/active/adaptiveForce"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce"),
         },
-        cooldownReduction: {
-          value: 0,
+        option2: {
+          name: "Attack Speed",
+          value: "10%",
           imageUri: "https://example.com/cooldownReduction.png",
         },
-        health: {
-          value: 0,
+        option3: {
+          name: "Ability Haste",
+          value: "8",
           imageUri: "https://example.com/health.png",
         },
-        mana: {
-          value: 0,
-          imageUri: "https://example.com/mana.png",
+      },
+      slot2: {
+        option1: {
+          name: "Adaptive Force",
+          value: "5.4 AD/9 AP",
+          activeImage: require("../../../assets/runes/stats/active/adaptiveForce"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce"),
         },
-        movementSpeed: {
-          value: 0,
-          imageUri: "https://example.com/movementSpeed.png",
+        option2: {
+          name: "Movement Speed",
+          value: "2%",
+          imageUri: "https://example.com/cooldownReduction.png",
         },
-        // Agrega más modificadores de estadísticas generales según sea necesario
+        option3: {
+          name: "Bonus Health",
+          value: "10-180 (based in level)",
+          imageUri: "https://example.com/attackSpeed.png",
+        },
+      },
+      slot3: {
+        option1: {
+          name: "Bonus Health",
+          value: "65",
+          imageUri: "https://example.com/health.png",
+        },
+        option2: {
+          name: "Tenacity",
+          value: "10%",
+          imageUri: "https://example.com/attackSpeed.png",
+        },
+        option3: {
+          name: "Bonus Health",
+          value: "10-180 (based in level)",
+          imageUri: "https://example.com/attackSpeed.png",
+        },
       },
     },
-    categories: [
-      {
+    categories: {
+      1: {
         name: "Domination",
         imageUri:
           "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7200_Domination.png",
-        primary: [
-          {
-            name: "Electrocute",
-            activeImageUri:
-            require("../../../assets/runes/domination/active/electrocute.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactive/electrocute.png"),
-            isActive: true,
+        slots: {
+          slot1: {
+            option1: {
+              name: "Electrocute",
+              activeImageUri:
+                "../../../assets/runes/stats/active/electrocute.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/electrocute.png",
+              isActive: true,
+            },
+            option2: {
+              name: "Dark Harvest",
+              activeImageUri:
+                "../../../assets/runes/stats/active/darkHarvest.png",
+              inactiveImageUri: "../../../assets/runes/stats/darkHarvest.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Hail of Blades",
+              activeImageUri:
+                "../../../assets/runes/stats/active/hailOfBlades.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/hailOfBlades.png",
+              isActive: false,
+            },
           },
-          {
-            name: "Dark Harvest",
-            activeImageUri: require("../../../assets/runes/domination/active/darkHarvest.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactive/darkHarvest.png"),
-            isActive: false,
+          slot2: {
+            option1: {
+              name: "Cheap Shot",
+              activeImageUri:
+                "../../../assets/runes/stats/active/cheapShot.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/cheapShot.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Sudden Impact",
+              activeImageUri:
+                "../../../assets/runes/stats/active/suddenImpact.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/suddenImpact.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Taste of Blood",
+              activeImageUri:
+                "../../../assets/runes/stats/active/tasteOfBlood.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/tasteOfBlood.png",
+              isActive: false,
+            },
           },
-          // Agrega más objetos de runas principales según sea necesario
-        ],
-        secondary: [
-          {
-            name: "Cheap Shot",
-            activeImageUri: require("../../../assets/runes/domination/active/cheapShot.png"),
-            inactiveImageUri: require("../../../assets/runes/domination/inactive/cheapShot.png"),
-            isActive: false,
+          slot3: {
+            option1: {
+              name: "Zombie Ward",
+              activeImageUri:
+                "../../../assets/runes/stats/active/zombieWard.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/zombieWard.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Ghost Poro",
+              activeImageUri:
+                "../../../assets/runes/stats/active/ghostPoro.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/ghostPoro.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Eyeball Collection",
+              activeImageUri:
+                "../../../assets/runes/stats/active/eyeballCollection.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/eyeballCollection.png",
+              isActive: false,
+            },
           },
-          // Agrega más objetos de runas secundarias según sea necesario
-        ],
+          slot4: {
+            option1: {
+              name: "Treasure Hunter",
+              activeImageUri:
+                "../../../assets/runes/stats/active/treasureHunter.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/treasureHunter.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Ultimate Hunter",
+              activeImageUri:
+                "../../../assets/runes/stats/active/ultimateHunter.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/ultimateHunter.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Relentless Hunter",
+              activeImageUri:
+                "../../../assets/runes/stats/active/relentlessHunter.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/relentlessHunter.png",
+              isActive: false,
+            },
+          },
+        },
       },
-      // Agrega más categorías de runas según sea necesario
-    ],
+      2: {
+        name: "Sorcery",
+        imageUri:
+          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7201_Sorcery.png",
+        slots: {
+          slot1: {
+            option1: {
+              name: "Summon Aery",
+              activeImageUri:
+                "../../../assets/runes/stats/active/summonAery.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/summonAery.png",
+              isActive: true,
+            },
+            option2: {
+              name: "Arcane Comet",
+              activeImageUri:
+                "../../../assets/runes/stats/active/arcaneComet.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/arcaneComet.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Phase Rush",
+              activeImageUri:
+                "../../../assets/runes/stats/active/phaseRush.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/phaseRush.png",
+              isActive: false,
+            },
+          },
+          slot2: {
+            option1: {
+              name: "Nullifying Orb",
+              activeImageUri:
+                "../../../assets/runes/stats/active/nullifyingOrb.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/nullifyingOrb.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Manaflow Band",
+              activeImageUri:
+                "../../../assets/runes/stats/active/manaflowBand.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/manaflowBand.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Nimbus Cloak",
+              activeImageUri:
+                "../../../assets/runes/stats/active/nimbusCloak.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/nimbusCloak.png",
+              isActive: false,
+            },
+          },
+          slot3: {
+            option1: {
+              name: "Transcendence",
+              activeImageUri:
+                "../../../assets/runes/stats/active/transcendence.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/transcendence.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Celerity",
+              activeImageUri: "../../../assets/runes/stats/active/celerity.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/celerity.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Absolute Focus",
+              activeImageUri:
+                "../../../assets/runes/stats/active/absoluteFocus.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/absoluteFocus.png",
+              isActive: false,
+            },
+          },
+          slot4: {
+            option1: {
+              name: "Scorch",
+              activeImageUri: "../../../assets/runes/stats/active/scorch.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/scorch.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Waterwalking",
+              activeImageUri:
+                "../../../assets/runes/stats/active/waterwalking.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/waterwalking.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Gathering Storm",
+              activeImageUri:
+                "../../../assets/runes/stats/active/gatheringStorm.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/gatheringStorm.png",
+              isActive: false,
+            },
+          },
+        },
+      },
+      3: {
+        name: "Resolve",
+        imageUri:
+          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7202_Resolve.png",
+        slots: {
+          slot1: {
+            option1: {
+              name: "Grasp of the Undying",
+              activeImageUri:
+                "../../../assets/runes/stats/active/graspOfTheUndying.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/graspOfTheUndying.png",
+              isActive: true,
+            },
+            option2: {
+              name: "Aftershock",
+              activeImageUri:
+                "../../../assets/runes/stats/active/aftershock.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/aftershock.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Guardian",
+              activeImageUri: "../../../assets/runes/stats/active/guardian.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/guardian.png",
+              isActive: false,
+            },
+          },
+          slot2: {
+            option1: {
+              name: "Demolish",
+              activeImageUri: "../../../assets/runes/stats/active/demolish.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/demolish.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Font of Life",
+              activeImageUri:
+                "../../../assets/runes/stats/active/fontOfLife.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/fontOfLife.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Shield Bash",
+              activeImageUri:
+                "../../../assets/runes/stats/active/shieldBash.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/shieldBash.png",
+              isActive: false,
+            },
+          },
+          slot3: {
+            option1: {
+              name: "Conditioning",
+              activeImageUri:
+                "../../../assets/runes/stats/active/conditioning.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/conditioning.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Second Wind",
+              activeImageUri:
+                "../../../assets/runes/stats/active/secondWind.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/secondWind.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Bone Plating",
+              activeImageUri:
+                "../../../assets/runes/stats/active/bonePlating.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/bonePlating.png",
+              isActive: false,
+            },
+          },
+          slot4: {
+            option1: {
+              name: "Overgrowth",
+              activeImageUri:
+                "../../../assets/runes/stats/active/overgrowth.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/overgrowth.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Revitalize",
+              activeImageUri:
+                "../../../assets/runes/stats/active/revitalize.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/revitalize.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Unflinching",
+              activeImageUri:
+                "../../../assets/runes/stats/active/unflinching.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/unflinching.png",
+              isActive: false,
+            },
+          },
+        },
+      },
+      4: {
+        name: "Precision",
+        imageUri:
+          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7203_Precision.png",
+        slots: {
+          slot1: {
+            option1: {
+              name: "Press the Attack",
+              activeImageUri:
+                "../../../assets/runes/stats/active/pressTheAttack.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/pressTheAttack.png",
+              isActive: true,
+            },
+            option2: {
+              name: "Conqueror",
+              activeImageUri:
+                "../../../assets/runes/stats/active/conqueror.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/conqueror.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Fleet Footwork",
+              activeImageUri:
+                "../../../assets/runes/stats/active/fleetFootwork.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/fleetFootwork.png",
+              isActive: false,
+            },
+          },
+          slot2: {
+            option1: {
+              name: "Absorb Life",
+              activeImageUri:
+                "../../../assets/runes/stats/active/absorbLife.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/absorbLife.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Triumph",
+              activeImageUri: "../../../assets/runes/stats/active/triumph.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/triumph.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Presence of Mind",
+              activeImageUri:
+                "../../../assets/runes/stats/active/presenceOfMind.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/presenceOfMind.png",
+              isActive: false,
+            },
+          },
+          slot3: {
+            option1: {
+              name: "Legend: Alacrity",
+              activeImageUri: "../../../assets/runes/stats/active/alacrity.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/alacrity.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Legend: Tenacity",
+              activeImageUri: "../../../assets/runes/stats/active/tenacity.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/tenacity.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Legend: Bloodline",
+              activeImageUri:
+                "../../../assets/runes/stats/active/bloodline.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/bloodline.png",
+              isActive: false,
+            },
+          },
+          slot4: {
+            option1: {
+              name: "Coup de Grace",
+              activeImageUri:
+                "../../../assets/runes/stats/active/coupDeGrace.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/coupDeGrace.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Cut Down",
+              activeImageUri: "../../../assets/runes/stats/active/cutDown.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/cutDown.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Last Stand",
+              activeImageUri:
+                "../../../assets/runes/stats/active/lastStand.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/lastStand.png",
+              isActive: false,
+            },
+          },
+        },
+      },
+      5: {
+        name: "Inspiration",
+        imageUri:
+          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7204_Inspiration.png",
+        slots: {
+          slot1: {
+            option1: {
+              name: "Glacial Augment",
+              activeImageUri:
+                "../../../assets/runes/stats/active/glacialAugment.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/glacialAugment.png",
+              isActive: true,
+            },
+            option2: {
+              name: "Unsealed Spellbook",
+              activeImageUri:
+                "../../../assets/runes/stats/active/unsealedSpellbook.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/unsealedSpellbook.png",
+              isActive: false,
+            },
+            option3: {
+              name: "First Strike",
+              activeImageUri:
+                "../../../assets/runes/stats/active/firstStrike.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/firstStrike.png",
+              isActive: false,
+            },
+          },
+          slot2: {
+            option1: {
+              name: "Hextech Flashtraption",
+              activeImageUri:
+                "../../../assets/runes/stats/active/hextechFlashtraption.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/hextechFlashtraption.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Magical Footwear",
+              activeImageUri:
+                "../../../assets/runes/stats/active/magicalFootwear.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/magicalFootwear.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Cash Back",
+              activeImageUri: "../../../assets/runes/stats/active/cashBack.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/cashBack.png",
+              isActive: false,
+            },
+          },
+          slot3: {
+            option1: {
+              name: "Triple Tonic",
+              activeImageUri:
+                "../../../assets/runes/stats/active/tripleTonic.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/tripleTonic.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Time Warp Tonic",
+              activeImageUri:
+                "../../../assets/runes/stats/active/timeWarpTonic.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/timeWarpTonic.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Biscuit Delivery",
+              activeImageUri:
+                "../../../assets/runes/stats/active/biscuitDelivery.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/biscuitDelivery.png",
+              isActive: false,
+            },
+          },
+          slot4: {
+            option1: {
+              name: "Cosmic Insight",
+              activeImageUri:
+                "../../../assets/runes/stats/active/cosmicInsight.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/cosmicInsight.png",
+              isActive: false,
+            },
+            option2: {
+              name: "Approach Velocity",
+              activeImageUri:
+                "../../../assets/runes/stats/active/approachVelocity.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/approachVelocity.png",
+              isActive: false,
+            },
+            option3: {
+              name: "Jack of All Trades",
+              activeImageUri:
+                "../../../assets/runes/stats/active/jackOfAllTrades.png",
+              inactiveImageUri:
+                "../../../assets/runes/stats/inactive/jackOfAllTrades.png",
+              isActive: false,
+            },
+          },
+        },
+      },
+      //para entrar a un dato
+      // categories["1"].slots["slot2"].option1
+    },
   };
 
   const primaryRunesData = [
