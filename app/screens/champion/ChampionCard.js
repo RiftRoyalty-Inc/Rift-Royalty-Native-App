@@ -386,6 +386,284 @@ const ChampionCard = () => {
       },
     },
     {
+      "id": "pyke",
+      "name": "Pyke",
+      "function": "Assassin",
+      "region": "Bilgewater",
+      "role": "Support",
+      "description": "Pyke, the Bloodharbor Ripper, is a monstrous assassin who prowls the streets of Bilgewater. Once a feared harpooner from the slaughter docks of the port city, Pyke drowned after a terrible betrayal, only to emerge as something dark and deadly. Rising from the depths, he now stalks the dank alleys and backways of his former hometown, using his modified bone harpoon to catch unsuspecting enemies off-guard.",
+      "imageUri": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_0.jpg",
+      "abilities": [
+        {
+          "id": "P",
+          "nombre": "Drowned",
+          "descripcion": "Pyke's health cannot be improved except through leveling up.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/PykeP.png"
+        },
+        {
+          "id": "Q",
+          "nombre": "Bone Skewer",
+          "descripcion": "Pyke hurls his harpoon forward, impaling the first enemy struck and pulling them a fixed distance towards him. The move will refund cooldown and mana if successfully used to pull an enemy.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeQ.png"
+        },
+        {
+          "id": "W",
+          "nombre": "Ghostwater Dive",
+          "descripcion": "Pyke dives into spectral waters, becoming invisible and gaining a significant increase in movement speed that decays over a few seconds.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeW.png"
+        },
+        {
+          "id": "E",
+          "nombre": "Phantom Undertow",
+          "descripcion": "Pyke dashes, leaving behind a drowned phantom. After a delay, the phantom returns to Pyke, damaging and stunning enemy champions it passes through.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeE.png"
+        },
+        {
+          "id": "R",
+          "nombre": "Death from Below",
+          "descripcion": "Pyke strikes in an X-shaped area, executing enemies below a certain threshold of health and granting additional gold to an assisting ally.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeR.png"
+        }
+      ],
+      "skins": [
+        {
+          "name": "default",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_0.jpg"
+        },
+        {
+          "name": "Sand Wraith Pyke",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_1.jpg"
+        },
+        {
+          "name": "Blood Moon Pyke",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_9.jpg"
+        },
+        {
+          "name": "Project: Pyke",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_16.jpg"
+        }
+      ],
+      "matchups": {
+        "strong": [
+          {
+            "champion": "Sona",
+            "winRate": 54,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Sona_0.jpg"
+          },
+          {
+            "champion": "Janna",
+            "winRate": 53,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Janna_0.jpg"
+          },
+          {
+            "champion": "Nami",
+            "winRate": 52,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Nami_0.jpg"
+          }
+        ],
+        "weak": [
+          {
+            "champion": "Nautilus",
+            "winRate": 48,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Nautilus_0.jpg"
+          },
+          {
+            "champion": "Blitzcrank",
+            "winRate": 47,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Blitzcrank_0.jpg"
+          },
+          {
+            "champion": "Leona",
+            "winRate": 45,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Leona_0.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yasuo",
+      "name": "Yasuo",
+      "function": "Fighter",
+      "region": "Ionia",
+      "role": "Mid",
+      "description": "Yasuo es un formidable espadachín de Ionia que puede manipular el viento a su voluntad. Una vez conocido como el honor de su pueblo, ahora es un fugitivo perseguido por el asesinato de su maestro. A pesar de su impetuoso temperamento, ha demostrado ser un aliado valioso en la batalla contra las fuerzas de la oscuridad que buscan invadir su tierra natal.",
+      "imageUri": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Yasuo_27.jpg",
+      "abilities": [
+        {
+          "id": "P",
+          "nombre": "Pasiva: Camino del Vagabundo",
+          "descripcion": "Después de dos segundos de moverse, Yasuo obtiene un escudo que bloquea daño de próximo golpe. El daño del escudo aumenta con la velocidad de movimiento.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Yasuo_P.png"
+        },
+        {
+          "id": "Q",
+          "nombre": "Golpe con Espada Descendente",
+          "descripcion": "Yasuo golpea frente a él con su espada, infligiendo daño físico. Golpear con el borde del ataque aumenta el daño.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoQ1.png"
+        },
+        {
+          "id": "W",
+          "nombre": "Viento Cortante",
+          "descripcion": "Yasuo crea un muro de viento que bloquea proyectiles entrantes durante varios segundos.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoW.png"
+        },
+        {
+          "id": "E",
+          "nombre": "Golpe con Espada Ascendente",
+          "descripcion": "Yasuo se desliza hacia un enemigo, lanzándolo al aire y permitiéndole atacarlo en el aire.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoE.png"
+        },
+        {
+          "id": "R",
+          "nombre": "Último Aliento",
+          "descripcion": "Yasuo salta a un enemigo, lanzándolo al aire y siguiéndolo con una serie de golpes de espada. Al aterrizar, Yasuo inflige daño adicional según el número de golpes de espada lanzados durante la habilidad.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoR.png"
+        }
+      ],
+      "skins": [
+        {
+          "name": "Proyecto: Yasuo",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Yasuo_0.jpg"
+        },
+        {
+          "name": "Alma de Dragón: Yasuo",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Yasuo_1.jpg"
+        },
+        {
+          "name": "Yasuo de la Arena Sangrienta",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Yasuo_2.jpg"
+        }
+      ],
+      "matchups": {
+        "strong": [
+          {
+            "champion": "Fizz",
+            "winRate": 52,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Fizz_0.jpg"
+          },
+          {
+            "champion": "Zed",
+            "winRate": 51,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Zed_0.jpg"
+          },
+          {
+            "champion": "Katarina",
+            "winRate": 50,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Katarina_0.jpg"
+          }
+        ],
+        "weak": [
+          {
+            "champion": "Malzahar",
+            "winRate": 48,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Malzahar_0.jpg"
+          },
+          {
+            "champion": "Annie",
+            "winRate": 46,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Annie_0.jpg"
+          },
+          {
+            "champion": "Akali",
+            "winRate": 45,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Akali_0.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vayne",
+      "name": "Vayne",
+      "function": "Marksman",
+      "region": "Demacia",
+      "role": "Bottom",
+      "description": "Vayne es una cazadora de monstruos oscura y solitaria. Solía ser una noble de Demacia, pero ahora se dedica a perseguir y abatir a los más peligrosos monstruos de Runaterra. Utiliza su destreza y su astucia para cazar a estas criaturas antes de que puedan infligir daño a los inocentes.",
+      "imageUri": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Vayne_25.jpg",
+      "abilities": [
+        {
+          "id": "P",
+          "nombre": "Pasiva: Destino de Plata",
+          "descripcion": "Los ataques básicos de Vayne le otorgan un porcentaje de daño adicional basado en la vida máxima del enemigo.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Vayne_P.png"
+        },
+        {
+          "id": "Q",
+          "nombre": "Tiroteo",
+          "descripcion": "Vayne dispara rápidamente a un objetivo, infligiendo daño físico adicional y aumentando temporalmente su velocidad de movimiento.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneQ.png"
+        },
+        {
+          "id": "W",
+          "nombre": "Tumble",
+          "descripcion": "Vayne se desliza hacia una dirección, evadiendo cualquier daño en el camino y potenciando su próximo ataque básico.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneW.png"
+        },
+        {
+          "id": "E",
+          "nombre": "Condena",
+          "descripcion": "Vayne dispara un proyectil que aturde al primer enemigo impactado contra una pared cercana.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneE.png"
+        },
+        {
+          "id": "R",
+          "nombre": "Última Hora",
+          "descripcion": "Vayne fortalece su resolución, aumentando su daño de ataque y otorgándole invisibilidad parcial durante un corto periodo de tiempo.",
+          "imagenUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneR.png"
+        }
+      ],
+      "skins": [
+        {
+          "name": "Vayne Victoriosa",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Vayne_0.jpg"
+        },
+        {
+          "name": "Vindicator Vayne",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Vayne_1.jpg"
+        },
+        {
+          "name": "Proyecto: Vayne",
+          "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Vayne_2.jpg"
+        }
+      ],
+      "matchups": {
+        "strong": [
+          {
+            "champion": "Draven",
+            "winRate": 53,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Draven_0.jpg"
+          },
+          {
+            "champion": "Ezreal",
+            "winRate": 52,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Ezreal_0.jpg"
+          },
+          {
+            "champion": "Kai'Sa",
+            "winRate": 51,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Kaisa_0.jpg"
+          }
+        ],
+        "weak": [
+          {
+            "champion": "Caitlyn",
+            "winRate": 48,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Caitlyn_0.jpg"
+          },
+          {
+            "champion": "Jinx",
+            "winRate": 47,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Jinx_0.jpg"
+          },
+          {
+            "champion": "Ashe",
+            "winRate": 46,
+            "icon": "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Ashe_0.jpg"
+          }
+        ]
+      }
+    },
+
+    {
       id: "thresh",
       name: "Thresh",
       function: "Support",
