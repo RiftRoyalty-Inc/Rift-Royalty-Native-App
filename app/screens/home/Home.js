@@ -173,7 +173,7 @@ const Home = () => {
         { role: 'top', key: '1' },
         { role: 'jungle', key: '2' },
         { role: 'mid', key: '3' },
-        { role: 'adc', key: '4' },
+        { role: 'adc', key: '4' }, 
         { role: 'support', key: '5' }
     ]);
     const [topChampions, setTopChampions] = React.useState(championWinratestats[0]);
