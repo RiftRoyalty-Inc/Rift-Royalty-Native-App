@@ -138,9 +138,9 @@ const Home = () => {
                 break;
         }
         if (imagenSource) {
-            return <Image source={imagenSource} style={{ width: 80, height: 50 }} />;
+            return <Image source={imagenSource} style={{ width: 34, height: 34 }} />;
         } else {
-            return <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>UNRANKED</Text>;
+            return <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>UR</Text>
         }
     };
     
@@ -170,7 +170,7 @@ const Home = () => {
             <View style={{ marginHorizontal: 10, marginVertical: 10 }}>
                 <Text style={{ color: colors.text, fontSize: 16, fontFamily: fonts.K2D_B, marginBottom: 10 }}>Summoners</Text>
                 <FlatList
-                    scrollEnabled={false}
+                    scrollEnabled={false} 
                     data={foundSummoners}
                     contentContainerStyle={{ gap: 10 }}
                     renderItem={({ item }) => (
