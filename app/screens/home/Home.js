@@ -176,7 +176,7 @@ const Home = () => {
                     renderItem={({ item }) => (
                         <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
                             <Image source={{uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${item.icon}.png`}} style={{width: 34,height: 34,borderRadius: 99,borderWidth: 1,borderColor: colors.contrast}}/>
-                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.name}</Text>
+                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.gameName}</Text>
                             {renderImagenSegunTier(item.queue.tier)}
                             <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.queue.division}</Text>
                         </View>
