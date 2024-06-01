@@ -304,12 +304,12 @@ const ChampionCard = () => {
         },
         secondary: {
           name: "Sorcery",
-          slot1: {
+          slot2: {
             option: {
-              name: "Nullifying Orb",
+              name: "Manaflow Band",
             },
           },
-          slot2: {
+          slot4: {
             option: {
               name: "Gathering Storm",
             },
@@ -2028,18 +2028,9 @@ const ChampionCard = () => {
   }
 
   function renderSecondaryRunes(secondaryName, allRunes) {
-    console.log(
-      "Nombre de la categoría de runas secundarias: " + secondaryName
-    );
-    console.log("Categorías generales de runas:", allRunes.categories);
-  
     // Verificar si el nombre de las runas secundarias está definido y existe en el JSON general de runas
     if (secondaryName && allRunes.categories[secondaryName]) {
       const secondaryCategory = allRunes.categories[secondaryName];
-      console.log(
-        "Secondary Category: ",
-        JSON.stringify(secondaryCategory, null, 2)
-      );
       return (
         <View key={secondaryName}>
           <View style={styles.runeInfo}>
@@ -2052,7 +2043,7 @@ const ChampionCard = () => {
           <View style={styles.containerRunes}>
             {/* Renderizar las runas de la categoría secundaria, excluyendo el primer slot */}
             {Object.values(secondaryCategory.slots)
-              .slice(1) // Excluir el primer slot
+            .slice(1)
               .map((slot, index) => (
                 <View key={index} style={styles.rowRunes}>
                   {Object.values(slot).map((option) => (
