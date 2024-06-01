@@ -439,6 +439,61 @@ const ChampionCard = () => {
           },
         ],
       },
+      runes: {
+        primary: {
+          name: "Resolve",
+          slot1: {
+            option: {
+              name: "Guardian",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Font of Life",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bone Plating",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Unflinching",
+            },
+          },
+        },
+        secondary: {
+          name: "Domination",
+          slot3: {
+            option: {
+              name: "Zombie Ward",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Ultimate Hunter",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Ability Haste",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Movement Speed",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Tenacity",
+            },
+          },
+        },
+      },
     },
     {
       id: "pyke",
@@ -1559,10 +1614,8 @@ const ChampionCard = () => {
   function marcarRunasActivas(championRunes, allRunes) {
     // Iterar sobre las categorías primarias del campeón
     for (const slot in championRunes.runes.primary) {
-      console.log("Slot?: " + slot);
       if (slot === "name") continue;
       const championRuneName = championRunes.runes.primary[slot].option.name;
-      console.log("Categoria primary: " + championRuneName);
       const primaryCategory =
         allRunes.categories[championRunes.runes.primary.name];
       for (const option in primaryCategory.slots[slot]) {
@@ -1570,7 +1623,6 @@ const ChampionCard = () => {
         if (runeOption.name === championRuneName) {
           runeOption.isActive = true;
           console.log(
-            "Name: " + runeOption.name + " Activo? " + runeOption.isActive
           ); // Corrección aquí
           break;
         }
@@ -1582,14 +1634,12 @@ const ChampionCard = () => {
       if (slot === "name") continue;
       const championRuneName =
         championRunes.runes.secondary[slot].option.name;
-      console.log("Categoria secondary: " + championRuneName);
       const secondaryCategory =
         allRunes.categories[championRunes.runes.secondary.name];
       for (const option in secondaryCategory.slots[slot]) {
         const runeOption = secondaryCategory.slots[slot][option];
         if (runeOption.name === championRuneName) {
           runeOption.isActive = true;
-          console.log("Activo? " + runeOption.isActive); // Corrección aquí
           break;
         }
       }
@@ -1599,13 +1649,11 @@ const ChampionCard = () => {
     // Iterar sobre los modificadores de estadísticas del campeón
     for (const slot in championRunes.runes.statsMod) {
       const championRuneName = championRunes.runes.statsMod[slot].option.name;
-      console.log("Modificador: " + championRuneName);
       for (const option in allRunes.statsMod[slot]) {
         const runeOption = allRunes.statsMod[slot][option];
         if (runeOption.name === championRuneName) {
           runeOption.isActive = true;
-          console.log("Activo? " + runeOption.isActive); // Corrección aquí
-          break;
+           break;
         }
       }
     }
@@ -1755,6 +1803,7 @@ const ChampionCard = () => {
     inactiveHealth: require("../../../assets/runes/stats/inactive/healthPlus.png"),
     activeTenacity: require("../../../assets/runes/stats/active/tenacity.png"),
     inactiveTenacity: require("../../../assets/runes/stats/inactive/tenacity.png"),
+    
   };
 
   const getRuneIconByName = (name, state) => {
@@ -1854,7 +1903,7 @@ const ChampionCard = () => {
           return cargaRunas.inactiveSummonAery;
         }
         break;
-        case "Arcane Comet":
+      case "Arcane Comet":
         if (state) {
           return cargaRunas.activeArcaneComet;
         } else {
@@ -1889,46 +1938,131 @@ const ChampionCard = () => {
           return cargaRunas.inactiveNimbusCloak;
         }
         break;
-        case "Transcendence":
+      case "Transcendence":
         if (state) {
           return cargaRunas.activeTranscendence;
         } else {
           return cargaRunas.inactiveTranscendence;
         }
         break;  
-        case "Celerity":
+      case "Celerity":
         if (state) {
           return cargaRunas.activeCelerity;
         } else {
           return cargaRunas.inactiveCelerity;
         }
         break;
-        case "Absolute Focus":
+      case "Absolute Focus":
         if (state) {
           return cargaRunas.activeAbsoluteFocus;
         } else {
           return cargaRunas.inactiveAbsoluteFocus;
         }
         break;
-        case "Scorch":
+      case "Scorch":
         if (state) {
           return cargaRunas.activeScorch;
         } else {
           return cargaRunas.inactiveScorch;
         }
         break;
-        case "Waterwalking":
+      case "Waterwalking":
         if (state) {
           return cargaRunas.activeWaterwalking;
         } else {
           return cargaRunas.inactiveWaterwalking;
         }
         break;
-        case "Gathering Storm":
+      case "Gathering Storm":
         if (state) {
           return cargaRunas.activeGatheringStorm;
         } else {
           return cargaRunas.inactiveGatheringStorm;
+        }
+        break;
+
+        case "Grasp of the Undying":
+        if (state) {
+          return cargaRunas.activeGraspOfTheUndying;
+        } else {
+          return cargaRunas.inactiveGraspOfTheUndying;
+        }
+        break;
+        case "Aftershock":
+        if (state) {
+          return cargaRunas.activeAftershock;
+        } else {
+          return cargaRunas.inactiveAftershock;
+        }
+        break;
+        case "Guardian":
+        if (state) {
+          return cargaRunas.activeGuardian;
+        } else {
+          return cargaRunas.inactiveGuardian;
+        }
+        break;
+        case "Demolish":
+        if (state) {
+          return cargaRunas.activeDemolish;
+        } else {
+          return cargaRunas.inactiveDemolish;
+        }
+        break;
+        case "Font of Life":
+        if (state) {
+          return cargaRunas.activeFontOfLife;
+        } else {
+          return cargaRunas.inactiveFontOfLife;
+        }
+        break;
+        case "Shield Bash":
+        if (state) {
+          return cargaRunas.activeShieldBash;
+        } else {
+          return cargaRunas.inactiveShieldBash;
+        }
+        break;
+        case "Conditioning":
+        if (state) {
+          return cargaRunas.activeConditioning;
+        } else {
+          return cargaRunas.inactiveConditioning;
+        }
+        break;
+        case "Second Wind":
+        if (state) {
+          return cargaRunas.activeSecondWind;
+        } else {
+          return cargaRunas.inactiveSecondWind;
+        }
+        break;
+        case "Bone Plating":
+        if (state) {
+          return cargaRunas.activeBonePlating;
+        } else {
+          return cargaRunas.inactiveBonePlating;
+        }
+        break;
+        case "Overgrowth":
+        if (state) {
+          return cargaRunas.activeOvergrowth;
+        } else {
+          return cargaRunas.inactiveOvergrowth;
+        }
+        break;
+        case "Revitalize":
+        if (state) {
+          return cargaRunas.activeRevitalize;
+        } else {
+          return cargaRunas.inactiveRevitalize;
+        }
+        break;
+        case "Unflinching":
+        if (state) {
+          return cargaRunas.activeUnflinching;
+        } else {
+          return cargaRunas.inactiveUnflinching;
         }
         break;
 
@@ -1937,8 +2071,10 @@ const ChampionCard = () => {
         //stats
         case "Adaptive Force":
         if (state) {
+          console.log("Entro en AP/AP activo");
           return cargaRunas.activeAdaptiveForce;
         } else {
+          console.log("Entro en AP/AP inactivo");
           return cargaRunas.inactiveAdaptiveForce;
         }
         break;
@@ -1951,12 +2087,12 @@ const ChampionCard = () => {
         break;
         case "Ability Haste":
         if (state) {
-          return cargaRunas.activeAbilityHaste;
+          return cargaRunas.activeCooldownReduction;
         } else {
-          return cargaRunas.inactiveAbilityHaste;
+          return cargaRunas.inactiveCooldownReduction;
         }
         break;
-        case "movement Speed":
+        case "Movement Speed":
         if (state) {
           return cargaRunas.activeMovementSpeed;
         } else {
@@ -2066,29 +2202,27 @@ const ChampionCard = () => {
     }
   }
   // Función para renderizar las statsMod
-const renderStatsMod = (statsMod) => {
-  return Object.keys(statsMod).map((slot) => {
-    const slotData = statsMod[slot];
-    
+  const renderStatsMod = (statsMod) => {
     return (
-      <View key={slot}>
-        <View style={styles.containerRunes}>
-          <View style={styles.rowRunes}>
-            {Object.values(slotData).map((option) => {
+      <View style={styles.containerRunes}>
+        <View style={[styles.rowRunes, { flexDirection: 'row' }]}>
+          {Object.keys(statsMod).map((slot) => {
+            const slotData = statsMod[slot];
+            return Object.values(slotData).map((option) => {
               return (
                 <Image
                   key={option.name}
-                  source={getRuneIconByName(option.name, option.isActive)}
-                  style={styles.runeIcon}
+                  source={getRuneIconByName(option.name, true)}
+                  style={{ ...styles.runeIcon, borderRadius: 50 }}
                 />
               );
-            })}
-          </View>
+            });
+          })}
         </View>
       </View>
     );
-  });
-};
+  };
+  
 
   
   
