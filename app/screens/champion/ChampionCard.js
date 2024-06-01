@@ -278,6 +278,61 @@ const ChampionCard = () => {
           },
         ],
       },
+      runes: {
+        primary: {
+          name: "Domination",
+          slot1: {
+            option: {
+              name: "Electrocute",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Cheap Shot",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Zombie Ward",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Treasure Hunter",
+            },
+          },
+        },
+        secondary: {
+          name: "Sorcery",
+          slot1: {
+            option: {
+              name: "Nullifying Orb",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Gathering Storm",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bonus Health",
+            },
+          },
+        },
+      },
     },
     {
       id: "rakan",
@@ -708,7 +763,6 @@ const ChampionCard = () => {
         ],
       },
     },
-
     {
       id: "thresh",
       name: "Thresh",
@@ -884,90 +938,36 @@ const ChampionCard = () => {
   };
 
   //FALTA POR COMPLETAR
+  //categories["1"].slots["slot2"].option1
   const runes = {
-    statsMod: {
-      slot1: {
-        option1: {
-          name: "Adaptive Force",
-          value: "5.4 AD/9 AP",
-          activeImage: require("../../../assets/runes/stats/active/adaptiveForce"),
-          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce"),
-        },
-        option2: {
-          name: "Attack Speed",
-          value: "10%",
-          imageUri: "https://example.com/cooldownReduction.png",
-        },
-        option3: {
-          name: "Ability Haste",
-          value: "8",
-          imageUri: "https://example.com/health.png",
-        },
-      },
-      slot2: {
-        option1: {
-          name: "Adaptive Force",
-          value: "5.4 AD/9 AP",
-          activeImage: require("../../../assets/runes/stats/active/adaptiveForce"),
-          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce"),
-        },
-        option2: {
-          name: "Movement Speed",
-          value: "2%",
-          imageUri: "https://example.com/cooldownReduction.png",
-        },
-        option3: {
-          name: "Bonus Health",
-          value: "10-180 (based in level)",
-          imageUri: "https://example.com/attackSpeed.png",
-        },
-      },
-      slot3: {
-        option1: {
-          name: "Bonus Health",
-          value: "65",
-          imageUri: "https://example.com/health.png",
-        },
-        option2: {
-          name: "Tenacity",
-          value: "10%",
-          imageUri: "https://example.com/attackSpeed.png",
-        },
-        option3: {
-          name: "Bonus Health",
-          value: "10-180 (based in level)",
-          imageUri: "https://example.com/attackSpeed.png",
-        },
-      },
-    },
     categories: {
-      1: {
-        name: "Domination",
+      Domination: {
         imageUri:
-          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7200_Domination.png",
+          "https://ddragon.canisback.com/img/perk-images/Styles/7200_Domination.png",
         slots: {
           slot1: {
             option1: {
               name: "Electrocute",
               activeImageUri:
-                "../../../assets/runes/stats/active/electrocute.png",
+                "../../../assets/runes/domination/active/electrocute.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/electrocute.png",
-              isActive: true,
+                "../../../assets/runes/domination/inactive/electrocute.png",
+              isActive: false,
             },
             option2: {
               name: "Dark Harvest",
               activeImageUri:
-                "../../../assets/runes/stats/active/darkHarvest.png",
-              inactiveImageUri: "../../../assets/runes/stats/darkHarvest.png",
+                "../../../assets/runes/domination/active/darkHarvest.png",
+              inactiveImageUri:
+                "../../../assets/runes/domination/inactive/darkHarvest.png",
               isActive: false,
             },
             option3: {
-              name: "Hail of Blades",
+              name: "Hail Of Blades",
               activeImageUri:
-                "../../../assets/runes/stats/active/hailOfBlades.png",
+                "../../../assets/runes/domination/active/hailOfBlades.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/hailOfBlades.png",
+                "../../../assets/runes/domination/inactive/hailOfBlades.png",
               isActive: false,
             },
           },
@@ -975,25 +975,25 @@ const ChampionCard = () => {
             option1: {
               name: "Cheap Shot",
               activeImageUri:
-                "../../../assets/runes/stats/active/cheapShot.png",
+                "../../../assets/runes/domination/active/cheapShot.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/cheapShot.png",
+                "../../../assets/runes/domination/inactive/cheapShot.png",
               isActive: false,
             },
             option2: {
               name: "Sudden Impact",
               activeImageUri:
-                "../../../assets/runes/stats/active/suddenImpact.png",
+                "../../../assets/runes/domination/active/suddenImpact.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/suddenImpact.png",
+                "../../../assets/runes/domination/inactive/suddenImpact.png",
               isActive: false,
             },
             option3: {
-              name: "Taste of Blood",
+              name: "Taste Of Blood",
               activeImageUri:
-                "../../../assets/runes/stats/active/tasteOfBlood.png",
+                "../../../assets/runes/domination/active/tasteOfBlood.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/tasteOfBlood.png",
+                "../../../assets/runes/domination/inactive/tasteOfBlood.png",
               isActive: false,
             },
           },
@@ -1001,25 +1001,25 @@ const ChampionCard = () => {
             option1: {
               name: "Zombie Ward",
               activeImageUri:
-                "../../../assets/runes/stats/active/zombieWard.png",
+                "../../../assets/runes/domination/active/zombyWard.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/zombieWard.png",
+                "../../../assets/runes/domination/inactive/zombyWard.png",
               isActive: false,
             },
             option2: {
               name: "Ghost Poro",
               activeImageUri:
-                "../../../assets/runes/stats/active/ghostPoro.png",
+                "../../../assets/runes/domination/active/ghostPoro.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/ghostPoro.png",
+                "../../../assets/runes/domination/inactive/ghostPoro.png",
               isActive: false,
             },
             option3: {
               name: "Eyeball Collection",
               activeImageUri:
-                "../../../assets/runes/stats/active/eyeballCollection.png",
+                "../../../assets/runes/domination/active/eyeBallCollection.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/eyeballCollection.png",
+                "../../../assets/runes/domination/inactive/eyeBallCollection.png",
               isActive: false,
             },
           },
@@ -1027,34 +1027,33 @@ const ChampionCard = () => {
             option1: {
               name: "Treasure Hunter",
               activeImageUri:
-                "../../../assets/runes/stats/active/treasureHunter.png",
+                "../../../assets/runes/domination/active/treasureHunter.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/treasureHunter.png",
+                "../../../assets/runes/domination/inactive/treasureHunter.png",
               isActive: false,
             },
             option2: {
               name: "Ultimate Hunter",
               activeImageUri:
-                "../../../assets/runes/stats/active/ultimateHunter.png",
+                "../../../assets/runes/domination/active/ultimateHunter.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/ultimateHunter.png",
+                "../../../assets/runes/domination/inactive/ultimateHunter.png",
               isActive: false,
             },
             option3: {
               name: "Relentless Hunter",
               activeImageUri:
-                "../../../assets/runes/stats/active/relentlessHunter.png",
+                "../../../assets/runes/domination/active/relentlessHunter.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/relentlessHunter.png",
+                "../../../assets/runes/domination/inactive/relentlessHunter.png",
               isActive: false,
             },
           },
         },
       },
-      2: {
-        name: "Sorcery",
+      Sorcery: {
         imageUri:
-          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7201_Sorcery.png",
+          "https://ddragon.canisback.com/img/perk-images/Styles/7202_Sorcery.png",
         slots: {
           slot1: {
             option1: {
@@ -1063,7 +1062,7 @@ const ChampionCard = () => {
                 "../../../assets/runes/stats/active/summonAery.png",
               inactiveImageUri:
                 "../../../assets/runes/stats/inactive/summonAery.png",
-              isActive: true,
+              isActive: false,
             },
             option2: {
               name: "Arcane Comet",
@@ -1160,10 +1159,9 @@ const ChampionCard = () => {
           },
         },
       },
-      3: {
-        name: "Resolve",
+      Resolve: {
         imageUri:
-          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7202_Resolve.png",
+          "https://ddragon.canisback.com/img/perk-images/Styles/7204_Resolve.png",
         slots: {
           slot1: {
             option1: {
@@ -1172,7 +1170,7 @@ const ChampionCard = () => {
                 "../../../assets/runes/stats/active/graspOfTheUndying.png",
               inactiveImageUri:
                 "../../../assets/runes/stats/inactive/graspOfTheUndying.png",
-              isActive: true,
+              isActive: false,
             },
             option2: {
               name: "Aftershock",
@@ -1269,10 +1267,9 @@ const ChampionCard = () => {
           },
         },
       },
-      4: {
-        name: "Precision",
+      Precision: {
         imageUri:
-          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7203_Precision.png",
+          "https://ddragon.canisback.com/img/perk-images/Styles/7201_Precision.png",
         slots: {
           slot1: {
             option1: {
@@ -1281,7 +1278,7 @@ const ChampionCard = () => {
                 "../../../assets/runes/stats/active/pressTheAttack.png",
               inactiveImageUri:
                 "../../../assets/runes/stats/inactive/pressTheAttack.png",
-              isActive: true,
+              isActive: false,
             },
             option2: {
               name: "Conqueror",
@@ -1376,10 +1373,9 @@ const ChampionCard = () => {
           },
         },
       },
-      5: {
-        name: "Inspiration",
+      inspiration: {
         imageUri:
-          "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/perk-images/Styles/7204_Inspiration.png",
+          "https://ddragon.canisback.com/img/perk-images/Styles/7203_Whimsy.png",
         slots: {
           slot1: {
             option1: {
@@ -1388,7 +1384,7 @@ const ChampionCard = () => {
                 "../../../assets/runes/stats/active/glacialAugment.png",
               inactiveImageUri:
                 "../../../assets/runes/stats/inactive/glacialAugment.png",
-              isActive: true,
+              isActive: false,
             },
             option2: {
               name: "Unsealed Spellbook",
@@ -1486,89 +1482,639 @@ const ChampionCard = () => {
           },
         },
       },
-      //para entrar a un dato
-      // categories["1"].slots["slot2"].option1
+    },
+    statsMod: {
+      slot1: {
+        option1: {
+          name: "Adaptive Force",
+          value: "5.4 AD/9 AP",
+          activeImage: require("../../../assets/runes/stats/active/adaptiveForce.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce.png"),
+          isActive: false,
+        },
+        option2: {
+          name: "Attack Speed",
+          value: "10%",
+          activeImage: require("../../../assets/runes/stats/active/attackSpeed.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/attackSpeed.png"),
+          isActive: false,
+        },
+        option3: {
+          name: "Ability Haste",
+          value: "8",
+          activeImage: require("../../../assets/runes/stats/active/cdrScaling.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/cdrScaling.png"),
+          isActive: false,
+        },
+      },
+      slot2: {
+        option1: {
+          name: "Adaptive Force",
+          value: "5.4 AD/9 AP",
+          activeImage: require("../../../assets/runes/stats/active/adaptiveForce.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/adaptiveForce.png"),
+          isActive: false,
+        },
+        option2: {
+          name: "Movement Speed",
+          value: "2%",
+          activeImage: require("../../../assets/runes/stats/active/movementSpeed.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/movementSpeed.png"),
+          isActive: false,
+        },
+        option3: {
+          name: "Bonus Health Scale",
+          value: "10-180 (based in level)",
+          activeImage: require("../../../assets/runes/stats/active/healthScaling.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/healthScaling.png"),
+          isActive: false,
+        },
+      },
+      slot3: {
+        option1: {
+          name: "Bonus Health",
+          value: "65",
+          activeImage: require("../../../assets/runes/stats/active/healthPlus.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/healthPlus.png"),
+          isActive: false,
+        },
+        option2: {
+          name: "Tenacity",
+          value: "10%",
+          activeImage: require("../../../assets/runes/stats/active/tenacity.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/tenacity.png"),
+          isActive: false,
+        },
+        option3: {
+          name: "Bonus Health Scale",
+          value: "10-180 (based in level)",
+          activeImage: require("../../../assets/runes/stats/active/healthScaling.png"),
+          inactiveImage: require("../../../assets/runes/stats/inactive/healthScaling.png"),
+          isActive: false,
+        },
+      },
     },
   };
 
-  const primaryRunesData = [
-    {
-      name: "Electrocute",
-      activeImageUri: require("../../../assets/runes/activeElectrocute.png"),
-      inactiveImageUri: require("../../../assets/runes/inactiveElectrocute.png"),
-      isActive: true,
-    },
-    {
-      name: "Dark Harvest",
-      activeImageUri: require("../../../assets/runes/activeDarkHarvest.png"),
-      inactiveImageUri: require("../../../assets/runes/inactiveDarkHarvest.png"),
-      isActive: false,
-    },
-    // Agrega más objetos de runas principales según sea necesario
-  ];
-  const secondaryRunesData = [
-    {
-      name: "Cheap Shot",
-      activeImageUri: require("../../../assets/runes/activeCheapShot.png"),
-      inactiveImageUri: require("../../../assets/runes/inactiveCheapShot.png"),
-      isActive: false,
-    },
-    // Agrega más objetos de runas secundarias según sea necesario
-  ];
-  // Simulación de las runas activas recibidas de la API o base de datos
-  const [activePrimaryRune, setActivePrimaryRune] = useState(null);
-  const [activeSecondaryRune, setActiveSecondaryRune] = useState(null);
+  function marcarRunasActivas(championRunes, allRunes) {
+    // Iterar sobre las categorías primarias del campeón
+    for (const slot in championRunes.runes.primary) {
+      console.log("Slot?: " + slot);
+      if (slot === "name") continue;
+      const championRuneName = championRunes.runes.primary[slot].option.name;
+      console.log("Categoria primary: " + championRuneName);
+      const primaryCategory =
+        allRunes.categories[championRunes.runes.primary.name];
+      for (const option in primaryCategory.slots[slot]) {
+        const runeOption = primaryCategory.slots[slot][option];
+        if (runeOption.name === championRuneName) {
+          runeOption.isActive = true;
+          console.log(
+            "Name: " + runeOption.name + " Activo? " + runeOption.isActive
+          ); // Corrección aquí
+          break;
+        }
+      }
+    }
 
-  useEffect(() => {
-    // Lógica simulada para establecer las runas activas inicialmente
-    // Por ejemplo, seleccionamos la primera runa de cada tipo como activa al cargar la pantalla
-    setActivePrimaryRune(primaryRunesData[0]);
-    setActiveSecondaryRune(secondaryRunesData[0]);
-  }, []);
-  const renderRune = ({ item }) => {
-    const isActive = item === activePrimaryRune || item === activeSecondaryRune;
+    // Iterar sobre las categorías secundarias del campeón
+    for (const slot in championRunes.runes.secondary) {
+      if (slot === "name") continue;
+      const championRuneName =
+        championRunes.runes.secondary[slot].option.name;
+      console.log("Categoria secondary: " + championRuneName);
+      const secondaryCategory =
+        allRunes.categories[championRunes.runes.secondary.name];
+      for (const option in secondaryCategory.slots[slot]) {
+        const runeOption = secondaryCategory.slots[slot][option];
+        if (runeOption.name === championRuneName) {
+          runeOption.isActive = true;
+          console.log("Activo? " + runeOption.isActive); // Corrección aquí
+          break;
+        }
+      }
+    }
+
+
+    // Iterar sobre los modificadores de estadísticas del campeón
+    for (const slot in championRunes.runes.statsMod) {
+      const championRuneName = championRunes.runes.statsMod[slot].option.name;
+      console.log("Modificador: " + championRuneName);
+      for (const option in allRunes.statsMod[slot]) {
+        const runeOption = allRunes.statsMod[slot][option];
+        if (runeOption.name === championRuneName) {
+          runeOption.isActive = true;
+          console.log("Activo? " + runeOption.isActive); // Corrección aquí
+          break;
+        }
+      }
+    }
+  }
+
+  // Llamamos a la función para marcar las runas activas
+  marcarRunasActivas(selectedChamp, runes);
+
+  const cargaRunas = {
+    //domination
+    activeElectrocute: require("../../../assets/runes/domination/active/electrocute.png"),
+    inactiveElectrocute: require("../../../assets/runes/domination/inactive/electrocute.png"),
+    activeDarkHarvest: require("../../../assets/runes/domination/active/darkHarvest.png"),
+    inactiveDarkHarvest: require("../../../assets/runes/domination/inactive/darkHarvest.png"),
+    activeHailOfBlades: require("../../../assets/runes/domination/active/hailOfBlades.png"),
+    inactiveHailOfBlades: require("../../../assets/runes/domination/inactive/hailOfBlades.png"),
+    activeCheapShot: require("../../../assets/runes/domination/active/cheapShot.png"),
+    inactiveCheapShot: require("../../../assets/runes/domination/inactive/cheapShot.png"),
+    activeSuddenImpact: require("../../../assets/runes/domination/active/suddenImpact.png"),
+    inactiveSuddenImpact: require("../../../assets/runes/domination/inactive/suddenImpact.png"),
+    activeTasteOfBlood: require("../../../assets/runes/domination/active/tasteOfBlood.png"),
+    inactiveTasteOfBlood: require("../../../assets/runes/domination/inactive/tasteOfBlood.png"),
+    activeZombyWard: require("../../../assets/runes/domination/active/zombyWard.png"),
+    inactiveZombyWard: require("../../../assets/runes/domination/inactive/zombyWard.png"),
+    activeGhostPoro: require("../../../assets/runes/domination/active/ghostPoro.png"),
+    inactiveGhostPoro: require("../../../assets/runes/domination/inactive/ghostPoro.png"),
+    activeEyeballCollection: require("../../../assets/runes/domination/active/eyeBallCollection.png"),
+    inactiveEyeballCollection: require("../../../assets/runes/domination/inactive/eyeBallCollection.png"),
+    activeTreasureHunter: require("../../../assets/runes/domination/active/treasureHunter.png"),
+    inactiveTreasureHunter: require("../../../assets/runes/domination/inactive/treasureHunter.png"),
+    activeUltimateHunter: require("../../../assets/runes/domination/active/ultimateHunter.png"),
+    inactiveUltimateHunter: require("../../../assets/runes/domination/inactive/ultimateHunter.png"),
+    activeRelentlessHunter: require("../../../assets/runes/domination/active/relentlessHunter.png"),
+    inactiveRelentlessHunter: require("../../../assets/runes/domination/inactive/relentlessHunter.png"),
+    //sorcery
+    activeArcaneComet: require("../../../assets/runes/sorcery/active/arcaneComet.png"),
+    inactiveArcaneComet: require("../../../assets/runes/sorcery/inactive/arcaneComet.png"),
+    activeSummonAery: require("../../../assets/runes/sorcery/active/summonAery.png"),
+    inactiveSummonAery: require("../../../assets/runes/sorcery/inactive/summonAery.png"),
+    activePhaseRush: require("../../../assets/runes/sorcery/active/phaseRush.png"),
+    inactivePhaseRush: require("../../../assets/runes/sorcery/inactive/phaseRush.png"),
+    activeNullifyingOrb: require("../../../assets/runes/sorcery/active/nullifyingOrb.png"),
+    inactiveNullifyingOrb: require("../../../assets/runes/sorcery/inactive/nullifyingOrb.png"),
+    activeManaflowBand: require("../../../assets/runes/sorcery/active/manaFlowBand.png"),
+    inactiveManaflowBand: require("../../../assets/runes/sorcery/inactive/manaFlowBand.png"),
+    activeNimbusCloak: require("../../../assets/runes/sorcery/active/nimbusCloak.png"),
+    inactiveNimbusCloak: require("../../../assets/runes/sorcery/inactive/nimbusCloak.png"),
+    activeTranscendence: require("../../../assets/runes/sorcery/active/transcendence.png"),
+    inactiveTranscendence: require("../../../assets/runes/sorcery/inactive/transcendence.png"),
+    activeCelerity: require("../../../assets/runes/sorcery/active/celerity.png"),
+    inactiveCelerity: require("../../../assets/runes/sorcery/inactive/celerity.png"),
+    activeAbsoluteFocus: require("../../../assets/runes/sorcery/active/absoluteFocus.png"),
+    inactiveAbsoluteFocus: require("../../../assets/runes/sorcery/inactive/absoluteFocus.png"),
+    activeScorch: require("../../../assets/runes/sorcery/active/scorch.png"),
+    inactiveScorch: require("../../../assets/runes/sorcery/inactive/scorch.png"),
+    activeWaterwalking: require("../../../assets/runes/sorcery/active/waterWalking.png"),
+    inactiveWaterwalking: require("../../../assets/runes/sorcery/inactive/waterWalking.png"),
+    activeGatheringStorm: require("../../../assets/runes/sorcery/active/gatheringStorm.png"),
+    inactiveGatheringStorm: require("../../../assets/runes/sorcery/inactive/gatheringStorm.png"),
+    //resolve
+    activeGraspOfTheUndying: require("../../../assets/runes/resolve/active/graspOfTheUndying.png"),
+    inactiveGraspOfTheUndying: require("../../../assets/runes/resolve/inactive/graspOfTheUndying.png"),
+    activeAftershock: require("../../../assets/runes/resolve/active/aftershock.png"),
+    inactiveAftershock: require("../../../assets/runes/resolve/inactive/aftershock.png"),
+    activeGuardian: require("../../../assets/runes/resolve/active/guardian.png"),
+    inactiveGuardian: require("../../../assets/runes/resolve/inactive/guardian.png"),
+    activeDemolish: require("../../../assets/runes/resolve/active/demolish.png"),
+    inactiveDemolish: require("../../../assets/runes/resolve/inactive/demolish.png"),
+    activeFontOfLife: require("../../../assets/runes/resolve/active/fontOfLife.png"),
+    inactiveFontOfLife: require("../../../assets/runes/resolve/inactive/fontOfLife.png"),
+    activeShieldBash: require("../../../assets/runes/resolve/active/shieldBash.png"),
+    inactiveShieldBash: require("../../../assets/runes/resolve/inactive/shieldBash.png"),
+    activeConditioning: require("../../../assets/runes/resolve/active/conditioning.png"),
+    inactiveConditioning: require("../../../assets/runes/resolve/inactive/conditioning.png"),
+    activeSecondWind: require("../../../assets/runes/resolve/active/secondWind.png"),
+    inactiveSecondWind: require("../../../assets/runes/resolve/inactive/secondWind.png"),
+    activeBonePlating: require("../../../assets/runes/resolve/active/bonePlating.png"),
+    inactiveBonePlating: require("../../../assets/runes/resolve/inactive/bonePlating.png"),
+    activeOvergrowth: require("../../../assets/runes/resolve/active/overgrowth.png"),
+    inactiveOvergrowth: require("../../../assets/runes/resolve/inactive/overgrowth.png"),
+    activeRevitalize: require("../../../assets/runes/resolve/active/revitalize.png"),
+    inactiveRevitalize: require("../../../assets/runes/resolve/inactive/revitalize.png"),
+    activeUnflinching: require("../../../assets/runes/resolve/active/unflinching.png"),
+    inactiveUnflinching: require("../../../assets/runes/resolve/inactive/unflinching.png"),
+    //precision
+    activePressTheAttack: require("../../../assets/runes/precision/active/pressTheAttack.png"),
+    inactivePressTheAttack: require("../../../assets/runes/precision/inactive/pressTheAttack.png"),
+    activeConqueror: require("../../../assets/runes/precision/active/conqueror.png"),
+    inactiveConqueror: require("../../../assets/runes/precision/inactive/conqueror.png"),
+    activeFleetFootwork: require("../../../assets/runes/precision/active/fleetFootwork.png"),
+    inactiveFleetFootwork: require("../../../assets/runes/precision/inactive/fleetFootwork.png"),
+    activeAbsorbLife: require("../../../assets/runes/precision/active/absorbLife.png"),
+    inactiveAbsorbLife: require("../../../assets/runes/precision/inactive/absorbLife.png"),
+    activeTriumph: require("../../../assets/runes/precision/active/triumph.png"),
+    inactiveTriumph: require("../../../assets/runes/precision/inactive/triumph.png"),
+    activePresenceOfMind: require("../../../assets/runes/precision/active/presenceOfMind.png"),
+    inactivePresenceOfMind: require("../../../assets/runes/precision/inactive/presenceOfMind.png"),
+    activeLegendAlacrity: require("../../../assets/runes/precision/active/alacracity.png"),
+    inactiveLegendAlacrity: require("../../../assets/runes/precision/inactive/alacracity.png"),
+    activeLegendHaste: require("../../../assets/runes/precision/active/haste.png"),
+    inactiveLegendHaste: require("../../../assets/runes/precision/inactive/haste.png"),
+    activeLegendBloodline: require("../../../assets/runes/precision/active/bloodline.png"),
+    inactiveLegendBloodline: require("../../../assets/runes/precision/inactive/bloodline.png"),
+    activeCoupDeGrace: require("../../../assets/runes/precision/active/coupeDeGrace.png"),
+    inactiveCoupDeGrace: require("../../../assets/runes/precision/inactive/coupeDeGrace.png"),
+    activeCutDown: require("../../../assets/runes/precision/active/cutDown.png"),
+    inactiveCutDown: require("../../../assets/runes/precision/inactive/cutDown.png"),
+    activeLastStand: require("../../../assets/runes/precision/active/lastStand.png"),
+    inactiveLastStand: require("../../../assets/runes/precision/inactive/lastStand.png"),
+    //inspiration
+    activeGlacialAugment: require("../../../assets/runes/inspiration/active/glacialAugment.png"),
+    inactiveGlacialAugment: require("../../../assets/runes/inspiration/inactive/glacialAugment.png"),
+    activeUnsealedSpellbook: require("../../../assets/runes/inspiration/active/unsealedSpellbook.png"),
+    inactiveUnsealedSpellbook: require("../../../assets/runes/inspiration/inactive/unsealedSpellbook.png"),
+    activeFirstStrike: require("../../../assets/runes/inspiration/active/firstStrike.png"),
+    inactiveFirstStrike: require("../../../assets/runes/inspiration/inactive/firstStrike.png"),
+    activeHextechFlashtraption: require("../../../assets/runes/inspiration/active/hextechFlashtraption.png"),
+    inactiveHextechFlashtraption: require("../../../assets/runes/inspiration/inactive/hextechFlashtraption.png"),
+    activeMagicalFootwear: require("../../../assets/runes/inspiration/active/magicalFootwear.png"),
+    inactiveMagicalFootwear: require("../../../assets/runes/inspiration/inactive/magicalFootwear.png"),
+    activeCashBack: require("../../../assets/runes/inspiration/active/cashBack.png"),
+    inactiveCashBack: require("../../../assets/runes/inspiration/inactive/cashBack.png"),
+    activeTripleTonic: require("../../../assets/runes/inspiration/active/tripleTonic.png"),
+    inactiveTripleTonic: require("../../../assets/runes/inspiration/inactive/tripleTonic.png"),
+    activeTimeWarpTonic: require("../../../assets/runes/inspiration/active/timeWarpTonic.png"),
+    inactiveTimeWarpTonic: require("../../../assets/runes/inspiration/inactive/timeWarpTonic.png"),
+    activeBiscuitDelivery: require("../../../assets/runes/inspiration/active/biscuitDelivery.png"),
+    inactiveBiscuitDelivery: require("../../../assets/runes/inspiration/inactive/biscuitDelivery.png"),
+    activeCosmicInsight: require("../../../assets/runes/inspiration/active/cosmicInsight.png"),
+    inactiveCosmicInsight: require("../../../assets/runes/inspiration/inactive/cosmicInsight.png"),
+    activeApproachVelocity: require("../../../assets/runes/inspiration/active/approachVelocity.png"),
+    inactiveApproachVelocity: require("../../../assets/runes/inspiration/inactive/approachVelocity.png"),
+    activeJackOfAllTrades: require("../../../assets/runes/inspiration/active/jackOfAllTrades.png"),
+    inactiveJackOfAllTrades: require("../../../assets/runes/inspiration/inactive/jackOfAllTrades.png"),
+    //statMods
+    activeAdaptiveForce: require("../../../assets/runes/stats/active/adaptiveForce.png"),
+    inactiveAdaptiveForce: require("../../../assets/runes/stats/inactive/adaptiveForce.png"),
+    activeAttackSpeed: require("../../../assets/runes/stats/active/attackSpeed.png"),
+    inactiveAttackSpeed: require("../../../assets/runes/stats/inactive/attackSpeed.png"),
+    activeCooldownReduction: require("../../../assets/runes/stats/active/cdrScaling.png"),
+    inactiveCooldownReduction: require("../../../assets/runes/stats/inactive/cdrScaling.png"),
+    activeMovementSpeed: require("../../../assets/runes/stats/active/movementSpeed.png"),
+    inactiveMovementSpeed: require("../../../assets/runes/stats/inactive/movementSpeed.png"),
+    activeHealthScaling: require("../../../assets/runes/stats/active/healthScaling.png"),
+    inactiveHealthScaling: require("../../../assets/runes/stats/inactive/healthScaling.png"),
+    activeHealth: require("../../../assets/runes/stats/active/healthPlus.png"),
+    inactiveHealth: require("../../../assets/runes/stats/inactive/healthPlus.png"),
+    activeTenacity: require("../../../assets/runes/stats/active/tenacity.png"),
+    inactiveTenacity: require("../../../assets/runes/stats/inactive/tenacity.png"),
+  };
+
+  const getRuneIconByName = (name, state) => {
+    let selectedOption = "";
+    switch (name) {
+      //DOMINATION
+      case "Electrocute":
+        if (state) {
+          return cargaRunas.activeElectrocute;
+        } else {
+          return cargaRunas.inactiveElectrocute;
+        }
+        break;
+      case "Dark Harvest":
+        if (state) {
+          return cargaRunas.activeDarkHarvest;
+        } else {
+          return cargaRunas.inactiveDarkHarvest;
+        }
+        break;
+      case "Hail Of Blades":
+        if (state) {
+          return cargaRunas.activeHailOfBlades;
+        } else {
+          return cargaRunas.inactiveHailOfBlades;
+        }
+        break;
+      case "Cheap Shot":
+        if (state) {
+          return cargaRunas.activeCheapShot;
+        } else {
+          return cargaRunas.inactiveCheapShot;
+        }
+        break;
+      case "Sudden Impact":
+        if (state) {
+          return cargaRunas.activeSuddenImpact;
+        } else {
+          return cargaRunas.inactiveSuddenImpact;
+        }
+        break;
+      case "Taste Of Blood":
+        if (state) {
+          return cargaRunas.activeTasteOfBlood;
+        } else {
+          return cargaRunas.inactiveTasteOfBlood;
+        }
+        break;
+      case "Zombie Ward":
+        if (state) {
+          return cargaRunas.activeZombyWard;
+        } else {
+          return cargaRunas.inactiveZombyWard;
+        }
+        break;
+      case "Ghost Poro":
+        if (state) {
+          return cargaRunas.activeGhostPoro;
+        } else {
+          return cargaRunas.inactiveGhostPoro;
+        }
+        break;
+      case "Eyeball Collection":
+        if (state) {
+          return cargaRunas.activeEyeballCollection;
+        } else {
+          return cargaRunas.inactiveEyeballCollection;
+        }
+        break;
+      case "Treasure Hunter":
+        if (state) {
+          return cargaRunas.activeTreasureHunter;
+        } else {
+          return cargaRunas.inactiveTreasureHunter;
+        }
+        break;
+      case "Ultimate Hunter":
+        if (state) {
+          return cargaRunas.activeUltimateHunter;
+        } else {
+          return cargaRunas.inactiveUltimateHunter;
+        }
+        break;
+      case "Relentless Hunter":
+        if (state) {
+          return cargaRunas.activeRelentlessHunter;
+        } else {
+          return cargaRunas.inactiveRelentlessHunter;
+        }
+        break;
+
+      //INSPIRATION
+      case "Summon Aery":
+        if (state) {
+          return cargaRunas.activeSummonAery;
+        } else {
+          return cargaRunas.inactiveSummonAery;
+        }
+        break;
+        case "Arcane Comet":
+        if (state) {
+          return cargaRunas.activeArcaneComet;
+        } else {
+          return cargaRunas.inactiveArcaneComet;
+        }
+        break;
+      case "Phase Rush":
+        if (state) {
+          return cargaRunas.activePhaseRush;
+        } else {
+          return cargaRunas.inactivePhaseRush;
+        }
+        break;
+      case "Nullifying Orb":
+        if (state) {
+          return cargaRunas.activeNullifyingOrb;
+        } else {
+          return cargaRunas.inactiveNullifyingOrb;
+        }
+        break;
+      case "Manaflow Band":
+        if (state) {
+          return cargaRunas.activeManaflowBand;
+        } else {
+          return cargaRunas.inactiveManaflowBand;
+        }
+        break;
+      case "Nimbus Cloak":
+        if (state) {
+          return cargaRunas.activeNimbusCloak;
+        } else {
+          return cargaRunas.inactiveNimbusCloak;
+        }
+        break;
+        case "Transcendence":
+        if (state) {
+          return cargaRunas.activeTranscendence;
+        } else {
+          return cargaRunas.inactiveTranscendence;
+        }
+        break;  
+        case "Celerity":
+        if (state) {
+          return cargaRunas.activeCelerity;
+        } else {
+          return cargaRunas.inactiveCelerity;
+        }
+        break;
+        case "Absolute Focus":
+        if (state) {
+          return cargaRunas.activeAbsoluteFocus;
+        } else {
+          return cargaRunas.inactiveAbsoluteFocus;
+        }
+        break;
+        case "Scorch":
+        if (state) {
+          return cargaRunas.activeScorch;
+        } else {
+          return cargaRunas.inactiveScorch;
+        }
+        break;
+        case "Waterwalking":
+        if (state) {
+          return cargaRunas.activeWaterwalking;
+        } else {
+          return cargaRunas.inactiveWaterwalking;
+        }
+        break;
+        case "Gathering Storm":
+        if (state) {
+          return cargaRunas.activeGatheringStorm;
+        } else {
+          return cargaRunas.inactiveGatheringStorm;
+        }
+        break;
+
+
+
+        //stats
+        case "Adaptive Force":
+        if (state) {
+          return cargaRunas.activeAdaptiveForce;
+        } else {
+          return cargaRunas.inactiveAdaptiveForce;
+        }
+        break;
+        case "Attack Speed":
+        if (state) {
+          return cargaRunas.activeAttackSpeed;
+        } else {
+          return cargaRunas.inactiveAttackSpeed;
+        }
+        break;
+        case "Ability Haste":
+        if (state) {
+          return cargaRunas.activeAbilityHaste;
+        } else {
+          return cargaRunas.inactiveAbilityHaste;
+        }
+        break;
+        case "movement Speed":
+        if (state) {
+          return cargaRunas.activeMovementSpeed;
+        } else {
+          return cargaRunas.inactiveMovementSpeed;
+        }
+        break;
+        case "Bonus Health Scale":
+        if (state) {
+          return cargaRunas.activeHealthScaling;
+        } else {
+          return cargaRunas.inactiveHealthScaling;
+        }
+        break;
+        case "Bonus Health":
+        if (state) {
+          return cargaRunas.activeHealth;
+        } else {
+          return cargaRunas.inactiveHealth;
+        }
+        break;
+        case "Tenacity":
+        if (state) {
+          return cargaRunas.activeTenacity;
+        } else {
+          return cargaRunas.inactiveTenacity;
+        }
+        break;
+            
+      default:
+        return null;
+    }
+  };
+
+  function renderPrimaryRunes(primaryName, allRunes) {
+    // Verificar si el nombre de las runas primarias está definido y existe en el JSON general de runas
+    if (primaryName && allRunes.categories[primaryName]) {
+      const primaryCategory = allRunes.categories[primaryName];
+      return (
+        <View key={primaryName}>
+          <View style={styles.runeInfo}>
+            <Image
+              source={{ uri: primaryCategory.imageUri }}
+              style={styles.runeIcon}
+            />
+            <Text style={styles.runeName}>{primaryName}</Text>
+          </View>
+          <View style={styles.containerRunes}>
+            {/* Renderizar las runas de la categoría primaria */}
+            {Object.values(primaryCategory.slots).map((slot, index) => (
+              <View key={index} style={styles.rowRunes}>
+                {Object.values(slot).map((option) => (
+                  <View key={option.name} style={styles.runeWrapper}>
+                    <Image
+                      source={getRuneIconByName(option.name, option.isActive)}
+                      // Ajusta los argumentos según tu caso
+                      style={styles.runeIcon}
+                    />
+                  </View>
+                ))}
+              </View>
+            ))}
+          </View>
+        </View>
+      );
+    } else {
+      console.log("NO ENCUENTRA RUNAS PRIAMRIAS");
+      return null; // Si no se encuentra la categoría de runas primarias, retornar null
+    }
+  }
+
+  function renderSecondaryRunes(secondaryName, allRunes) {
+    console.log(
+      "Nombre de la categoría de runas secundarias: " + secondaryName
+    );
+    console.log("Categorías generales de runas:", allRunes.categories);
+  
+    // Verificar si el nombre de las runas secundarias está definido y existe en el JSON general de runas
+    if (secondaryName && allRunes.categories[secondaryName]) {
+      const secondaryCategory = allRunes.categories[secondaryName];
+      console.log(
+        "Secondary Category: ",
+        JSON.stringify(secondaryCategory, null, 2)
+      );
+      return (
+        <View key={secondaryName}>
+          <View style={styles.runeInfo}>
+            <Image
+              source={{ uri: secondaryCategory.imageUri }}
+              style={styles.runeIcon}
+            />
+            <Text style={styles.runeName}>{secondaryName}</Text>
+          </View>
+          <View style={styles.containerRunes}>
+            {/* Renderizar las runas de la categoría secundaria, excluyendo el primer slot */}
+            {Object.values(secondaryCategory.slots)
+              .slice(1) // Excluir el primer slot
+              .map((slot, index) => (
+                <View key={index} style={styles.rowRunes}>
+                  {Object.values(slot).map((option) => (
+                    <View key={option.name} style={styles.runeWrapper}>
+                      <Image
+                        source={getRuneIconByName(option.name, option.isActive)}
+                        // Ajusta los argumentos según tu caso
+                        style={styles.runeIcon}
+                      />
+                    </View>
+                  ))}
+                </View>
+              ))}
+          </View>
+        </View>
+      );
+    } else {
+      console.log("NO ENCUENTRA RUNAS SECUNDARIAS");
+      return null; // Si no se encuentra la categoría de runas secundarias, retornar null
+    }
+  }
+  // Función para renderizar las statsMod
+const renderStatsMod = (statsMod) => {
+  return Object.keys(statsMod).map((slot) => {
+    const slotData = statsMod[slot];
+    
     return (
-      <View
-        style={[styles.runeContainer, item.isActive ? styles.activeRune : null]}
-      >
-        <Image
-          source={item.isActive ? item.activeImageUri : item.inactiveImageUri}
-          style={styles.runeIcon}
-        />
-        <Text style={styles.runeName}>{item.name}</Text>
+      <View key={slot}>
+        <View style={styles.containerRunes}>
+          <View style={styles.rowRunes}>
+            {Object.values(slotData).map((option) => {
+              return (
+                <Image
+                  key={option.name}
+                  source={getRuneIconByName(option.name, option.isActive)}
+                  style={styles.runeIcon}
+                />
+              );
+            })}
+          </View>
+        </View>
       </View>
     );
-  };
+  });
+};
+
+  
+  
+  
+
   const renderInfoBlock = () => {
     if (selectedButton === "Runes") {
+      console.log("Datos de runas:", selectedChamp.runes);
       return (
         <View style={styles.infoBlock}>
           <Text style={styles.infoHeaderText}>Runes</Text>
-          <View style={styles.runeInfo}>
-            <Image
-              source={require("../../../assets/domination.png")}
-              style={styles.runeIcon}
-            />
-            <Text style={styles.runeName}>Domination</Text>
-          </View>
-          <View style={styles.containerRunes}>
-            <View style={styles.rowRunes}>
-              <FlatList
-                data={primaryRunesData}
-                renderItem={({ item }) => renderRune({ item })}
-                keyExtractor={(item) => item.name}
-                horizontal
-              />
-            </View>
-            <View style={styles.rowRunes}>
-              <FlatList
-                data={secondaryRunesData}
-                renderItem={({ item }) => renderRune({ item })}
-                keyExtractor={(item) => item.name}
-                horizontal
-              />
-            </View>
-          </View>
+          {/* Renderizar solo las runas primarias del campeón */}
+          {renderPrimaryRunes(selectedChamp.runes.primary.name, runes)}
+          {/* Renderizar solo las runas secundarias del campeón */}
+          {renderSecondaryRunes(selectedChamp.runes.secondary.name, runes)}
+          {/*Renderizar las stats*/}
+          {renderStatsMod(selectedChamp.runes.statsMod)}
         </View>
       );
     } else if (selectedButton === "Build") {
@@ -2260,10 +2806,6 @@ const styles = StyleSheet.create({
   },
   activeRune: {
     borderColor: "blue",
-  },
-  runeIcon: {
-    width: 50,
-    height: 50,
   },
   runeName: {
     marginTop: 5,
