@@ -605,6 +605,61 @@ const ChampionCard = () => {
           },
         ],
       },
+      runes: {
+        primary: {
+          name: "Inspiration",
+          slot1: {
+            option: {
+              name: "Glacial Augment",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Magical Footwear",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Time Warp Tonic",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Approach Velocity",
+            },
+          },
+        },
+        secondary: {
+          name: "Precision",
+          slot3: {
+            option: {
+              name: "Legend: Tenacity",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Coup de Grace",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bonus Health Scale",
+            },
+          },
+        },
+      },
     },
     {
       id: "yasuo",
@@ -1895,7 +1950,7 @@ const ChampionCard = () => {
         }
         break;
 
-      //INSPIRATION
+      //SORCERY
       case "Summon Aery":
         if (state) {
           return cargaRunas.activeSummonAery;
@@ -1980,7 +2035,8 @@ const ChampionCard = () => {
           return cargaRunas.inactiveGatheringStorm;
         }
         break;
-
+      
+        //RESOLVE
         case "Grasp of the Undying":
         if (state) {
           return cargaRunas.activeGraspOfTheUndying;
@@ -2066,7 +2122,177 @@ const ChampionCard = () => {
         }
         break;
 
-
+        //PRECISION
+        case "Press the Attack":
+        if (state) {
+          return cargaRunas.activePressTheAttack;
+        } else {
+          return cargaRunas.inactivePressTheAttack;
+        }
+        break;
+        case "Conqueror":
+        if (state) {
+          return cargaRunas.activeConqueror;
+        } else {
+          return cargaRunas.inactiveConqueror;
+        }
+        break;
+        case "Fleet Footwork":
+        if (state) {
+          return cargaRunas.activeFleetFootwork;
+        } else {
+          return cargaRunas.inactiveFleetFootwork;
+        }
+        break;
+        case "Absorb Life":
+        if (state) {
+          return cargaRunas.activeAbsorbLife;
+        } else {
+          return cargaRunas.inactiveAbsorbLife;
+        }
+        break;
+        case "Triumph":
+        if (state) {
+          return cargaRunas.activeTriumph;
+        } else {
+          return cargaRunas.inactiveTriumph;
+        }
+        break;
+        case "Presence of Mind":
+        if (state) {
+          return cargaRunas.activePresenceOfMind;
+        } else {
+          return cargaRunas.inactivePresenceOfMind;
+        }
+        break;
+        case "Legend: Alacrity":
+        if (state) {
+          return cargaRunas.activeLegendAlacrity;
+        } else {
+          return cargaRunas.inactiveLegendAlacrity;
+        }
+        break;
+        case "Legend: Tenacity":
+        if (state) {
+          return cargaRunas.activeLegendTenacity;
+        } else {
+          return cargaRunas.inactiveLegendTenacity;
+        }
+        break;
+        case "Legend: Bloodline":
+        if (state) {
+          return cargaRunas.activeLegendBloodline;
+        } else {
+          return cargaRunas.inactiveLegendBloodline;
+        }
+        break;
+        case "Coup de Grace":
+        if (state) {
+          return cargaRunas.activeCoupDeGrace;
+        } else {
+          return cargaRunas.inactiveCoupDeGrace;
+        }
+        break;
+        case "Cut Down":
+        if (state) {
+          return cargaRunas.activeCutDown;
+        } else {
+          return cargaRunas.inactiveCutDown;
+        }
+        break;
+        case "Last stand":
+        if (state) {
+          return cargaRunas.activeLastStand;
+        } else {
+          return cargaRunas.inactiveLastStand;
+        }
+        break;
+        
+        //INSPIRATION
+        case "Glacial Augment":
+        if (state) {
+          return cargaRunas.activeGlacialAugment;
+        } else {
+          return cargaRunas.inactiveGlacialAugment;
+        }
+        break;
+        case "Unsealed Spellbook":
+        if (state) {
+          return cargaRunas.activeUnsealedSpellbook;
+        } else {
+          return cargaRunas.inactiveUnsealedSpellbook;
+        }
+        break;
+        case "First Strike":
+        if (state) {
+          return cargaRunas.activeFirstStrike;
+        } else {
+          return cargaRunas.inactiveFirstStrike;
+        }
+        break;
+        case "Hextech Flashtraption":
+        if (state) {
+          return cargaRunas.activeHextechFlashtraption;
+        } else {
+          return cargaRunas.inactiveHextechFlashtraption;
+        }
+        break;
+        case "Magical Footwear":
+        if (state) {
+          return cargaRunas.activeMagicalFootwear;
+        } else {
+          return cargaRunas.inactiveMagicalFootwear;
+        }
+        break;
+        case "Cash Back":
+        if (state) {
+          return cargaRunas.activeCashBack;
+        } else {
+          return cargaRunas.inactiveCashBack;
+        }
+        break;
+        case "Triple Tonic":
+        if (state) {
+          return cargaRunas.activeTripleTonic;
+        } else {
+          return cargaRunas.inactiveTripleTonic;
+        }
+        break;
+        case "Time Warp Tonic":
+        if (state) {
+          return cargaRunas.activeTimeWarpTonic;
+        } else {
+          return cargaRunas.inactiveTimeWarpTonic;
+        }
+        break;
+        case "Biscuit Delivery":
+        if (state) {
+          return cargaRunas.activeBiscuitDelivery;
+        } else {
+          return cargaRunas.inactiveBiscuitDelivery;
+        }
+        break;
+        case "Cosmic Insight":
+        if (state) {
+          return cargaRunas.activeCosmicInsight;
+        } else {
+          return cargaRunas.inactiveCosmicInsight;
+        }
+        break;
+        case "Approach Velocity":
+        if (state) {
+          return cargaRunas.activeApproachVelocity;
+        } else {
+          return cargaRunas.inactiveApproachVelocity;
+        }
+        break;
+        case "Jack of All Trades":
+        if (state) {
+          return cargaRunas.activeJackOfAllTrades;
+        } else {
+          return cargaRunas.inactiveJackOfAllTrades;
+        }
+        break;
 
         //stats
         case "Adaptive Force":
