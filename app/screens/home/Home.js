@@ -76,6 +76,7 @@ const Home = () => {
             if (search != null && search != undefined && search.length > 0) {
                 isSearching(true);
                 const URL = `${Environment.RR_API}/searches/champions_summoners?search=${search}&region=${regionSearch}`;
+                console.log("URL: " + URL);
                 const response =
                     await fetch(URL, {})
                         .then(response => response.json())
@@ -94,6 +95,52 @@ const Home = () => {
         }
         fetchData();
     }, [search]);
+
+    const renderImagenSegunTier = (item) => {
+        let imagenSource = null;
+        switch (item) {
+            case "IRON":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Iron.png' };
+                break;
+            case "BRONZE":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Bronze.png' };
+                break;
+            case "SILVER":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Silver.png' };
+                break;
+            case "GOLD":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Gold.png' };
+                break;
+            case "PLATINUM":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Platinum.png' };
+                break;
+            case "EMERALD":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Emerald.png' };
+                break;
+            case "DIAMOND":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Diamond.png' };
+                break;
+            case "MASTER":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Master.png' };
+                break;
+            case "GRANDMASTER":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Grandmaster.png' };
+                break;
+            case "CHALLENGER":
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Challenger.png' };
+                break;
+            default:
+                // Aquí puedes manejar otros casos si es necesario
+                break;
+        }
+        if (imagenSource) {
+            return <Image source={imagenSource} style={{ width: 34, height: 34 }} />;
+        } else {
+            return <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>UR</Text>
+        }
+    };
+    
+
     useEffect(() => {
         // console.log(foundChampions);
         setChampionList(
@@ -114,17 +161,20 @@ const Home = () => {
         );
     }, [foundChampions])
     useEffect(() => {
-        // console.log(foundSummoners);
+         console.log(foundSummoners);
         setSummonerList(
             <View style={{ marginHorizontal: 10, marginVertical: 10 }}>
                 <Text style={{ color: colors.text, fontSize: 16, fontFamily: fonts.K2D_B, marginBottom: 10 }}>Summoners</Text>
                 <FlatList
-                    scrollEnabled={false}
+                    scrollEnabled={false} 
                     data={foundSummoners}
                     contentContainerStyle={{ gap: 10 }}
                     renderItem={({ item }) => (
                         <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
-                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.name}</Text>
+                            <Image source={{uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${item.icon}.png`}} style={{width: 34,height: 34,borderRadius: 99,borderWidth: 1,borderColor: colors.contrast}}/>
+                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.gameName}</Text>
+                            {renderImagenSegunTier(item.queue.tier)}
+                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.queue.division}</Text>
                         </View>
                     )}
                 />
@@ -132,12 +182,32 @@ const Home = () => {
         );
     }, [foundSummoners])
 
+    const resultadoSummoners = () => {
+        <View>
+            <View>
+                <Text>Summoners</Text>
+            </View>
+            <View>
+                {/* Flatlist */}
+                <FlatList
+                    scrollEnabled={false}
+                    data={foundSummoners}
+                    renderItem={({ item }) => (
+                        <View>
+                            <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 22, height: 22 }} />
+                            <Text>{item.name}</Text>
+                        </View>
+                    )}
+                />
+            </View>
+        </View>
+    }
     const [topUsers, setTopUsers] = React.useState(null);
     const [roles, setRoles] = React.useState([
         { role: 'top', key: '1' },
         { role: 'jungle', key: '2' },
         { role: 'mid', key: '3' },
-        { role: 'adc', key: '4' },
+        { role: 'adc', key: '4' }, 
         { role: 'support', key: '5' }
     ]);
 

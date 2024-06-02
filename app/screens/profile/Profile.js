@@ -37,46 +37,125 @@ const ProfileCard = () => {
 
 const matchData = [
   {
-    type: "Ranked Solo",
-    lpChange: "+89 LP",
-    timeAgo: "4 minutes ago",
-    duration: "32m 4s",
-    champion: {
-      name: "Pyke",
-      icon: "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Pyke.png", // Replace with the correct URL
-      summonerSpells: [
-        "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
-        "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerDot.png",
-      ],
-      runes: [
-        "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
-        "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/NimbusCloak.png",
-      ],
-    },
-    stats: {
-      kda: "25/4/15",
-      kdaRatio: "10.0 KDA",
-      cs: "46 CS",
-      csPerMin: "2.6 CS/Min",
-    },
-    items: [
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3153.png",
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3074.png",
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3748.png",
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3111.png",
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3026.png",
-      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3364.png",
+    "type": "Ranked Solo",
+    "lpChange": "+89 LP",
+    "timeAgo": "4 minutes ago",
+    "duration": "32m 4s",
+    "champion": {
+    "name": "Pyke",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Pyke.png",
+    "summonerSpells": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerDot.png"
     ],
-    tags: ["Pentakill", "Controller", "EarlyGank"],
-  },
+    "runes": [
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/NimbusCloak.png"
+    ]
+    },
+    "stats": {
+    "kda": "25/4/15",
+    "kdaRatio": "10.0 KDA",
+    "cs": "46 CS",
+    "csPerMin": "2.6 CS/Min"
+    },
+    "items": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3153.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3074.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3748.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3111.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3026.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3364.png"
+    ],
+    "tags": ["Pentakill", "Controller", "EarlyGank"]
+    },
+    {
+    "type": "Ranked Flex",
+    "lpChange": "-15 LP",
+    "timeAgo": "1 hour ago",
+    "duration": "28m 53s",
+    "champion": {
+    "name": "Ahri",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Ahri.png",
+    "summonerSpells": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerHeal.png"
+    ],
+    "runes": [
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Aery/Aery.png",
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
+    ]
+    },
+    "stats": {
+    "kda": "7/5/12",
+    "kdaRatio": "3.8 KDA",
+    "cs": "158 CS",
+    "csPerMin": "5.5 CS/Min"
+    },
+    "items": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3165.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3020.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3157.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3285.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3089.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3151.png"
+    ],
+    "tags": ["Roam", "Burst", "MidgamePower"]
+    },
+    {
+    "type": "Normal Draft",
+    "lpChange": "+0 LP",
+    "timeAgo": "2 hours ago",
+    "duration": "34m 12s",
+    "champion": {
+    "name": "Garen",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Garen.png",
+    "summonerSpells": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerIgnite.png"
+    ],
+    "runes": [
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png",
+    "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+    ]
+    },
+    "stats": {
+    "kda": "8/3/9",
+    "kdaRatio": "5.7 KDA",
+    "cs": "214 CS",
+    "csPerMin": "6.3 CS/Min"
+    },
+    "items": [
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/6630.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3068.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3075.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3742.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/1038.png",
+    "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3065.png"
+    ],
+    "tags": ["Tanky", "Splitpush", "LateGame"]
+    }
   // Add more matches as needed
 ];
 
+const getLpChangeStyle = (lpChange) => {
+  // Convertir el cambio de LP a un número entero
+  const lpChangeValue = parseInt(lpChange);
+
+  // Determinar el estilo basado en el cambio de LP
+  if (lpChangeValue < 0) {
+    return styles.lpChangeNegative;
+  } else {
+    return styles.lpChangePositive;
+  }
+};
+
 const MatchCard = ({ match }) => {
+  const lpChangeStyle = getLpChangeStyle(match.lpChange);
   return (
     <View style={styles.matchContainer}>
       <View style={styles.matchHeader}>
-        <Text style={styles.matchType}>
+        <Text style={[styles.matchType, lpChangeStyle]}>
           {match.type} {match.lpChange}
         </Text>
         <Text style={styles.matchTime}>{match.timeAgo}</Text>
@@ -177,6 +256,22 @@ const data = {
       winRate: "67%",
       games: "27 Games",
       icon: "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/TwistedFate.png", // replace with the actual URL
+    },
+    {
+      "name": "Lee Sin",
+      "kda": "3.50 KDA",
+      "stats": "5.5 / 5.7 / 9.8",
+      "winRate": "53%",
+      "games": "45 Games",
+      "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/LeeSin.png"
+    },
+    {
+      "name": "Lux",
+      "kda": "4.20 KDA",
+      "stats": "6.2 / 4.1 / 12.8",
+      "winRate": "55%",
+      "games": "38 Games",
+      "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Lux.png"
     },
     // Add more champions here if needed
   ],
@@ -465,6 +560,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 15,
     marginHorizontal: 5,
+    marginVertical: 5,
   },
   matchHeader: {
     flexDirection: "row",
@@ -475,7 +571,6 @@ const styles = StyleSheet.create({
   matchType: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00FF00",
   },
   matchTime: {
     fontSize: 14,
@@ -489,6 +584,12 @@ const styles = StyleSheet.create({
   matchBody: {
     flexDirection: "row",
     alignItems: "center",
+  },
+  lpChangePositive: {
+    color: '#00FF00',
+  },
+  lpChangeNegative: {
+    color: 'red',
   },
   championIcon: {
     width: 50,
@@ -568,6 +669,26 @@ const styles = StyleSheet.create({
   tagEarlyGank: {
     backgroundColor: "#fff", // Cambiar color si lo deseas
   },
+  tagRoam: {
+    backgroundColor: "#FFA500", /* Color naranja */
+  },
+  tagBurst: {
+    backgroundColor: "#FFD700", /* Color dorado */
+  },
+  tagMidgamePower: {
+    backgroundColor: "#4B0082", /* Color índigo oscuro */
+    color:"#fff",
+  },
+  tagTanky: {
+    backgroundColor: "#4682B4", /* Azul acero */
+  },
+  tagSplitpush: {
+    backgroundColor: "#32CD32", /* Verde lima */
+  },
+  tagLateGame: {
+    backgroundColor: "#8B008B", /* Violeta oscuro */
+  }
+  
 });
 
 export default ProfileScreen;
