@@ -13,8 +13,9 @@ import colors from '../../utils/constants/colors';
 import Environment from '../../utils/constants/Environment';
 import { getRandomNumber } from '../../utils/RandomNumber';
 import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
-const LinkAccountPopup = () => {
+const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
 
     const [activeStep, setActiveStep] = useState(1);
     const [currentProfileIconId, setCurrentProfileIconId] = useState(null);
@@ -43,14 +44,36 @@ const LinkAccountPopup = () => {
         }
 
         if (activeStep == 2 && debug == false) {
+            console.log(`${Environment.RR_API}/summoners/linkaccount?region=${region}&gameName=${gameName}&tagLine=${tagLine}&profileIconId=${currentProfileIconId}&newIcon=${iconToChangeTo}`);
+            const URL = `${Environment.RR_API}/summoners/linkaccount?region=${encodeURIComponent(region)}&gameName=${encodeURIComponent(gameName)}&tagLine=${encodeURIComponent(tagLine)}&profileIconId=${encodeURIComponent(currentProfileIconId)}&newIcon=${encodeURIComponent(iconToChangeTo)}`;
+            console.log(URL);
+
             setIconChanged(
-                await fetch(`${Environment.RR_API}/summoners/linkaccount?region=${region}&gameName=${gameName}&tagLine=${tagLine}&profileIconId=${currentProfileIconId}`)
-                .then(response => response.json())
-                .then(data => data)
-                .catch(error => console.log(error))
+                await fetch(URL, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => { console.log(data); return data.code; })
+                    .catch(error => console.log(error))
             );
         }
+
+        if (activeStep == 3 && debug == false) {
+            console.log("buh");
+            setDisplayLinkAccount(false);
+        }
+
     }
+
+    useEffect(() => {
+        if (iconChanged == 200 && activeStep == 2) {
+            setActiveStep(activeStep + 1);
+        }
+    }, [iconChanged])
 
     useEffect(() => {
         if (currentProfileIconId != "undefined" && currentProfileIconId != null && activeStep == 1) {
@@ -99,26 +122,48 @@ const LinkAccountPopup = () => {
                     </View>
                 );
                 break;
+            case 3:
+                return (
+                    <View style={styles.successContainer}>
+                        <AntDesign name="checkcircleo" size={48} color={colors.success} style={styles.textCenter} />
+                        <Text style={[styles.text, styles.textCenter, styles.success]}>Account linked successfully</Text>
+                    </View>
+                );
+                break;
             default:
                 return (<></>);
                 break;
         }
     }
 
+    const returnButtonText = (activeStep) =>{
+        switch (activeStep) {
+            case 1:
+                return 'Next';
+                break;
+            case 2:
+                return 'I changed my Summoner Icon';
+                break;
+            case 3:
+                return 'Finish';
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
-        <View style={styles.container}>
-            <View style={styles.content}>
-                <View>
-                    <Text style={[styles.text, styles.bold,]}>Link your League of Legends Account!</Text>
-                    <Text style={[styles.text, activeStep === 1 ? styles.focusText : null]}>1. Enter your Game Name + Tag Line</Text>
-                    <Text style={[styles.text, activeStep === 2 ? styles.focusText : null]}>2. Change your Summoner Icon To The Displayed One</Text>
-                    <Text style={[styles.text]}>3. Finish!</Text>
-                </View>
-                {handleStepContent()}
-                <Pressable style={[styles.stepsBtn, validName ? styles.activeButton : styles.inactiveButton]} onPress={validName ? handleStepChange : null}>
-                    <Text style={[styles.text, styles.bold, styles.textCenter]}>{activeStep === 2 ? 'Finish' : 'Next'}</Text>
-                </Pressable>
+        <View style={styles.content}>
+            <View>
+                <Text style={[styles.text, styles.bold,]}>Link your League of Legends Account!</Text>
+                <Text style={[styles.text, activeStep === 1 ? styles.focusText : null]}>1. Enter your Game Name + Tag Line</Text>
+                <Text style={[styles.text, activeStep === 2 ? styles.focusText : null]}>2. Change your Summoner Icon To The Displayed One</Text>
+                <Text style={[styles.text, activeStep === 3 ? styles.focusText : null]}>3. Finish!</Text>
             </View>
+            {handleStepContent()}
+            <Pressable style={[styles.stepsBtn, validName ? styles.activeButton : styles.inactiveButton]} onPress={validName ? handleStepChange : null}>
+                <Text style={[styles.text, styles.bold, styles.textCenter]}>{returnButtonText(activeStep)}</Text>
+            </Pressable>
         </View>
     );
 }
@@ -126,14 +171,11 @@ const LinkAccountPopup = () => {
 export default LinkAccountPopup
 
 const styles = StyleSheet.create({
-    container: {
-        minWidth: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: 247,
-        position: 'absolute',
-        top: 200
+    success: {
+        color: colors.success
+    },
+    hide: {
+        display: 'none',
     },
     focusText: {
         color: colors.contrast
@@ -154,7 +196,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         paddingHorizontal: 22,
         gap: 20,
-        paddingVertical: 15
+        paddingVertical: 40
     },
     text: {
         fontSize: 16,

@@ -10,7 +10,7 @@ import {
     ActivityIndicator,
     ScrollView
 } from 'react-native';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getTop5Players } from '../../utils/scripts/home/Home';
 import Environment from '../../utils/constants/Environment';
 import { FlatList } from 'react-native-gesture-handler';
@@ -60,21 +60,17 @@ const Home = () => {
     function Capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
-    const [value, setValue] = React.useState("");
-
     const championWinratestats = require('../../utils/json/MatchesChampionsPerRole.json');
     const [region, setRegion] = React.useState('KR');
-
     const [regionSearch, setRegionSearch] = React.useState('EUW');
     const [searching, isSearching] = React.useState(false);
     const [search, setSearch] = React.useState('');
-    const [resultSearch, setResultSearch] = React.useState(null);
     const [foundChampions, setFoundChampions] = React.useState(null);
     const [championList, setChampionList] = React.useState(null);
     const [summonerList, setSummonerList] = React.useState(null);
+    const [displayLinkAccount, setDisplayLinkAccount] = useState(false);
 
     const [foundSummoners, setFoundSummoners] = React.useState(null);
-    const [test, setTest] = React.useState(null);
     useEffect(() => {
         async function fetchData() {
             if (search != null && search != undefined && search.length > 0) {
@@ -185,28 +181,6 @@ const Home = () => {
             </View>
         );
     }, [foundSummoners])
-    const resultadoChampions = () => {
-        return (
-            <View>
-                <View>
-                    <Text style={{ color: colors.text, fontSize: 16, fontFamily: fonts.K2D_B }}>Champions</Text>
-                </View>
-                <View>
-                    {/* {console.log(`https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/${foundChampions[0].champion.name}.png`)} */}
-                    <FlatList
-                        scrollEnabled={false}
-                        data={foundChampions}
-                        renderItem={({ item }) => (
-                            <View>
-                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/Nunu.png` }} style={{ width: 22, height: 22 }} />
-                                <Text>{item.champion.slug}</Text>
-                            </View>
-                        )}
-                    />
-                </View>
-            </View>
-        )
-    }
 
     const resultadoSummoners = () => {
         <View>
@@ -236,45 +210,6 @@ const Home = () => {
         { role: 'adc', key: '4' }, 
         { role: 'support', key: '5' }
     ]);
-    const [topChampions, setTopChampions] = React.useState(championWinratestats[0]);
-    const [activeRole, setActiveRole] = React.useState('jungle');
-    const [listedChampions, setListedChampions] = React.useState(activeRole != null || activeRole != undefined ? championWinratestats[0][activeRole] : championWinratestats[0]['top']);
-
-    const roleIcons = {
-        // C:\Users\zekro\Desktop\MyApp\MyApp\app\assets\images\icons\roles
-        top: require('../../assets/images/icons/roles/top.png'),
-        jungle: require('../../assets/images/icons/roles/jungle.png'),
-        mid: require('../../assets/images/icons/roles/mid.png'),
-        adc: require('../../assets/images/icons/roles/adc.png'),
-        support: require('../../assets/images/icons/roles/support.png')
-    };
-
-    const trophy = require('../../assets/images/icons/trophy.png');
-
-    const disabledRoleIcons = {
-        top: require('../../assets/images/icons/roles/top.png'),
-        jungle: require('../../assets/images/icons/roles/jungle.png'),
-        mid: require('../../assets/images/icons/roles/mid.png'),
-        adc: require('../../assets/images/icons/roles/adc.png'),
-        support: require('../../assets/images/icons/roles/support.png')
-    }
-
-    const getRoleIconByName = (name) => {
-        switch (name) {
-            case 'top':
-                return roleIcons.top;
-            case 'jungle':
-                return roleIcons.jungle;
-            case 'mid':
-                return roleIcons.mid;
-            case 'adc':
-                return roleIcons.adc;
-            case 'support':
-                return roleIcons.support;
-            default:
-                return null;
-        }
-    }
 
     /**
      * Asynchronously handles the top users for a given region.
@@ -284,15 +219,6 @@ const Home = () => {
      */
     async function handleTopUsers(region) {
         const response = await fetch(`${Environment.RR_API}/summoners/top-players-world?region=${region}`, {}).then(response => response.json()).catch(error => console.log(error));
-        return response;
-    }
-
-    async function handleActiveRole(activeRole) {
-        return championWinratestats[0][activeRole];
-    }
-
-    async function handleNews() {
-        const response = await fetch("", {}).then(response => response.json()).catch(error => console.log(error));
         return response;
     }
 
@@ -326,10 +252,6 @@ const Home = () => {
     useEffect(() => {
         handleTopUsers(region).then(users => { setTopUsers(users); });
     }, [region]);
-
-    useEffect(() => {
-        handleActiveRole(activeRole).then(topChamps => { setListedChampions(topChamps); });
-    }, [activeRole]);
 
     // useEffect(() => {
     //     handleNews().then(news => { setNews(news); });
@@ -374,57 +296,6 @@ const Home = () => {
         }
     }
 
-    const getTopChamps = () => {
-        if (activeRole !== null && activeRole !== undefined) {
-            return (
-                <FlatList
-                    scrollEnabled={false}
-                    horizontal
-                    style={{ flex: 1, minWidth: '100%', minHeight: '100%' }}
-                    contentContainerStyle={{ minWidth: '100%', alignItems: 'center', justifyContent: 'space-around' }}
-                    data={listedChampions}
-                    renderItem={({ item }) => (
-                        <View style={{ alignItems: 'center' }}>
-                            <Image
-                                source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.9.1/img/champion/${item.id}.png` }}
-                                style={{ width: 52, height: 52, borderRadius: 52 / 2, borderWidth: 1, borderColor: 'cyan' }}
-                            />
-                            <View style={{ alignItems: 'center' }}>
-                                <Text style={{
-                                    color: 'white',
-                                    fontFamily: fonts.K2D_R,
-                                    fontSize: 16,
-                                }}>{item.name}</Text>
-                                <Text style={{
-                                    color: 'cyan',
-                                    fontFamily: fonts.K2D_B,
-                                    fontSize: 16
-                                }}
-                                >{((item.wins / (item.wins + item.losses)) * 100).toFixed(2)}%</Text>
-                                <Text style={{
-                                    color: '#8D8D8D',
-                                    fontFamily: fonts.K2D_R,
-                                    fontSize: 16
-                                }}>Win Rate</Text>
-                            </View>
-                        </View>
-                    )}
-                />
-            );
-        }
-        return (
-            <View>
-                <ActivityIndicator size="large" color="#D0D0D0" />
-            </View>
-        );
-    }
-
-    const getNews = () => {
-        return (
-            <Text>New1</Text>
-        )
-    }
-
     function SearchItems() {
         if (search != null && search != undefined && search.length > 0) {
             isSearching(true);
@@ -438,7 +309,7 @@ const Home = () => {
     }
 
     function handleLinkAccount() {
-        console.log('huh');
+        setDisplayLinkAccount(true);
     }
 
     const LinkAccountBtn = () => {
@@ -451,21 +322,12 @@ const Home = () => {
         );
     }
 
-    const LinkAccountContainer = () => {
+    const closeButton = () => {
         return (
-            <View style={styles.linkAccountPopupContainer}>
-                <View style={styles.linkAccountPopup}>
-                    <Text style={[styles.text, styles.bold]}>Link your League of Legends Account!</Text>
-                    <View>
-                        <Text style={styles.text}>1. Enter your Game Name + Tag Line</Text>
-                        <Text style={styles.text}>2. Change your Summoner Icon To The Displayed One</Text>
-                        <Text style={styles.text}>3. Finish!</Text>
-                    </View>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder='GameName#EUW1'
-                    />
-                </View>
+            <View style={styles.closeButtonContainer}>
+                <Pressable onPress={() => { setDisplayLinkAccount(false) }} style={styles.closeButton}>
+                    <AntDesign name="closecircleo" size={24} color={colors.contrast} />
+                </Pressable>
             </View>
         );
     }
@@ -650,7 +512,10 @@ const Home = () => {
                     )}
                 />
             </View>
-            <LinkAccountPopup/>
+            <View style={displayLinkAccount ? styles.linkAccountPopupContainer : { display: 'none' }}>
+                {closeButton()}
+                <LinkAccountPopup displayLinkAccount={displayLinkAccount} setDisplayLinkAccount={setDisplayLinkAccount} />
+            </View>
         </ScrollView>
     )
 }
@@ -665,7 +530,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         minHeight: 247,
         position: 'absolute',
-        top: 200
+        top: 200,
+    },
+    closeButtonContainer: {
+        position: 'absolute',
+        top: 10,
+        right: 23,
+        zIndex: 1
     },
     linkAccountPopup: {
         backgroundColor: colors.bgPurple,

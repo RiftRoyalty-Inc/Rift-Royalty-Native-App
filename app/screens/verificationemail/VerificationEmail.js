@@ -4,7 +4,8 @@ import colors from '../../utils/constants/colors'
 import fonts from '../../utils/constants/fonts'
 import { useRoute } from '@react-navigation/native';
 import Environment from '../../utils/constants/Environment';
-
+import * as Keychain from 'react-native-keychain';
+import * as SecureStore from 'expo-secure-store';
 
 
 const VerificationEmail = () => {
@@ -22,23 +23,34 @@ const VerificationEmail = () => {
      * @return {Promise<void>} A promise that resolves when the verification code is successfully submitted,
      * or rejects with an error if the submission fails.
      */
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const enteredCode = code.join('');
         const url = Environment.RR_API + '/email-verification/verify';
-        const response =
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email,
-                    code: enteredCode
-                })
-            }).then(response => { return response.json() })
-                .then(json => { setAlertMessage(json.msg); })
-                .catch(error => console.log(error));
+        console.log(url);
+        console.log(email, enteredCode);
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                code: enteredCode
+            })
+        });
+        const json = await response.json();
+        console.log(json);
+        if (json.code == '1') {
+            console.log("saving log in...");
+            const userData = {email: email};
+            await SecureStore.setItemAsync('userData', JSON.stringify(userData));
+            console.log('user data saved');
+            if (SecureStore.getItemAsync('userData') != null) {
+                console.log('user data retrieved');
+            }
+        }
+        setAlertMessage(json.msg);
     }
 
     /**
@@ -220,7 +232,7 @@ const styles = StyleSheet.create({
 
     },
     alertContainer: {
-        marginTop:15
+        marginTop: 15
     },
     alertText: {
         color: colors.error

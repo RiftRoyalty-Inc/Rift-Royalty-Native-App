@@ -13,9 +13,6 @@ import fonts from '../../utils/constants/fonts';
 import Checkbox from 'expo-checkbox';
 import Environment from '../../utils/constants/Environment';
 import colors from '../../utils/constants/colors';
-import { SECRET_KEY } from '@env';
-import * as Crypto from 'expo-crypto';
-import sjcl from 'sjcl';
 
 const RegisterForm = () => {
     const navigation = useNavigation();

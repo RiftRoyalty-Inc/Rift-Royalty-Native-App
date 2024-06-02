@@ -10,4 +10,5 @@ export default{
     error:'#FF9898',
     fillContrast:'#DAA92D',
     disabledBtn:'#6C6C6C',
+    success:'#A4DD88'
 }
