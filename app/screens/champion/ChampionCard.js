@@ -13,6 +13,7 @@ import {
 import { useRoute } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { color } from "@rneui/base";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 const window = Dimensions.get("window");
 const windowHeight = window.height;
@@ -31,30 +32,35 @@ const ChampionCard = () => {
   };
 
   const roles = [
-    { name: "Top", imageUri: require("../../../assets/bottom.png") },
-    { name: "Jungler", imageUri: require("../../../assets/bottom.png") },
-    { name: "Mid", imageUri: require("../../../assets/bottom.png") },
-    { name: "Bottom", imageUri: require("../../../assets/bottom.png") },
-    { name: "Support", imageUri: require("../../../assets/bottom.png") },
+    { name: "Top", imageUri: require("../../../assets/role/Position_Challenger-Top.png") },
+    { name: "Jungler", imageUri: require("../../../assets/role/Position_Challenger-Jungle.png") },
+    { name: "Mid", imageUri: require("../../../assets/role/Position_Challenger-Mid.png") },
+    { name: "Bottom", imageUri: require("../../../assets/role/Position_Challenger-Bot.png") },
+    { name: "Support", imageUri: require("../../../assets/role/Position_Challenger-Support.png") },
   ];
   const regions = [
-    { name: "Ionia", imageUri: require("../../../assets/jonia.png") }, //este esta bien de prueba},
-    { name: "Demacia", imageUri: "https://example.com/demacia.jpg" },
-    { name: "Noxus", imageUri: "https://example.com/noxus.jpg" },
-    { name: "Freljord", imageUri: "https://example.com/freljord.jpg" },
-    { name: "Piltover", imageUri: "https://example.com/piltover.jpg" },
-    { name: "Bilgewater", imageUri: "https://example.com/bilgewater.jpg" },
-    { name: "Shadow Isles", imageUri: "https://example.com/shadow-isles.jpg" },
+    { name: "Ionia", imageUri: require("../../../assets/region/Ionia_LoR_Region.webp") }, //este esta bien de prueba},
+    { name: "Demacia", imageUri: require("../../../assets/region/Demacia_LoR_Region.webp") },
+    { name: "Noxus", imageUri: require("../../../assets/region/Noxus_LoR_Region.webp")  },
+    { name: "Freljord", imageUri: require("../../../assets/region/Freljord_LoR_Region.webp")  },
+    { name: "Piltover", imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp")  },
+    { name: "Zaun", imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp")  },
+    { name: "Bilgewater", imageUri: require("../../../assets/region/Bilgewater_LoR_Region.webp") },
+    { name: "Shadow Isles", imageUri: require("../../../assets/region/Shadow_Isles_LoR_Region.webp")},
+    { name: "Shurima", imageUri: require("../../../assets/region/Shurima_LoR_Region.webp")},
+    { name: "Targon", imageUri: require("../../../assets/region/Targon_LoR_Region.webp")},
+    { name: "Bandle City", imageUri: require("../../../assets/region/Bandle_City_LoR_Region.webp")},
+    { name: "Runeterra", imageUri: require("../../../assets/region/Runeterra_LoR_Region.webp")},
   ];
   const functions = [
-    { name: "All", imageUri: require("../../../assets/ALL.png") },
-    { name: "Assassin", imageUri: require("../../../assets/ASSASINS.png") },
-    { name: "Tank", imageUri: require("../../../assets/TANK.png") },
-    { name: "Support", imageUri: require("../../../assets/SUPPORT.png") },
-    { name: "Mage", imageUri: require("../../../assets/MAGE.png") },
-    { name: "Fighter", imageUri: require("../../../assets/FIGHTER.png") },
-    { name: "Marksman", imageUri: require("../../../assets/marksman.png") }, //ES EL UNICO QUE ES CORRECTO
-    { name: "Specialist", imageUri: require("../../../assets/SPECIALIST.png") },
+    // { name: "All", imageUri: require("../../../assets/funcion/") },
+    { name: "Assassin", imageUri: require("../../../assets/funcion/Assassin_icon.webp") },
+    { name: "Tank", imageUri: require("../../../assets/funcion/Tank_icon.webp") },
+    { name: "Support", imageUri: require("../../../assets/funcion/Support_icon.webp") },
+    { name: "Mage", imageUri: require("../../../assets/funcion/Mage_icon.webp") },
+    { name: "Fighter", imageUri: require("../../../assets/funcion/Fighter_icon.webp") },
+    { name: "Marksman", imageUri: require("../../../assets/funcion/Marksman_icon.webp") },//ES EL UNICO QUE ES CORRECTO
+    { name: "Specialist", imageUri: require("../../../assets/funcion/Specialist_icon.webp") },
   ];
   const items = [
     // botas de velocidad
@@ -333,6 +339,128 @@ const ChampionCard = () => {
           },
         },
       },
+      build: {
+        starter: {
+          item1: {
+            name: "Doran's Blade",
+            category: "Starter",
+            description:
+              "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Infinity Edge",
+            category: "Core",
+            description:
+              "Provides a massive amount of Attack Damage and enhances critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+          },
+          item2: {
+            name: "Essence Reaver",
+            category: "Core",
+            description:
+              "Provides Attack Damage, Cooldown Reduction, and mana sustain. Good for extended fights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3508.png",
+          },
+          item3: {
+            name: "Stormrazor",
+            category: "Core",
+            description:
+              "Provides Attack Damage, Attack Speed, and a burst of movement speed on critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3095.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Bloodthirster",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+          },
+          option2: {
+            name: "Phantom Dancer",
+            category: "Situational",
+            description:
+              "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+          },
+          option3: {
+            name: "Guardian Angel",
+            category: "Situational",
+            description:
+              "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Lord Dominik's Regards",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and increases damage against high health targets.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+          },
+          option2: {
+            name: "Mortal Reminder",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+          },
+          option3: {
+            name: "Rapid Firecannon",
+            category: "Situational",
+            description:
+              "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Swiftness",
+            category: "Boots",
+            description:
+              "Provides movement speed and reduces the effectiveness of slows.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223009.png",
+          },
+          option2: {
+            name: "Berserker's Greaves",
+            category: "Boots",
+            description:
+              "Grants Attack Speed. Good for increasing damage output.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223006.png",
+          },
+        },
+      },
     },
     {
       id: "rakan",
@@ -494,6 +622,128 @@ const ChampionCard = () => {
           },
         },
       },
+      build: {
+        starter: {
+          item1: {
+            name: "Relic Shield",
+            category: "Starter",
+            description:
+              "Provides health and executes minions. Good for supporting in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Shurelya's Battlesong",
+            category: "Core",
+            description:
+              "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+          },
+          item2: {
+            name: "Zeke's Convergence",
+            category: "Core",
+            description:
+              "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+          },
+          item3: {
+            name: "Redemption",
+            category: "Core",
+            description:
+              "Heals and shields allies in an area. Good for supporting in teamfights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Ardent Censer",
+            category: "Situational",
+            description:
+              "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+          },
+          option2: {
+            name: "Knight's Vow",
+            category: "Situational",
+            description:
+              "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+          },
+          option3: {
+            name: "Mikael's Blessing",
+            category: "Situational",
+            description:
+              "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Locket of the Iron Solari",
+            category: "Situational",
+            description:
+              "Provides armor, magic resistance, and a shield to nearby allies when activated.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+          },
+          option2: {
+            name: "Staff of Flowing Water",
+            category: "Situational",
+            description:
+              "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+          },
+          option3: {
+            name: "Abyssal Mask",
+            category: "Situational",
+            description:
+              "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Mobility",
+            category: "Boots",
+            description:
+              "Provides increased movement speed. Enhanced out of combat movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+          },
+          option2: {
+            name: "Ionian Boots of Lucidity",
+            category: "Boots",
+            description:
+              "Grants Ability Haste and reduces the cooldown of summoner spells.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+          },
+        },
+      },
     },
     {
       id: "pyke",
@@ -633,7 +883,7 @@ const ChampionCard = () => {
           name: "Precision",
           slot3: {
             option: {
-              name: "Legend: Tenacity",
+              name: "Legend: Haste",
             },
           },
           slot4: {
@@ -657,6 +907,128 @@ const ChampionCard = () => {
             option: {
               name: "Bonus Health Scale",
             },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Relic Shield",
+            category: "Starter",
+            description:
+              "Provides health and executes minions. Good for supporting in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Shurelya's Battlesong",
+            category: "Core",
+            description:
+              "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+          },
+          item2: {
+            name: "Zeke's Convergence",
+            category: "Core",
+            description:
+              "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+          },
+          item3: {
+            name: "Redemption",
+            category: "Core",
+            description:
+              "Heals and shields allies in an area. Good for supporting in teamfights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Ardent Censer",
+            category: "Situational",
+            description:
+              "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+          },
+          option2: {
+            name: "Knight's Vow",
+            category: "Situational",
+            description:
+              "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+          },
+          option3: {
+            name: "Mikael's Blessing",
+            category: "Situational",
+            description:
+              "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Locket of the Iron Solari",
+            category: "Situational",
+            description:
+              "Provides armor, magic resistance, and a shield to nearby allies when activated.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+          },
+          option2: {
+            name: "Staff of Flowing Water",
+            category: "Situational",
+            description:
+              "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+          },
+          option3: {
+            name: "Abyssal Mask",
+            category: "Situational",
+            description:
+              "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Mobility",
+            category: "Boots",
+            description:
+              "Provides increased movement speed. Enhanced out of combat movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+          },
+          option2: {
+            name: "Ionian Boots of Lucidity",
+            category: "Boots",
+            description:
+              "Grants Ability Haste and reduces the cooldown of summoner spells.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
           },
         },
       },
@@ -686,7 +1058,7 @@ const ChampionCard = () => {
           descripcion:
             "Yasuo golpea frente a él con su espada, infligiendo daño físico. Golpear con el borde del ataque aumenta el daño.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoQ1.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoQ1Wrapper.png",
         },
         {
           id: "W",
@@ -766,6 +1138,183 @@ const ChampionCard = () => {
           },
         ],
       },
+      runes: {
+        primary: {
+          name: "Precision",
+          slot1: {
+            option: {
+              name: "Conqueror",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Triumph",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Legend: Alacrity",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Coup de Grace",
+            },
+          },
+        },
+        secondary: {
+          name: "Resolve",
+          slot3: {
+            option: {
+              name: "Second Wind",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Overgrowth",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Attack Speed",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bonus Health",
+            },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Doran's Blade",
+            category: "Starter",
+            description:
+              "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Infinity Edge",
+            category: "Core",
+            description:
+              "Provides a massive amount of Attack Damage and enhances critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+          },
+          item2: {
+            name: "Phantom Dancer",
+            category: "Core",
+            description:
+              "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+          },
+          item3: {
+            name: "Sterak's Gage",
+            category: "Core",
+            description:
+              "Provides Health, Attack Damage, and a shield when taking a large amount of damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3053.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Bloodthirster",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+          },
+          option2: {
+            name: "Guardian Angel",
+            category: "Situational",
+            description:
+              "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+          },
+          option3: {
+            name: "Mortal Reminder",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Lord Dominik's Regards",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and increases damage against high health targets.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+          },
+          option2: {
+            name: "Mercurial Scimitar",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Magic Resist, and a Quicksilver active to remove crowd control effects.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3139.png",
+          },
+          option3: {
+            name: "Rapid Firecannon",
+            category: "Situational",
+            description:
+              "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Berserker's Greaves",
+            category: "Boots",
+            description:
+              "Grants Attack Speed. Good for increasing damage output.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3006.png",
+          },
+          option2: {
+            name: "Ninja Tabi",
+            category: "Boots",
+            description:
+              "Provides Armor and reduces damage taken from basic attacks.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3047.png",
+          },
+        },
+      },
     },
     {
       id: "vayne",
@@ -792,7 +1341,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne dispara rápidamente a un objetivo, infligiendo daño físico adicional y aumentando temporalmente su velocidad de movimiento.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneTumble.png",
         },
         {
           id: "W",
@@ -800,7 +1349,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne se desliza hacia una dirección, evadiendo cualquier daño en el camino y potenciando su próximo ataque básico.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneSilveredBolts.png",
         },
         {
           id: "E",
@@ -808,7 +1357,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne dispara un proyectil que aturde al primer enemigo impactado contra una pared cercana.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneCondemn.png",
         },
         {
           id: "R",
@@ -816,7 +1365,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne fortalece su resolución, aumentando su daño de ataque y otorgándole invisibilidad parcial durante un corto periodo de tiempo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneInquisition.png",
         },
       ],
       skins: [
@@ -871,6 +1420,305 @@ const ChampionCard = () => {
             icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Ashe_0.jpg",
           },
         ],
+      },
+      runes: {
+        primary: {
+          name: "Precision",
+          slot1: {
+            option: {
+              name: "Fleet Footwork",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Presence of Mind",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Legend: Bloodline",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Coup de Grace",
+            },
+          },
+        },
+        secondary: {
+          name: "Domination",
+          slot2: {
+            option: {
+              name: "Taste Of Blood",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Treasure Hunter",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Attack Speed",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bonus Health",
+            },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Doran's Blade",
+            category: "Starter",
+            description:
+              "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Infinity Edge",
+            category: "Core",
+            description:
+              "Provides a massive amount of Attack Damage and enhances critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+          },
+          item2: {
+            name: "Phantom Dancer",
+            category: "Core",
+            description:
+              "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+          },
+          item3: {
+            name: "Sterak's Gage",
+            category: "Core",
+            description:
+              "Provides Health, Attack Damage, and a shield when taking a large amount of damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3053.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Bloodthirster",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+          },
+          option2: {
+            name: "Guardian Angel",
+            category: "Situational",
+            description:
+              "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+          },
+          option3: {
+            name: "Mortal Reminder",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Lord Dominik's Regards",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and increases damage against high health targets.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+          },
+          option2: {
+            name: "Mercurial Scimitar",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Magic Resist, and a Quicksilver active to remove crowd control effects.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3139.png",
+          },
+          option3: {
+            name: "Rapid Firecannon",
+            category: "Situational",
+            description:
+              "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Berserker's Greaves",
+            category: "Boots",
+            description:
+              "Grants Attack Speed. Good for increasing damage output.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3006.png",
+          },
+          option2: {
+            name: "Ninja Tabi",
+            category: "Boots",
+            description:
+              "Provides Armor and reduces damage taken from basic attacks.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3047.png",
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Relic Shield",
+            category: "Starter",
+            description:
+              "Provides health and executes minions. Good for supporting in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Shurelya's Battlesong",
+            category: "Core",
+            description:
+              "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+          },
+          item2: {
+            name: "Zeke's Convergence",
+            category: "Core",
+            description:
+              "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+          },
+          item3: {
+            name: "Redemption",
+            category: "Core",
+            description:
+              "Heals and shields allies in an area. Good for supporting in teamfights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Ardent Censer",
+            category: "Situational",
+            description:
+              "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+          },
+          option2: {
+            name: "Knight's Vow",
+            category: "Situational",
+            description:
+              "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+          },
+          option3: {
+            name: "Mikael's Blessing",
+            category: "Situational",
+            description:
+              "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Locket of the Iron Solari",
+            category: "Situational",
+            description:
+              "Provides armor, magic resistance, and a shield to nearby allies when activated.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+          },
+          option2: {
+            name: "Staff of Flowing Water",
+            category: "Situational",
+            description:
+              "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+          },
+          option3: {
+            name: "Abyssal Mask",
+            category: "Situational",
+            description:
+              "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Mobility",
+            category: "Boots",
+            description:
+              "Provides increased movement speed. Enhanced out of combat movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+          },
+          option2: {
+            name: "Ionian Boots of Lucidity",
+            category: "Boots",
+            description:
+              "Grants Ability Haste and reduces the cooldown of summoner spells.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+          },
+        },
       },
     },
     {
@@ -977,6 +1825,183 @@ const ChampionCard = () => {
             icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Akali_0.jpg",
           },
         ],
+      },
+      runes: {
+        primary: {
+          name: "Resolve",
+          slot1: {
+            option: {
+              name: "Aftershock",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Font of Life",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bone Plating",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Unflinching",
+            },
+          },
+        },
+        secondary: {
+          name: "Inspiration",
+          slot3: {
+            option: {
+              name: "Biscuit Delivery",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Cosmic Insight",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Bonus Health",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Tenacity",
+            },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Relic Shield",
+            category: "Starter",
+            description:
+              "Provides health and executes minions. Good for supporting in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Shurelya's Battlesong",
+            category: "Core",
+            description:
+              "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+          },
+          item2: {
+            name: "Zeke's Convergence",
+            category: "Core",
+            description:
+              "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+          },
+          item3: {
+            name: "Redemption",
+            category: "Core",
+            description:
+              "Heals and shields allies in an area. Good for supporting in teamfights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Ardent Censer",
+            category: "Situational",
+            description:
+              "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+          },
+          option2: {
+            name: "Knight's Vow",
+            category: "Situational",
+            description:
+              "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+          },
+          option3: {
+            name: "Mikael's Blessing",
+            category: "Situational",
+            description:
+              "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Locket of the Iron Solari",
+            category: "Situational",
+            description:
+              "Provides armor, magic resistance, and a shield to nearby allies when activated.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+          },
+          option2: {
+            name: "Staff of Flowing Water",
+            category: "Situational",
+            description:
+              "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+          },
+          option3: {
+            name: "Abyssal Mask",
+            category: "Situational",
+            description:
+              "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Mobility",
+            category: "Boots",
+            description:
+              "Provides increased movement speed. Enhanced out of combat movement speed.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+          },
+          option2: {
+            name: "Ionian Boots of Lucidity",
+            category: "Boots",
+            description:
+              "Grants Ability Haste and reduces the cooldown of summoner spells.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+          },
+        },
       },
     },
   ];
@@ -1441,10 +2466,10 @@ const ChampionCard = () => {
               isActive: false,
             },
             option2: {
-              name: "Legend: Tenacity",
-              activeImageUri: "../../../assets/runes/stats/active/tenacity.png",
+              name: "Legend: Haste",
+              activeImageUri: "../../../assets/runes/stats/active/haste.png",
               inactiveImageUri:
-                "../../../assets/runes/stats/inactive/tenacity.png",
+                "../../../assets/runes/stats/inactive/haste.png",
               isActive: false,
             },
             option3: {
@@ -1483,7 +2508,7 @@ const ChampionCard = () => {
           },
         },
       },
-      inspiration: {
+      Inspiration: {
         imageUri:
           "https://ddragon.canisback.com/img/perk-images/Styles/7203_Whimsy.png",
         slots: {
@@ -1677,8 +2702,7 @@ const ChampionCard = () => {
         const runeOption = primaryCategory.slots[slot][option];
         if (runeOption.name === championRuneName) {
           runeOption.isActive = true;
-          console.log(
-          ); // Corrección aquí
+          console.log(); // Corrección aquí
           break;
         }
       }
@@ -1687,8 +2711,7 @@ const ChampionCard = () => {
     // Iterar sobre las categorías secundarias del campeón
     for (const slot in championRunes.runes.secondary) {
       if (slot === "name") continue;
-      const championRuneName =
-        championRunes.runes.secondary[slot].option.name;
+      const championRuneName = championRunes.runes.secondary[slot].option.name;
       const secondaryCategory =
         allRunes.categories[championRunes.runes.secondary.name];
       for (const option in secondaryCategory.slots[slot]) {
@@ -1700,7 +2723,6 @@ const ChampionCard = () => {
       }
     }
 
-
     // Iterar sobre los modificadores de estadísticas del campeón
     for (const slot in championRunes.runes.statsMod) {
       const championRuneName = championRunes.runes.statsMod[slot].option.name;
@@ -1708,7 +2730,7 @@ const ChampionCard = () => {
         const runeOption = allRunes.statsMod[slot][option];
         if (runeOption.name === championRuneName) {
           runeOption.isActive = true;
-           break;
+          break;
         }
       }
     }
@@ -1858,7 +2880,6 @@ const ChampionCard = () => {
     inactiveHealth: require("../../../assets/runes/stats/inactive/healthPlus.png"),
     activeTenacity: require("../../../assets/runes/stats/active/tenacity.png"),
     inactiveTenacity: require("../../../assets/runes/stats/inactive/tenacity.png"),
-    
   };
 
   const getRuneIconByName = (name, state) => {
@@ -1999,7 +3020,7 @@ const ChampionCard = () => {
         } else {
           return cargaRunas.inactiveTranscendence;
         }
-        break;  
+        break;
       case "Celerity":
         if (state) {
           return cargaRunas.activeCelerity;
@@ -2035,86 +3056,86 @@ const ChampionCard = () => {
           return cargaRunas.inactiveGatheringStorm;
         }
         break;
-      
-        //RESOLVE
-        case "Grasp of the Undying":
+
+      //RESOLVE
+      case "Grasp of the Undying":
         if (state) {
           return cargaRunas.activeGraspOfTheUndying;
         } else {
           return cargaRunas.inactiveGraspOfTheUndying;
         }
         break;
-        case "Aftershock":
+      case "Aftershock":
         if (state) {
           return cargaRunas.activeAftershock;
         } else {
           return cargaRunas.inactiveAftershock;
         }
         break;
-        case "Guardian":
+      case "Guardian":
         if (state) {
           return cargaRunas.activeGuardian;
         } else {
           return cargaRunas.inactiveGuardian;
         }
         break;
-        case "Demolish":
+      case "Demolish":
         if (state) {
           return cargaRunas.activeDemolish;
         } else {
           return cargaRunas.inactiveDemolish;
         }
         break;
-        case "Font of Life":
+      case "Font of Life":
         if (state) {
           return cargaRunas.activeFontOfLife;
         } else {
           return cargaRunas.inactiveFontOfLife;
         }
         break;
-        case "Shield Bash":
+      case "Shield Bash":
         if (state) {
           return cargaRunas.activeShieldBash;
         } else {
           return cargaRunas.inactiveShieldBash;
         }
         break;
-        case "Conditioning":
+      case "Conditioning":
         if (state) {
           return cargaRunas.activeConditioning;
         } else {
           return cargaRunas.inactiveConditioning;
         }
         break;
-        case "Second Wind":
+      case "Second Wind":
         if (state) {
           return cargaRunas.activeSecondWind;
         } else {
           return cargaRunas.inactiveSecondWind;
         }
         break;
-        case "Bone Plating":
+      case "Bone Plating":
         if (state) {
           return cargaRunas.activeBonePlating;
         } else {
           return cargaRunas.inactiveBonePlating;
         }
         break;
-        case "Overgrowth":
+      case "Overgrowth":
         if (state) {
           return cargaRunas.activeOvergrowth;
         } else {
           return cargaRunas.inactiveOvergrowth;
         }
         break;
-        case "Revitalize":
+      case "Revitalize":
         if (state) {
           return cargaRunas.activeRevitalize;
         } else {
           return cargaRunas.inactiveRevitalize;
         }
         break;
-        case "Unflinching":
+      case "Unflinching":
         if (state) {
           return cargaRunas.activeUnflinching;
         } else {
@@ -2122,171 +3143,181 @@ const ChampionCard = () => {
         }
         break;
 
-        //PRECISION
-        case "Press the Attack":
+      //PRECISION
+      case "Press the Attack":
         if (state) {
           return cargaRunas.activePressTheAttack;
         } else {
           return cargaRunas.inactivePressTheAttack;
         }
         break;
-        case "Conqueror":
+      case "Conqueror":
         if (state) {
           return cargaRunas.activeConqueror;
         } else {
           return cargaRunas.inactiveConqueror;
         }
         break;
-        case "Fleet Footwork":
+      case "Fleet Footwork":
         if (state) {
           return cargaRunas.activeFleetFootwork;
         } else {
           return cargaRunas.inactiveFleetFootwork;
         }
         break;
-        case "Absorb Life":
+      case "Absorb Life":
         if (state) {
           return cargaRunas.activeAbsorbLife;
         } else {
           return cargaRunas.inactiveAbsorbLife;
         }
         break;
-        case "Triumph":
+      case "Triumph":
         if (state) {
           return cargaRunas.activeTriumph;
         } else {
           return cargaRunas.inactiveTriumph;
         }
         break;
-        case "Presence of Mind":
+      case "Presence of Mind":
         if (state) {
           return cargaRunas.activePresenceOfMind;
         } else {
           return cargaRunas.inactivePresenceOfMind;
         }
         break;
-        case "Legend: Alacrity":
+      case "Legend: Alacrity":
         if (state) {
           return cargaRunas.activeLegendAlacrity;
         } else {
           return cargaRunas.inactiveLegendAlacrity;
         }
         break;
-        case "Legend: Tenacity":
+      case "Legend: Haste":
         if (state) {
-          return cargaRunas.activeLegendTenacity;
+          return cargaRunas.activeLegendHaste;
         } else {
-          return cargaRunas.inactiveLegendTenacity;
+          return cargaRunas.inactiveLegendHaste;
         }
         break;
-        case "Legend: Bloodline":
+      case "Legend: Bloodline":
         if (state) {
           return cargaRunas.activeLegendBloodline;
         } else {
           return cargaRunas.inactiveLegendBloodline;
         }
         break;
-        case "Coup de Grace":
+      case "Coup de Grace":
         if (state) {
           return cargaRunas.activeCoupDeGrace;
         } else {
           return cargaRunas.inactiveCoupDeGrace;
         }
         break;
-        case "Cut Down":
+      case "Cut Down":
         if (state) {
           return cargaRunas.activeCutDown;
         } else {
           return cargaRunas.inactiveCutDown;
         }
         break;
-        case "Last stand":
+      case "Last Stand":
         if (state) {
           return cargaRunas.activeLastStand;
         } else {
           return cargaRunas.inactiveLastStand;
         }
         break;
-        
-        //INSPIRATION
-        case "Glacial Augment":
+
+      //INSPIRATION
+      case "Glacial Augment":
         if (state) {
           return cargaRunas.activeGlacialAugment;
         } else {
           return cargaRunas.inactiveGlacialAugment;
         }
         break;
-        case "Unsealed Spellbook":
+      case "Unsealed Spellbook":
         if (state) {
           return cargaRunas.activeUnsealedSpellbook;
         } else {
           return cargaRunas.inactiveUnsealedSpellbook;
         }
         break;
-        case "First Strike":
+      case "First Strike":
         if (state) {
           return cargaRunas.activeFirstStrike;
         } else {
           return cargaRunas.inactiveFirstStrike;
         }
         break;
-        case "Hextech Flashtraption":
+      case "Hextech Flashtraption":
         if (state) {
           return cargaRunas.activeHextechFlashtraption;
         } else {
           return cargaRunas.inactiveHextechFlashtraption;
         }
         break;
-        case "Magical Footwear":
+      case "Magical Footwear":
         if (state) {
+          console.log("Magical Activo" + cargaRunas.activeMagicalFootwear);
           return cargaRunas.activeMagicalFootwear;
         } else {
+          console.log("Magical Inactivo" + cargaRunas.inactiveMagicalFootwear);
           return cargaRunas.inactiveMagicalFootwear;
         }
         break;
-        case "Cash Back":
+      case "Cash Back":
         if (state) {
           return cargaRunas.activeCashBack;
         } else {
           return cargaRunas.inactiveCashBack;
         }
         break;
-        case "Triple Tonic":
+      case "Triple Tonic":
         if (state) {
           return cargaRunas.activeTripleTonic;
         } else {
           return cargaRunas.inactiveTripleTonic;
         }
         break;
-        case "Time Warp Tonic":
+      case "Time Warp Tonic":
         if (state) {
+          console.log("Time Warp Activo" + cargaRunas.activeTimeWarpTonic);
           return cargaRunas.activeTimeWarpTonic;
         } else {
+          console.log("Time Warp Inactivo" + cargaRunas.inactiveTimeWarpTonic);
           return cargaRunas.inactiveTimeWarpTonic;
         }
         break;
-        case "Biscuit Delivery":
+      case "Biscuit Delivery":
         if (state) {
           return cargaRunas.activeBiscuitDelivery;
         } else {
           return cargaRunas.inactiveBiscuitDelivery;
         }
         break;
-        case "Cosmic Insight":
+      case "Cosmic Insight":
         if (state) {
           return cargaRunas.activeCosmicInsight;
         } else {
           return cargaRunas.inactiveCosmicInsight;
         }
         break;
-        case "Approach Velocity":
+      case "Approach Velocity":
         if (state) {
+          console.log(
+            "Approach Velocity Activo" + cargaRunas.activeApproachVelocity
+          );
           return cargaRunas.activeApproachVelocity;
         } else {
+          console.log(
+            "Approach Velocity Inactivo" + cargaRunas.inactiveApproachVelocity
+          );
           return cargaRunas.inactiveApproachVelocity;
         }
         break;
-        case "Jack of All Trades":
+      case "Jack of All Trades":
         if (state) {
           return cargaRunas.activeJackOfAllTrades;
         } else {
@@ -2294,8 +3325,8 @@ const ChampionCard = () => {
         }
         break;
 
-        //stats
-        case "Adaptive Force":
+      //stats
+      case "Adaptive Force":
         if (state) {
           console.log("Entro en AP/AP activo");
           return cargaRunas.activeAdaptiveForce;
@@ -2304,49 +3335,49 @@ const ChampionCard = () => {
           return cargaRunas.inactiveAdaptiveForce;
         }
         break;
-        case "Attack Speed":
+      case "Attack Speed":
         if (state) {
           return cargaRunas.activeAttackSpeed;
         } else {
           return cargaRunas.inactiveAttackSpeed;
         }
         break;
-        case "Ability Haste":
+      case "Ability Haste":
         if (state) {
           return cargaRunas.activeCooldownReduction;
         } else {
           return cargaRunas.inactiveCooldownReduction;
         }
         break;
-        case "Movement Speed":
+      case "Movement Speed":
         if (state) {
           return cargaRunas.activeMovementSpeed;
         } else {
           return cargaRunas.inactiveMovementSpeed;
         }
         break;
-        case "Bonus Health Scale":
+      case "Bonus Health Scale":
         if (state) {
           return cargaRunas.activeHealthScaling;
         } else {
           return cargaRunas.inactiveHealthScaling;
         }
         break;
-        case "Bonus Health":
+      case "Bonus Health":
         if (state) {
           return cargaRunas.activeHealth;
         } else {
           return cargaRunas.inactiveHealth;
         }
         break;
-        case "Tenacity":
+      case "Tenacity":
         if (state) {
           return cargaRunas.activeTenacity;
         } else {
           return cargaRunas.inactiveTenacity;
         }
         break;
-            
+
       default:
         return null;
     }
@@ -2405,7 +3436,7 @@ const ChampionCard = () => {
           <View style={styles.containerRunes}>
             {/* Renderizar las runas de la categoría secundaria, excluyendo el primer slot */}
             {Object.values(secondaryCategory.slots)
-            .slice(1)
+              .slice(1)
               .map((slot, index) => (
                 <View key={index} style={styles.rowRunes}>
                   {Object.values(slot).map((option) => (
@@ -2431,7 +3462,7 @@ const ChampionCard = () => {
   const renderStatsMod = (statsMod) => {
     return (
       <View style={styles.containerRunes}>
-        <View style={[styles.rowRunes, { flexDirection: 'row' }]}>
+        <View style={[styles.rowRunes, { flexDirection: "row" }]}>
           {Object.keys(statsMod).map((slot) => {
             const slotData = statsMod[slot];
             return Object.values(slotData).map((option) => {
@@ -2448,11 +3479,75 @@ const ChampionCard = () => {
       </View>
     );
   };
-  
 
-  
-  
-  
+  const renderSection = (sectionName, items) => {
+    return (
+      <View style={styles.buildBlock}>
+        <Text style={styles.categoryText}>{sectionName}</Text>
+        {sectionName === "Starter Items" ? (
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            {Object.keys(items).map((option, index) => {
+              const item = items[option];
+              return (
+                <View key={index}>
+                  <Image source={{ uri: item.image }} style={styles.itemIcon} />
+                </View>
+              );
+            })}
+          </View>
+        ) : sectionName === "Core Items" ? (
+          <View style={{ flexDirection: "row", justifyContent: "center" }}>
+            {Object.keys(items).map((option, index) => {
+              const item = items[option];
+              return (
+                <View
+                  style={{ flexDirection: "row", alignItems: "center" }}
+                  key={index}
+                >
+                  <View>
+                    <Image
+                      source={{ uri: item.image }}
+                      style={styles.itemIcon}
+                    />
+                  </View>
+                  {index < Object.keys(items).length - 1 && (
+                    <AntDesign name="caretright" size={24} color="black" />
+                  )}
+                </View>
+              );
+            })}
+          </View>
+        ) : sectionName === "Boots" ? (
+          <View style={{ flexDirection: "row", justifyContent: "center" }}>
+            {Object.keys(items).map((option, index) => {
+              const item = items[option];
+              return (
+                <View key={index}>
+                  <Image source={{ uri: item.image }} style={styles.itemIcon} />
+                </View>
+              );
+            })}
+          </View>
+        ) : (
+          <View style={{ flexDirection: "row", justifyContent: "center" }}>
+            {Object.keys(items).map((option, index) => {
+              const item = items[option];
+              return (
+                <View key={index}>
+                  <Image source={{ uri: item.image }} style={styles.itemIcon} />
+                </View>
+              );
+            })}
+          </View>
+        )}
+      </View>
+    );
+  };
 
   const renderInfoBlock = () => {
     if (selectedButton === "Runes") {
@@ -2472,30 +3567,11 @@ const ChampionCard = () => {
       return (
         <View style={styles.infoBlock}>
           <Text style={styles.infoHeaderText}>Build</Text>
-          <View style={styles.buildBlock}>
-            <Text style={styles.buildHeaderText}>Starter Items</Text>
-            <View style={styles.ItemsContainer}>{renderizarItems(items)}</View>
-          </View>
-
-          <View style={styles.buildBlock}>
-            <Text style={styles.buildHeaderText}>Core Items</Text>
-            <View style={styles.ItemsContainer}>{renderizarItems(items)}</View>
-          </View>
-
-          <View style={styles.buildBlock}>
-            <Text style={styles.buildHeaderText}>4th Item</Text>
-            <View style={styles.ItemsContainer}>{renderizarItems(items)}</View>
-          </View>
-
-          <View style={styles.buildBlock}>
-            <Text style={styles.buildHeaderText}>5th Item</Text>
-            <View style={styles.ItemsContainer}>{renderizarItems(items)}</View>
-          </View>
-
-          <View style={styles.buildBlock}>
-            <Text style={styles.buildHeaderText}>Boots</Text>
-            <View style={styles.ItemsContainer}>{renderizarItems(items)}</View>
-          </View>
+          {renderSection("Starter Items", selectedChamp.build.starter)}
+          {renderSection("Core Items", selectedChamp.build.core)}
+          {renderSection("4th Item Options", selectedChamp.build["4th"])}
+          {renderSection("5th Item Options", selectedChamp.build["5th"])}
+          {renderSection("Boots", selectedChamp.build.boots)}
         </View>
       );
     }
@@ -2516,6 +3592,53 @@ const ChampionCard = () => {
   const pressedButtonBorderStyle = {
     borderBottomWidth: 0, // Elimina el borde inferior cuando el botón está pulsado
   };
+
+  // Function to generate a random skill order
+  const generateSkillOrder = () => {
+    const levels = Array.from({ length: 18 }, (_, i) => i + 1);
+    const skillOrder = ["Q", "W", "E"];
+
+    // Shuffle levels except for 6, 11, and 16 which are reserved for 'R'
+    const shuffle = (array) => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    };
+
+    const randomizedLevels = shuffle(
+      levels.filter((lvl) => ![6, 11, 16].includes(lvl))
+    );
+    const skillLevels = Array(18).fill(null);
+
+    // Assign 'R' to levels 6, 11, and 16
+    skillLevels[5] = "R";
+    skillLevels[10] = "R";
+    skillLevels[15] = "R";
+
+    let qCount = 0,
+      wCount = 0,
+      eCount = 0;
+
+    // Randomly assign 'Q', 'W', 'E' to the remaining levels
+    randomizedLevels.forEach((lvl) => {
+      if (qCount < 5) {
+        skillLevels[lvl - 1] = "Q";
+        qCount++;
+      } else if (wCount < 5) {
+        skillLevels[lvl - 1] = "W";
+        wCount++;
+      } else {
+        skillLevels[lvl - 1] = "E";
+        eCount++;
+      }
+    });
+
+    return skillLevels;
+  };
+
+  const skillOrder = generateSkillOrder();
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -2635,7 +3758,8 @@ const ChampionCard = () => {
           {/* SKILLS PRIOTRITY */}
           <View
             style={{
-              ...styles.buildBlock,
+              ...styles.skillBlock,
+              paddingBottom: 0,
               borderBottomLeftRadius: 0,
               borderBottomRightRadius: 0,
               borderWidth: 0,
@@ -2666,101 +3790,31 @@ const ChampionCard = () => {
           <View style={styles.secondBlock}>
             <Text style={styles.secondBlockHeader}>Skill Order Per Level</Text>
             <View style={styles.skillPerLevelContainer}>
-              <View style={styles.skillContainer}>
-                <Image
-                  source={{ uri: abilitiesMaxPerLevel.abilities[0].imagenUri }}
-                  style={styles.skillIcon}
-                />
-                <Text style={styles.skillName}>
-                  {abilitiesMaxPerLevel.abilities[0].nombre}
-                </Text>
-                <View style={styles.skillLevels}>
-                  {Array.from(
-                    {
-                      length:
-                        abilitiesMaxPerLevel.abilities[0].id === "R" ? 3 : 5,
-                    },
-                    (_, nivelIndex) =>
-                      nivelIndex +
-                      (abilitiesMaxPerLevel.abilities[0].id === "R" ? 7 : 1)
-                  ).map((nivel, nivelIndex) => (
-                    <View style={styles.skillLevel} key={nivelIndex}>
-                      <Text style={styles.skillLevelText}>{nivel}</Text>
+              {["Q", "W", "E", "R"].map((skillId, idx) => {
+                const ability = abilitiesMaxPerLevel.abilities.find(
+                  (ability) => ability.id === skillId
+                );
+                const levels = skillOrder
+                  .map((skill, index) => (skill === skillId ? index + 1 : null))
+                  .filter((level) => level !== null);
+
+                return (
+                  <View style={styles.skillContainer} key={idx}>
+                    <Image
+                      source={{ uri: ability.imagenUri }}
+                      style={styles.skillIcon}
+                    />
+                    <Text style={styles.skillName}>{ability.nombre}</Text>
+                    <View style={styles.skillLevels}>
+                      {levels.map((nivel, nivelIndex) => (
+                        <View style={styles.skillLevel} key={nivelIndex}>
+                          <Text style={styles.skillLevelText}>{nivel}</Text>
+                        </View>
+                      ))}
                     </View>
-                  ))}
-                </View>
-              </View>
-              <View style={styles.skillContainer}>
-                <Image
-                  source={{ uri: abilitiesMaxPerLevel.abilities[1].imagenUri }}
-                  style={styles.skillIcon}
-                />
-                <Text style={styles.skillName}>
-                  {abilitiesMaxPerLevel.abilities[1].nombre}
-                </Text>
-                <View style={styles.skillLevels}>
-                  {Array.from(
-                    {
-                      length:
-                        abilitiesMaxPerLevel.abilities[1].id === "R" ? 3 : 5,
-                    },
-                    (_, nivelIndex) =>
-                      nivelIndex +
-                      (abilitiesMaxPerLevel.abilities[1].id === "R" ? 7 : 1)
-                  ).map((nivel, nivelIndex) => (
-                    <View style={styles.skillLevel} key={nivelIndex}>
-                      <Text style={styles.skillLevelText}>{nivel}</Text>
-                    </View>
-                  ))}
-                </View>
-              </View>
-              <View style={styles.skillContainer}>
-                <Image
-                  source={{ uri: abilitiesMaxPerLevel.abilities[2].imagenUri }}
-                  style={styles.skillIcon}
-                />
-                <Text style={styles.skillName}>
-                  {abilitiesMaxPerLevel.abilities[2].nombre}
-                </Text>
-                <View style={styles.skillLevels}>
-                  {Array.from(
-                    {
-                      length:
-                        abilitiesMaxPerLevel.abilities[2].id === "R" ? 3 : 5,
-                    },
-                    (_, nivelIndex) =>
-                      nivelIndex +
-                      (abilitiesMaxPerLevel.abilities[2].id === "R" ? 7 : 1)
-                  ).map((nivel, nivelIndex) => (
-                    <View style={styles.skillLevel} key={nivelIndex}>
-                      <Text style={styles.skillLevelText}>{nivel}</Text>
-                    </View>
-                  ))}
-                </View>
-              </View>
-              {abilitiesMaxPerLevel.abilities.length === 4 && (
-                <View style={styles.skillContainer}>
-                  <Image
-                    source={{
-                      uri: abilitiesMaxPerLevel.abilities[3].imagenUri,
-                    }}
-                    style={styles.skillIcon}
-                  />
-                  <Text style={styles.skillName}>
-                    {abilitiesMaxPerLevel.abilities[3].nombre}
-                  </Text>
-                  <View style={styles.skillLevels}>
-                    {Array.from(
-                      { length: 3 },
-                      (_, nivelIndex) => nivelIndex + 1
-                    ).map((nivel, nivelIndex) => (
-                      <View style={styles.skillLevel} key={nivelIndex}>
-                        <Text style={styles.skillLevelText}>{nivel}</Text>
-                      </View>
-                    ))}
                   </View>
-                </View>
-              )}
+                );
+              })}
             </View>
           </View>
         </View>
@@ -2944,7 +3998,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
   },
   infoHeaderText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#FAD597",
     textShadowColor: "rgba(0, 0, 0, 0.75)", // Color de la sombra
@@ -2972,9 +4026,7 @@ const styles = StyleSheet.create({
   },
   buildBlock: {
     backgroundColor: "#252046",
-    padding: 20,
     marginTop: 20,
-    marginHorizontal: 20,
     borderRadius: 10,
     borderWidth: 2, // Añadir el ancho del borde
   },
@@ -2990,17 +4042,50 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 }, // Offset de la sombra
     textShadowRadius: 2, // Radio de la sombra
   },
+  categoryText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    fontStyle: "italic",
+    color: "#FAD597",
+    marginTop: 10,
+    marginBottom: 10,
+    paddingLeft: 15,
+    borderBottomWidth: 1,
+    borderColor: "#FAD597",
+    paddingBottom: 5,
+    textShadowColor: "rgba(0, 0, 0, 0.75)", // Color de la sombra
+    textShadowOffset: { width: 2, height: 2 }, // Offset de la sombra
+    textShadowRadius: 2, // Radio de la sombra
+  },
+  itemIcon: {
+    width: 64,
+    height: 64,
+    marginBottom: 10,
+    marginHorizontal: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#FAD597",
+  },
   skillOrderContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     marginTop: 15,
   },
+  skillBlock: {
+    backgroundColor: "#252046",
+    padding: 20,
+    marginHorizontal: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#FAD597",
+  },
   skillOrder: {
     width: 50,
     height: 50,
     marginRight: 10,
     marginBottom: 10,
+    borderRadius: 10,
   },
   ItemsContainer: {
     flexDirection: "row",
@@ -3054,6 +4139,7 @@ const styles = StyleSheet.create({
     width: 40, // Ajustamos el tamaño del ícono de habilidad
     height: 40, // Ajustamos el tamaño del ícono de habilidad
     marginRight: 10,
+    borderRadius: 10,
   },
   skillName: {
     width: 110,
@@ -3068,14 +4154,16 @@ const styles = StyleSheet.create({
   skillLevel: {
     width: 25, // Ajustamos el tamaño de los cuadrados de nivel de habilidad
     height: 25, // Ajustamos el tamaño de los cuadrados de nivel de habilidad
-    backgroundColor: "#fff",
+    backgroundColor: "#252046",
     borderRadius: 5,
+    borderWidth: 2,
+    borderColor: "#ADA5DF",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 5,
   },
   skillLevelText: {
-    color: "#252046",
+    color: "#E3E3E3",
     fontWeight: "bold",
   },
   skillPerLevelContainer: {

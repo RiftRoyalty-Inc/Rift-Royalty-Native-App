@@ -15,14 +15,14 @@ const ItemListScreen = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const filterOptions = [
-    { name: "All", imageUri: require("../../../assets/ALL.png") },
-    { name: "Assassin", imageUri: require("../../../assets/ASSASINS.png") },
-    { name: "Tank", imageUri: require("../../../assets/TANK.png") },
-    { name: "Support", imageUri: require("../../../assets/SUPPORT.png") },
-    { name: "Mage", imageUri: require("../../../assets/MAGE.png") },
-    { name: "Fighter", imageUri: require("../../../assets/FIGHTER.png") },
-    { name: "Marksman", imageUri: require("../../../assets/MARKSMAN1.png") },
-    { name: "Specialist", imageUri: require("../../../assets/SPECIALIST.png") },
+    { name: "All", imageUri: require("../../../assets/role_icon/ALL.png") },
+    { name: "Assassin", imageUri: require("../../../assets/role_icon/ASSASINS.png") },
+    { name: "Tank", imageUri: require("../../../assets/role_icon/TANK.png") },
+    { name: "Support", imageUri: require("../../../assets/role_icon/SUPPORT.png") },
+    { name: "Mage", imageUri: require("../../../assets/role_icon/MAGE.png") },
+    { name: "Fighter", imageUri: require("../../../assets/role_icon/FIGHTER.png") },
+    { name: "Marksman", imageUri: require("../../../assets/role_icon/MARKSMAN1.png") },
+    { name: "Specialist", imageUri: require("../../../assets/role_icon/SPECIALIST.png") },
   ];
 
   const itemData = [
