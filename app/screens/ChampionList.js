@@ -24,14 +24,14 @@ const ChampionListScreen = () => {
   };
 
   const filterOptions = [
-    { name: "All", imageUri: require("../../assets/ALL.png") },
-    { name: "Assassin", imageUri: require("../../assets/ASSASINS.png") },
-    { name: "Tank", imageUri: require("../../assets/TANK.png") },
-    { name: "Support", imageUri: require("../../assets/SUPPORT.png") },
-    { name: "Mage", imageUri: require("../../assets/MAGE.png") },
-    { name: "Fighter", imageUri: require("../../assets/FIGHTER.png") },
-    { name: "Marksman", imageUri: require("../../assets/MARKSMAN1.png") },
-    { name: "Specialist", imageUri: require("../../assets/SPECIALIST.png") },
+    { name: "All", imageUri: require("../../assets/role_icon/ALL.png") },
+    { name: "Assassin", imageUri: require("../../assets/role_icon/ASSASINS.png") },
+    { name: "Tank", imageUri: require("../../assets/role_icon/TANK.png") },
+    { name: "Support", imageUri: require("../../assets/role_icon/SUPPORT.png") },
+    { name: "Mage", imageUri: require("../../assets/role_icon/MAGE.png") },
+    { name: "Fighter", imageUri: require("../../assets/role_icon/FIGHTER.png") },
+    { name: "Marksman", imageUri: require("../../assets/role_icon/MARKSMAN1.png") },
+    { name: "Specialist", imageUri: require("../../assets/role_icon/SPECIALIST.png") },
   ];
 
   const championData = [
@@ -57,63 +57,63 @@ const ChampionListScreen = () => {
       type: "Mage",
     },
     {
-      id: "4",
+      id: "pyke",
       name: "Pyke",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Pyke_1.jpg",
       type: "Support",
     },
     {
-      id: "5",
+      id: "yasuo",
       name: "Yasuo",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Yasuo_2.jpg",
       type: "Fighter",
     },
     {
-      id: "6",
+      id: "vayne",
       name: "Vayne",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Vayne_10.jpg",
       type: "Marksman",
     },
     {
-      id: "7",
+      id: "leona",
       name: "Leona",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Leona_21.jpg",
       type: "Tank",
     },
     {
-      id: "8",
+      id: "jinx",
       name: "Jinx",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Jinx_3.jpg",
       type: "Marksman",
     },
     {
-      id: "9",
+      id: "darius",
       name: "Darius",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Darius_15.jpg",
       type: "Fighter",
     },
     {
-      id: "10",
+      id: "lux",
       name: "Lux",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Lux_15.jpg",
       type: "Mage",
     },
     {
-      id: "11",
+      id: "leesin",
       name: "LeeSin",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/LeeSin_1.jpg",
       type: "Fighter",
     },
     {
-      id: "12",
+      id: "ashe",
       name: "Ashe",
       imageUri:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Ashe_6.jpg",
