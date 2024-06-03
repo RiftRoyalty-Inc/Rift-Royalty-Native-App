@@ -2,7 +2,7 @@ import { Keyboard, Pressable, StyleSheet, Text, TextInput, TouchableWithoutFeedb
 import React, { useEffect } from 'react'
 import colors from '../../utils/constants/colors'
 import fonts from '../../utils/constants/fonts'
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import Environment from '../../utils/constants/Environment';
 import * as Keychain from 'react-native-keychain';
 import * as SecureStore from 'expo-secure-store';
@@ -16,6 +16,7 @@ const VerificationEmail = () => {
     const [alertMessage, setAlertMessage] = React.useState('');
     const [alertCode, setAlertCode] = React.useState('');
     const inputs = React.useRef([]);
+    const navigate = useNavigation();
 
     /**
      * Submits the verification code to the server for email verification.
@@ -43,11 +44,11 @@ const VerificationEmail = () => {
         console.log(json);
         if (json.code == '1') {
             console.log("saving log in...");
-            const userData = {email: email};
-            await SecureStore.setItemAsync('userData', JSON.stringify(userData));
+            await SecureStore.setItemAsync('user_jwt', json.token);
             console.log('user data saved');
             if (SecureStore.getItemAsync('userData') != null) {
-                console.log('user data retrieved');
+                console.log('user data sucessfully saved & retrieved');
+                
             }
         }
         setAlertMessage(json.msg);
