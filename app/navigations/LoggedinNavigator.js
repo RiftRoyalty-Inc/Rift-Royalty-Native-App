@@ -12,14 +12,16 @@ import ChampionCard from '../screens/champion/ChampionCard';
 
 const Stack = createStackNavigator();
 
-function AuthNavigator() {
+function LoggedInNavigator() {
     return (
-        <Stack.Navigator initialRouteName={routes.LOGIN} screenOptions={({ route }) => ({
+        <Stack.Navigator initialRouteName={routes.HOME} screenOptions={({ route }) => ({
         })}>
-            <Stack.Screen name={routes.LOGIN} component={Login} options={{header: () => <HeaderAuth />}} />
-            <Stack.Screen name={routes.VERIFICATION_EMAIL} component={VerificationEmail} options={{header: () => <HeaderAuth />}}/>
+            <Stack.Screen name={routes.HOME} component={BottomTabNavigator} options={{headerShown: false}} />
+            <Stack.Screen name={routes.CHAMPION_LIST} component={BottomTabNavigator} />
+            <Stack.Screen name={routes.CHAMPION_CARD} component={ChampionCard} options={{header: () => HeaderAuth()}} />
+            <Stack.Screen name={routes.ITEM_LIST} component={BottomTabNavigator}/>
         </Stack.Navigator>
     );
 }
 
-export default AuthNavigator;
+export default LoggedInNavigator;

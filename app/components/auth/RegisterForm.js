@@ -13,6 +13,7 @@ import fonts from '../../utils/constants/fonts';
 import Checkbox from 'expo-checkbox';
 import Environment from '../../utils/constants/Environment';
 import colors from '../../utils/constants/colors';
+import * as SecureStore from 'expo-secure-store';
 
 const RegisterForm = () => {
     const navigation = useNavigation();
@@ -30,6 +31,26 @@ const RegisterForm = () => {
     const [isEmailTouched, setIsEmailTouched] = useState(false);
     const [isUsernameTouched, setIsUsernameTouched] = useState(false);
     const [isPasswordTouched, setIsPasswordTouched] = useState(false);
+
+
+    const logout = async () => {
+        try {
+            const condition = await SecureStore.getItemAsync('userData');
+            if (condition != null) {
+                await SecureStore.deleteItemAsync('userData');
+                console.log("User logged out");
+            }else{
+                console.log("User not logged in");
+            }
+        } catch (e) {
+            console.log("Error logging out");
+            console.log(e);
+        }
+    }
+
+    useEffect(() => {
+        logout();
+    }, [])
 
     useEffect(() => {
         if (isChecked && isEmailValid && isUsernameValid && isPasswordValid) {
