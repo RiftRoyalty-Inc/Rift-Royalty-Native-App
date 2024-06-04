@@ -3,16 +3,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Text } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import { useState, useEffect, useCallback } from 'react';
-import { Redirect, Stack } from "expo-router";
+import { useState, useEffect } from 'react';
 import AuthNavigator from './app/navigations/AuthNavigator';
-import fonts from './app/utils/constants/fonts';
 import LoggedInNavigator from './app/navigations/LoggedinNavigator';
 import * as SecureStore from 'expo-secure-store';
 
-
 export default function App() {
     const [appIsReady, setAppIsReady] = useState(false);
+    const [userData, setUserData] = useState(null);
 
     useEffect(() => {
         async function prepare() {
@@ -23,7 +21,6 @@ export default function App() {
                     'K2D-L': require('./fonts/K2D-Light.ttf'),
                     'AOBOSHI-R': require('./fonts/AoboshiOne-Regular.ttf'),
                 });
-                // await new Promise(resolve => setTimeout(resolve, 4000));
             } catch (e) {
                 console.warn(e);
             } finally {
@@ -33,26 +30,32 @@ export default function App() {
         prepare();
     }, []);
 
-    const onLayoutRootView = useCallback(async () => {
-        if (appIsReady) {
-            await SplashScreen.hideAsync();
-        }
-    }, [appIsReady]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await SecureStore.getItemAsync('user_jwt');
+                setUserData(data);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        console.log("buh")
+        console.log(userData);
+    }, [userData]);
 
     if (!appIsReady) {
-        // Contenido a mostrar mientras carga la aplicación
         return (
-            <>
-                {/* <Stack.Screen options={{headerShown: false}} onLayout={onLayoutRootView} /> */}
-                <Text style={{ padding: 24 }}>Loading...</Text>
-            </>
+            <Text style={{ padding: 24 }}>Loading...</Text>
         );
     }
 
     return (
-        // Contenido que se mostrará una vez cargada la aplicación
         <NavigationContainer>
-            {SecureStore.getItemAsync('userData') == null ? <AuthNavigator /> : <LoggedInNavigator />}
+            {userData != null ? <LoggedInNavigator /> : <AuthNavigator setUserData={setUserData} />}
         </NavigationContainer>
     );
 }

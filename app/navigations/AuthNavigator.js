@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 
 function AuthNavigator() {
     return (
-        <Stack.Navigator initialRouteName={routes.LOGIN} screenOptions={({ route }) => ({
+        <Stack.Navigator screenOptions={({ route }) => ({
         })}>
             <Stack.Screen name={routes.LOGIN} component={Login} options={{header: () => <HeaderAuth />}} />
             <Stack.Screen name={routes.VERIFICATION_EMAIL} component={VerificationEmail} options={{header: () => <HeaderAuth />}}/>
