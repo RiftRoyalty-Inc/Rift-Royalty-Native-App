@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 
 function LoggedInNavigator() {
     return (
-        <Stack.Navigator initialRouteName={routes.HOME} screenOptions={({ route }) => ({
+        <Stack.Navigator screenOptions={({ route }) => ({
         })}>
             <Stack.Screen name={routes.HOME} component={BottomTabNavigator} options={{headerShown: false}} />
             <Stack.Screen name={routes.CHAMPION_LIST} component={BottomTabNavigator} />

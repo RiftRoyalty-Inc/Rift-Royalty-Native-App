@@ -6,7 +6,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import Environment from '../../utils/constants/Environment';
 import * as Keychain from 'react-native-keychain';
 import * as SecureStore from 'expo-secure-store';
-
+import routes from '../../utils/constants/routes';
 
 const VerificationEmail = () => {
     const route = useRoute();
@@ -46,9 +46,8 @@ const VerificationEmail = () => {
             console.log("saving log in...");
             await SecureStore.setItemAsync('user_jwt', json.token);
             console.log('user data saved');
-            if (SecureStore.getItemAsync('userData') != null) {
+            if (await SecureStore.getItemAsync('userData') != null) {
                 console.log('user data sucessfully saved & retrieved');
-                
             }
         }
         setAlertMessage(json.msg);
