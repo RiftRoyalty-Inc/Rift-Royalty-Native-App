@@ -37,10 +37,8 @@ const RegisterForm = () => {
         try {
             const condition = await SecureStore.getItemAsync('userData');
             if (condition != null) {
-                await SecureStore.deleteItemAsync('userData');
-                console.log("User logged out");
+                console.log("User logged in");
             }else{
-                console.log("User not logged in");
             }
         } catch (e) {
             console.log("Error logging out");
