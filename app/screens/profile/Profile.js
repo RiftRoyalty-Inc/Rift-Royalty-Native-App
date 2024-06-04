@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     StyleSheet,
     View,
@@ -7,7 +7,13 @@ import {
     Image,
     ImageBackground,
     FlatList,
+    RefreshControl,
 } from "react-native";
+import Environment from "../../utils/constants/Environment";
+import colors from "../../utils/constants/colors";
+import LogoutBtn from "../../components/profile/LogoutBtn";
+
+
 const ProfileCard = () => {
     return (
         <View style={styles.container}>
@@ -35,109 +41,116 @@ const ProfileCard = () => {
     );
 };
 
-const matchData = [
-    {
-        "type": "Ranked Solo",
-        "lpChange": "+89 LP",
-        "timeAgo": "4 minutes ago",
-        "duration": "32m 4s",
-        "champion": {
-            "name": "Pyke",
-            "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Pyke.png",
-            "summonerSpells": [
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerDot.png"
-            ],
-            "runes": [
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/NimbusCloak.png"
-            ]
-        },
-        "stats": {
-            "kda": "25/4/15",
-            "kdaRatio": "10.0 KDA",
-            "cs": "46 CS",
-            "csPerMin": "2.6 CS/Min"
-        },
-        "items": [
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3153.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3074.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3748.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3111.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3026.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3364.png"
-        ],
-        "tags": ["Pentakill", "Controller", "EarlyGank"]
-    },
-    {
-        "type": "Ranked Flex",
-        "lpChange": "-15 LP",
-        "timeAgo": "1 hour ago",
-        "duration": "28m 53s",
-        "champion": {
-            "name": "Ahri",
-            "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Ahri.png",
-            "summonerSpells": [
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerHeal.png"
-            ],
-            "runes": [
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Aery/Aery.png",
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
-            ]
-        },
-        "stats": {
-            "kda": "7/5/12",
-            "kdaRatio": "3.8 KDA",
-            "cs": "158 CS",
-            "csPerMin": "5.5 CS/Min"
-        },
-        "items": [
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3165.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3020.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3157.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3285.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3089.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3151.png"
-        ],
-        "tags": ["Roam", "Burst", "MidgamePower"]
-    },
-    {
-        "type": "Normal Draft",
-        "lpChange": "+0 LP",
-        "timeAgo": "2 hours ago",
-        "duration": "34m 12s",
-        "champion": {
-            "name": "Garen",
-            "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Garen.png",
-            "summonerSpells": [
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
-                "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerIgnite.png"
-            ],
-            "runes": [
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
-            ]
-        },
-        "stats": {
-            "kda": "8/3/9",
-            "kdaRatio": "5.7 KDA",
-            "cs": "214 CS",
-            "csPerMin": "6.3 CS/Min"
-        },
-        "items": [
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/6630.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3068.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3075.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3742.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/1038.png",
-            "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3065.png"
-        ],
-        "tags": ["Tanky", "Splitpush", "LateGame"]
-    }
-    // Add more matches as needed
-];
+// const matchData = [
+//     {
+//         "type": "Ranked Solo",
+//         "timeAgo": "4 minutes ago",
+//         "duration": "32m 4s",
+//         "champion": {
+//             "name": "Pyke",
+//             "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Pyke.png",
+//             "summonerSpells": [
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerDot.png"
+//             ],
+//             "runes": [
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/NimbusCloak.png"
+//             ]
+//         },
+//         "stats": {
+//             "kda": "25/4/15",
+//             "kdaRatio": "10.0 KDA",
+//             "cs": "46 CS",
+//             "csPerMin": "2.6 CS/Min"
+//         },
+//         "items": [
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3153.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3074.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3748.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3111.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3026.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3364.png"
+//         ],
+//         "tags": ["Pentakill", "Controller", "EarlyGank"]
+//     },
+//     {
+//         "type": "Ranked Flex",
+//         "timeAgo": "1 hour ago",
+//         "duration": "28m 53s",
+//         "champion": {
+//             "name": "Ahri",
+//             "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Ahri.png",
+//             "summonerSpells": [
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerHeal.png"
+//             ],
+//             "runes": [
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Aery/Aery.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png"
+//             ]
+//         },
+//         "stats": {
+//             "kda": "7/5/12",
+//             "kdaRatio": "3.8 KDA",
+//             "cs": "158 CS",
+//             "csPerMin": "5.5 CS/Min"
+//         },
+//         "items": [
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3165.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3020.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3157.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3285.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3089.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3151.png"
+//         ],
+//         "tags": ["Roam", "Burst", "MidgamePower"]
+//     },
+//     {
+//         "type": "Normal Draft",
+//         "timeAgo": "2 hours ago",
+//         "duration": "34m 12s",
+//         "champion": {
+//             "name": "Garen",
+//             "icon": "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/Garen.png",
+//             "summonerSpells": [
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerFlash.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/spell/SummonerIgnite.png"
+//             ],
+//             "runes": [
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png",
+//                 "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png"
+//             ]
+//         },
+//         "stats": {
+//             "kda": "8/3/9",
+//             "kdaRatio": "5.7 KDA",
+//             "cs": "214 CS",
+//             "csPerMin": "6.3 CS/Min"
+//         },
+//         "items": [
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/6630.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3068.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3075.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3742.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/1038.png",
+//             "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/item/3065.png"
+//         ],
+//         "tags": ["Tanky", "Splitpush", "LateGame"],
+//         "result" : "Victory"
+//     }
+//     // Add more matches as needed
+// ];
 
+const getLpChangeStyle = (result) => {
+    if (result !== 'Victory') {
+        return styles.lpChangeNegative;
+    } else {
+        return styles.lpChangePositive;
+    }
+};
+
+/* 
 const getLpChangeStyle = (lpChange) => {
     // Convertir el cambio de LP a un número entero
     const lpChangeValue = parseInt(lpChange);
@@ -149,14 +162,15 @@ const getLpChangeStyle = (lpChange) => {
         return styles.lpChangePositive;
     }
 };
+*/
 
 const MatchCard = ({ match }) => {
-    const lpChangeStyle = getLpChangeStyle(match.lpChange);
+    const lpChangeStyle = getLpChangeStyle(match.result);
     return (
         <View style={styles.matchContainer}>
             <View style={styles.matchHeader}>
                 <Text style={[styles.matchType, lpChangeStyle]}>
-                    {match.type} {match.lpChange}
+                    {match.type}
                 </Text>
                 <Text style={styles.matchTime}>{match.timeAgo}</Text>
                 <Text style={styles.matchDuration}>{match.duration}</Text>
@@ -209,6 +223,7 @@ const MatchCard = ({ match }) => {
             </View>
             <View style={styles.tagsContainer}>
                 {match.tags.map((tag, index) => (
+                    console.log(`tag${tag}`),
                     <Text key={index} style={[styles.tag, styles[`tag${tag}`]]}>
                         {tag}
                     </Text>
@@ -218,7 +233,7 @@ const MatchCard = ({ match }) => {
     );
 };
 
-const MatchList = () => {
+const MatchList = ({ matchData }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.sectionTitle}>Matches</Text>
@@ -362,14 +377,42 @@ const ProfileStats = () => {
 };
 
 const ProfileScreen = () => {
+    const [matchData, setMatchData] = useState([]);
+    const [gameName, setGameName] = useState("Alexoliete2315");
+    const [tagLine, setTagLine] = useState("1673");
+    const [region, setRegion] = useState("euw1");
+    const [refreshing, setRefreshing] = React.useState(false);
+
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 2000);
+    }, []);
+
+    useEffect(() => {
+        const getMatches = async () => {
+            try {
+                // /summoners/getmatches?gameName=Alexoliete2315&tagLine=1673&region=euw1
+                const URL = `${Environment.RR_API}/summoners/getmatches?gameName=${gameName}&tagLine=${tagLine}&region=${region}`;
+                const response = await fetch(URL, {}).then(response => response.json()).catch(error => console.log(error));
+                setMatchData(response);
+                console.log(URL)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getMatches();
+    }, [refreshing]);
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} style={styles.container}>
             <ProfileCard />
+            <LogoutBtn/>
             {/* Agregamos la sección de estadísticas de perfil */}
             <ProfileStats />
             {/* Agregamos la sección de partidas */}
             <View style={styles.section}>
-                <MatchList />
+                <MatchList matchData={matchData} />
             </View>
         </ScrollView>
     );
@@ -659,6 +702,24 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         marginRight: 5,
         borderRadius: 5,
+    },
+    tagVictory: {
+        color: "#00FF00",
+    },
+    "tagYou Surrendered :(": {
+        color: "#FFFFFF",
+        backgroundColor: "#FF0000",
+    },
+    "tagQuadra Kill!": {
+        color: "#FFFFFF",
+        backgroundColor: "#FFAA00",
+    },
+    "tagPENTAKILL!": {
+        backgroundColor: "#4B0082", /* Color índigo oscuro */
+        color: "#fff",
+    },
+    "tagKilling Spree": {
+        backgroundColor: "#FFD700",
     },
     tagPentakill: {
         backgroundColor: "#FF0000", // Cambiar color si lo deseas

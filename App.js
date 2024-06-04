@@ -40,7 +40,7 @@ export default function App() {
             }
         };
         fetchData();
-    }, []);
+    }, [SecureStore.getItemAsync('user_jwt')]);
 
     useEffect(() => {
         console.log("buh")
