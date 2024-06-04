@@ -61,18 +61,17 @@ const LoginForm = () => {
         setIsPasswordValid(password.length > 5);
     };
 
-    async function handleSignup() {
+    async function handleSignIn() {
         setAuthStatus(null);
         setIsLoading(true);
         try {
-            const response = await fetch(`${Environment.USERS_API}/signup/`, {
-                method: 'POST',
+            const response = await fetch(`${Environment.USERS_API}/signin/`, {
+                method: 'GET',
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username,
                     email,
                     password
                 })
@@ -154,7 +153,7 @@ const LoginForm = () => {
                     onBlur={() => handleBlur('password')}
                 />
             </View>
-            <View style={styles.checkboxContainer}>
+            {/* <View style={styles.checkboxContainer}>
                 <Checkbox
                     style={styles.checkbox}
                     value={isChecked}
@@ -162,10 +161,10 @@ const LoginForm = () => {
                     color={isChecked ? '#4630EB' : undefined}
                 />
                 <Text style={styles.text}>Remember me in this device</Text>
-            </View>
+            </View> */}
             <View style={[styles.btnContainer, fieldsFilled ? styles.activeBtnContainer : styles.disabledBtnContainer]}>
-                <Pressable style={styles.btn} onPress={() => { if (fieldsFilled) { handleSignup() } else { console.log('Fields are not filled yet') }; }}>
-                    <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>SIGN UP</Text>
+                <Pressable style={styles.btn} onPress={() => { if (fieldsFilled) { handleSignIn() } else { console.log('Fields are not filled yet') }; }}>
+                    <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>SIGN IN</Text>
                 </Pressable>
             </View>
             <View style={{ marginTop: 15 }}>
