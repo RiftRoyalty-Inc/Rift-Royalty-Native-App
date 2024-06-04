@@ -32,35 +32,107 @@ const ChampionCard = () => {
   };
 
   const roles = [
-    { name: "Top", imageUri: require("../../../assets/role/Position_Challenger-Top.png") },
-    { name: "Jungler", imageUri: require("../../../assets/role/Position_Challenger-Jungle.png") },
-    { name: "Mid", imageUri: require("../../../assets/role/Position_Challenger-Mid.png") },
-    { name: "Bottom", imageUri: require("../../../assets/role/Position_Challenger-Bot.png") },
-    { name: "Support", imageUri: require("../../../assets/role/Position_Challenger-Support.png") },
+    {
+      name: "Top",
+      imageUri: require("../../../assets/role/Position_Challenger-Top.png"),
+    },
+    {
+      name: "Jungler",
+      imageUri: require("../../../assets/role/Position_Challenger-Jungle.png"),
+    },
+    {
+      name: "Mid",
+      imageUri: require("../../../assets/role/Position_Challenger-Mid.png"),
+    },
+    {
+      name: "Bottom",
+      imageUri: require("../../../assets/role/Position_Challenger-Bot.png"),
+    },
+    {
+      name: "Support",
+      imageUri: require("../../../assets/role/Position_Challenger-Support.png"),
+    },
   ];
   const regions = [
-    { name: "Ionia", imageUri: require("../../../assets/region/Ionia_LoR_Region.webp") }, //este esta bien de prueba},
-    { name: "Demacia", imageUri: require("../../../assets/region/Demacia_LoR_Region.webp") },
-    { name: "Noxus", imageUri: require("../../../assets/region/Noxus_LoR_Region.webp")  },
-    { name: "Freljord", imageUri: require("../../../assets/region/Freljord_LoR_Region.webp")  },
-    { name: "Piltover", imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp")  },
-    { name: "Zaun", imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp")  },
-    { name: "Bilgewater", imageUri: require("../../../assets/region/Bilgewater_LoR_Region.webp") },
-    { name: "Shadow Isles", imageUri: require("../../../assets/region/Shadow_Isles_LoR_Region.webp")},
-    { name: "Shurima", imageUri: require("../../../assets/region/Shurima_LoR_Region.webp")},
-    { name: "Targon", imageUri: require("../../../assets/region/Targon_LoR_Region.webp")},
-    { name: "Bandle City", imageUri: require("../../../assets/region/Bandle_City_LoR_Region.webp")},
-    { name: "Runeterra", imageUri: require("../../../assets/region/Runeterra_LoR_Region.webp")},
+    {
+      name: "Ionia",
+      imageUri: require("../../../assets/region/Ionia_LoR_Region.webp"),
+    }, //este esta bien de prueba},
+    {
+      name: "Demacia",
+      imageUri: require("../../../assets/region/Demacia_LoR_Region.webp"),
+    },
+    {
+      name: "Noxus",
+      imageUri: require("../../../assets/region/Noxus_LoR_Region.webp"),
+    },
+    {
+      name: "Freljord",
+      imageUri: require("../../../assets/region/Freljord_LoR_Region.webp"),
+    },
+    {
+      name: "Piltover",
+      imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp"),
+    },
+    {
+      name: "Zaun",
+      imageUri: require("../../../assets/region/Piltover_Zaun_LoR_Region.webp"),
+    },
+    {
+      name: "Bilgewater",
+      imageUri: require("../../../assets/region/Bilgewater_LoR_Region.webp"),
+    },
+    {
+      name: "Shadow Isles",
+      imageUri: require("../../../assets/region/Shadow_Isles_LoR_Region.webp"),
+    },
+    {
+      name: "Shurima",
+      imageUri: require("../../../assets/region/Shurima_LoR_Region.webp"),
+    },
+    {
+      name: "Targon",
+      imageUri: require("../../../assets/region/Targon_LoR_Region.webp"),
+    },
+    {
+      name: "Bandle City",
+      imageUri: require("../../../assets/region/Bandle_City_LoR_Region.webp"),
+    },
+    {
+      name: "Runeterra",
+      imageUri: require("../../../assets/region/Runeterra_LoR_Region.webp"),
+    },
   ];
   const functions = [
     // { name: "All", imageUri: require("../../../assets/funcion/") },
-    { name: "Assassin", imageUri: require("../../../assets/funcion/Assassin_icon.webp") },
-    { name: "Tank", imageUri: require("../../../assets/funcion/Tank_icon.webp") },
-    { name: "Support", imageUri: require("../../../assets/funcion/Support_icon.webp") },
-    { name: "Mage", imageUri: require("../../../assets/funcion/Mage_icon.webp") },
-    { name: "Fighter", imageUri: require("../../../assets/funcion/Fighter_icon.webp") },
-    { name: "Marksman", imageUri: require("../../../assets/funcion/Marksman_icon.webp") },//ES EL UNICO QUE ES CORRECTO
-    { name: "Specialist", imageUri: require("../../../assets/funcion/Specialist_icon.webp") },
+    {
+      name: "Assassin",
+      imageUri: require("../../../assets/funcion/Assassin_icon.webp"),
+    },
+    {
+      name: "Tank",
+      imageUri: require("../../../assets/funcion/Tank_icon.webp"),
+    },
+    {
+      name: "Support",
+      imageUri: require("../../../assets/funcion/Support_icon.webp"),
+    },
+    {
+      name: "Mage",
+      imageUri: require("../../../assets/funcion/Mage_icon.webp"),
+    },
+    {
+      name: "Fighter",
+      imageUri: require("../../../assets/funcion/Fighter_icon.webp"),
+    },
+    {
+      name: "Marksman",
+      imageUri: require("../../../assets/funcion/Marksman_icon.webp"),
+    }, //ES EL UNICO QUE ES CORRECTO
+    {
+      name: "Specialist",
+      imageUri: require("../../../assets/funcion/Specialist_icon.webp"),
+    },
   ];
   const items = [
     // botas de velocidad
@@ -1598,128 +1670,6 @@ const ChampionCard = () => {
           },
         },
       },
-      build: {
-        starter: {
-          item1: {
-            name: "Relic Shield",
-            category: "Starter",
-            description:
-              "Provides health and executes minions. Good for supporting in lane.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
-          },
-          item2: {
-            name: "Health Potion",
-            category: "Potion",
-            description: "Restores health over time. Helps sustain in lane.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
-          },
-          item3: {
-            name: "Health Potion",
-            category: "Potion",
-            description: "Restores health over time. Helps sustain in lane.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
-          },
-        },
-        core: {
-          item1: {
-            name: "Shurelya's Battlesong",
-            category: "Core",
-            description:
-              "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
-          },
-          item2: {
-            name: "Zeke's Convergence",
-            category: "Core",
-            description:
-              "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
-          },
-          item3: {
-            name: "Redemption",
-            category: "Core",
-            description:
-              "Heals and shields allies in an area. Good for supporting in teamfights.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
-          },
-        },
-        "4th": {
-          option1: {
-            name: "Ardent Censer",
-            category: "Situational",
-            description:
-              "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
-          },
-          option2: {
-            name: "Knight's Vow",
-            category: "Situational",
-            description:
-              "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
-          },
-          option3: {
-            name: "Mikael's Blessing",
-            category: "Situational",
-            description:
-              "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
-          },
-        },
-        "5th": {
-          option1: {
-            name: "Locket of the Iron Solari",
-            category: "Situational",
-            description:
-              "Provides armor, magic resistance, and a shield to nearby allies when activated.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
-          },
-          option2: {
-            name: "Staff of Flowing Water",
-            category: "Situational",
-            description:
-              "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
-          },
-          option3: {
-            name: "Abyssal Mask",
-            category: "Situational",
-            description:
-              "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
-          },
-        },
-        boots: {
-          option1: {
-            name: "Boots of Mobility",
-            category: "Boots",
-            description:
-              "Provides increased movement speed. Enhanced out of combat movement speed.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
-          },
-          option2: {
-            name: "Ionian Boots of Lucidity",
-            category: "Boots",
-            description:
-              "Grants Ability Haste and reduces the cooldown of summoner spells.",
-            image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
-          },
-        },
-      },
     },
     {
       id: "thresh",
@@ -2000,6 +1950,553 @@ const ChampionCard = () => {
               "Grants Ability Haste and reduces the cooldown of summoner spells.",
             image:
               "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+          },
+        },
+      },
+    },
+    {
+      id: "leona",
+      name: "Leona",
+      function: "Support",
+      region: "Targon",
+      role: "Support",
+      description:
+        "Leona, el Radiante Amanecer, es una guerrera imbuida con el fuego del sol. Dotada de una armadura sagrada y un coraje inquebrantable, lleva a cabo la justicia en nombre del Sol. Con su espada y escudo, defiende a los desamparados y castiga a los malvados, demostrando la gloria del sol en cada ataque.",
+      imageUri:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Leona_0.jpg",
+      abilities: [
+        {
+          id: "P",
+          nombre: "Luz del Sol (Pasiva)",
+          descripcion:
+            "Los ataques básicos de Leona infligen daño adicional al activar habilidades y marcan a los enemigos, lo que les permite recibir daño adicional de aliados.",
+          imagenUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/LeonaSunlight.png",
+        },
+        {
+          id: "Q",
+          nombre: "Espada del Amanecer",
+          descripcion:
+            "Leona enciende su espada con energía solar, lo que le otorga un ataque básico mejorado y aturde al enemigo.",
+          imagenUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaShieldOfDaybreak.png",
+        },
+        {
+          id: "W",
+          nombre: "Eclipse",
+          descripcion:
+            "Leona invoca una explosión de energía solar, ganando armadura y resistencia mágica y dañando a los enemigos cercanos. Si los enemigos están marcados por Luz del Sol, se inflige daño adicional.",
+          imagenUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaSolarBarrier.png",
+        },
+        {
+          id: "E",
+          nombre: "Filotormenta",
+          descripcion:
+            "Leona lanza un rayo de energía solar, infligiendo daño y ralentizando al enemigo. Si el enemigo está marcado por Luz del Sol, Leona lo teleporta a su posición.",
+          imagenUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaZenithBlade.png",
+        },
+        {
+          id: "R",
+          nombre: "Llamarada Solar",
+          descripcion:
+            "Leona invoca un rayo de energía solar, infligiendo daño y aturdindo a los enemigos en un área. Los enemigos marcados por Luz del Sol quedan inmovilizados durante más tiempo.",
+          imagenUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaSolarFlare.png",
+        },
+      ],
+      skins: [
+        {
+          name: "Leona Clásica",
+          image:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Leona_0.jpg",
+        },
+        {
+          name: "Leona Valquiria",
+          image:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Leona_1.jpg",
+        },
+        {
+          name: "Leona Defensora de los Ancianos",
+          image:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/centered/Leona_2.jpg",
+        },
+      ],
+      matchups: {
+        strong: [
+          {
+            champion: "Blitzcrank",
+            winRate: 53,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Blitzcrank_0.jpg",
+          },
+          {
+            champion: "Brand",
+            winRate: 52,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Brand_0.jpg",
+          },
+          {
+            champion: "Nami",
+            winRate: 51,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Nami_0.jpg",
+          },
+        ],
+        weak: [
+          {
+            champion: "Nautilus",
+            winRate: 48,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Nautilus_0.jpg",
+          },
+          {
+            champion: "Zyra",
+            winRate: 46,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Zyra_0.jpg",
+          },
+          {
+            champion: "Senna",
+            winRate: 45,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Senna_0.jpg",
+          },
+        ],
+      },
+      runes: {
+        primary: {
+          name: "Resolve",
+          slot1: {
+            option: {
+              name: "Guardian",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Font of Life",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bone Plating",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Revitalize",
+            },
+          },
+        },
+        secondary: {
+          name: "Precision",
+          slot3: {
+            option: {
+              name: "Legend: Haste",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Coup de Grace",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Movement Speed",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Tenacity",
+            },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Relic Shield",
+            category: "Starter",
+            description:
+              "Proporciona salud y ejecuta súbditos. Bueno para apoyar en la calle.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description:
+              "Restaura salud con el tiempo. Ayuda a mantenerse en la calle.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description:
+              "Restaura salud con el tiempo. Ayuda a mantenerse en la calle.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Locket of the Iron Solari",
+            category: "Core",
+            description:
+              "Proporciona armadura, resistencia mágica y un escudo a los aliados cercanos cuando se activa.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+          },
+          item2: {
+            name: "Knight's Vow",
+            category: "Core",
+            description:
+              "Te vincula a un campeón aliado. Si recibe daño, ganas velocidad de movimiento hacia él y una parte del daño recibido se redirige a ti.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+          },
+          item3: {
+            name: "Zeke's Convergence",
+            category: "Core",
+            description:
+              "Otorga armadura, resistencia mágica y proporciona un efecto de área ardiente cuando lanzas tu definitiva.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Redemption",
+            category: "Situational",
+            description:
+              "Cura y protege a los aliados en un área. Bueno para apoyar en peleas de equipo.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+          },
+          option2: {
+            name: "Shurelya's Battlesong",
+            category: "Situational",
+            description:
+              "Proporciona rapidez de habilidad, salud y velocidad de movimiento. Mejora la velocidad de movimiento de los aliados.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+          },
+          option3: {
+            name: "Ardent Censer",
+            category: "Situational",
+            description:
+              "Aumenta la velocidad de ataque y otorga daño adicional al golpear a campeones aliados afectados por tus escudos o curaciones.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Mikael's Blessing",
+            category: "Situational",
+            description:
+              "Elimina todos los efectos de control de masas de un campeón aliado y les otorga resistencia al ralentizamiento.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+          },
+          option2: {
+            name: "Staff of Flowing Water",
+            category: "Situational",
+            description:
+              "Proporciona Poder de Habilidad, Regeneración de Maná y mejora la velocidad de movimiento y el AP de los aliados cuando los curas o proteges.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+          },
+          option3: {
+            name: "Abyssal Mask",
+            category: "Situational",
+            description:
+              "Concede resistencia mágica, salud y aumenta el daño mágico infligido a los enemigos en un área.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Mobility",
+            category: "Boots",
+            description:
+              "Proporciona velocidad de movimiento aumentada. Velocidad de movimiento mejorada fuera de combate.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+          },
+          option2: {
+            name: "Ionian Boots of Lucidity",
+            category: "Boots",
+            description:
+              "Concede rapidez de habilidad y reduce el enfriamiento de las habilidades de invocador.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+          },
+        },
+      },
+    },
+    {
+      id: "jinx",
+      name: "Jinx",
+      imageUri:
+        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/Jinx0.png",
+      abilities: [
+        {
+          id: "Q",
+          name: "Cambiar de Armas!",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxQ.png",
+        },
+        {
+          id: "W",
+          name: "Zap!",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxW.png",
+        },
+        {
+          id: "E",
+          name: "Zaparrastroso",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxE.png",
+        },
+        {
+          id: "R",
+          name: "Supermegacohete Infernal",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxR.png",
+        },
+      ],
+      skins: [
+        {
+          name: "Jinx Lanzallamas",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_1.jpg",
+        },
+        {
+          name: "Jinx Pajarraca",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_2.jpg",
+        },
+        {
+          name: "Jinx Sorpresas Divertidas",
+          imageUri:
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_3.jpg",
+        },
+      ],
+      matchups: {
+        strong: [
+          {
+            champion: "Draven",
+            winRate: 52,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Draven_0.jpg",
+          },
+          {
+            champion: "Caitlyn",
+            winRate: 53,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Caitlyn_0.jpg",
+          },
+          {
+            champion: "Lucian",
+            winRate: 51,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Lucian_0.jpg",
+          },
+        ],
+        weak: [
+          {
+            champion: "Kai'Sa",
+            winRate: 48,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Kaisa_0.jpg",
+          },
+          {
+            champion: "Tristana",
+            winRate: 47,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Tristana_0.jpg",
+          },
+          {
+            champion: "Ezreal",
+            winRate: 46,
+            icon: "https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/Ezreal_0.jpg",
+          },
+        ],
+      },
+      runes: {
+        primary: {
+          name: "Precision",
+          slot1: {
+            option: {
+              name: "Conqueror",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Triumph",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Legend: Bloodline",
+            },
+          },
+          slot4: {
+            option: {
+              name: "Coup de Grace",
+            },
+          },
+        },
+        secondary: {
+          name: "Sorcery",
+          slot1: {
+            option: {
+              name: "Celerity",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Gathering Storm",
+            },
+          },
+        },
+        statsMod: {
+          slot1: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot2: {
+            option: {
+              name: "Adaptive Force",
+            },
+          },
+          slot3: {
+            option: {
+              name: "Bonus Health",
+            },
+          },
+        },
+      },
+      build: {
+        starter: {
+          item1: {
+            name: "Doran's Blade",
+            category: "Starter",
+            description:
+              "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+          },
+          item2: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+          item3: {
+            name: "Health Potion",
+            category: "Potion",
+            description: "Restores health over time. Helps sustain in lane.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+          },
+        },
+        core: {
+          item1: {
+            name: "Infinity Edge",
+            category: "Core",
+            description:
+              "Provides a massive amount of Attack Damage and enhances critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+          },
+          item2: {
+            name: "Essence Reaver",
+            category: "Core",
+            description:
+              "Provides Attack Damage, Cooldown Reduction, and mana sustain. Good for extended fights.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3508.png",
+          },
+          item3: {
+            name: "Stormrazor",
+            category: "Core",
+            description:
+              "Provides Attack Damage, Attack Speed, and a burst of movement speed on critical strikes.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3095.png",
+          },
+        },
+        "4th": {
+          option1: {
+            name: "Bloodthirster",
+            category: "Situational",
+            description:
+              "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+          },
+          option2: {
+            name: "Phantom Dancer",
+            category: "Situational",
+            description:
+              "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+          },
+          option3: {
+            name: "Guardian Angel",
+            category: "Situational",
+            description:
+              "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+          },
+        },
+        "5th": {
+          option1: {
+            name: "Lord Dominik's Regards",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and increases damage against high health targets.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+          },
+          option2: {
+            name: "Mortal Reminder",
+            category: "Situational",
+            description:
+              "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+          },
+          option3: {
+            name: "Rapid Firecannon",
+            category: "Situational",
+            description:
+              "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+          },
+        },
+        boots: {
+          option1: {
+            name: "Boots of Swiftness",
+            category: "Boots",
+            description:
+              "Provides movement speed and reduces the effectiveness of slows.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223009.png",
+          },
+          option2: {
+            name: "Berserker's Greaves",
+            category: "Boots",
+            description:
+              "Grants Attack Speed. Good for increasing damage output.",
+            image:
+              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223006.png",
           },
         },
       },
