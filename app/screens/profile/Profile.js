@@ -13,7 +13,6 @@ import Environment from "../../utils/constants/Environment";
 import colors from "../../utils/constants/colors";
 import LogoutBtn from "../../components/profile/LogoutBtn";
 
-
 const ProfileCard = () => {
     return (
         <View style={styles.container}>

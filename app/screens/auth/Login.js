@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     Pressable,
     SafeAreaView,
@@ -16,7 +16,6 @@ import colors from '../../utils/constants/colors';
 const Login = () => {
 
     const [visibleForm, setVisibleForm] = useState('signup');
-
     return (
         <SafeAreaView style={styles.content}>
             {/* BOTONES DE SIGN UP Y SIGN IN */}

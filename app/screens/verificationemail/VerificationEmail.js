@@ -7,8 +7,10 @@ import Environment from '../../utils/constants/Environment';
 import * as Keychain from 'react-native-keychain';
 import * as SecureStore from 'expo-secure-store';
 import routes from '../../utils/constants/routes';
+import { AuthContext } from '../../../App';
 
 const VerificationEmail = () => {
+    const {signUp} = React.useContext(AuthContext);
     const route = useRoute();
     const { email } = route.params;
     const [code, setCode] = React.useState(['', '', '', '']);
@@ -44,11 +46,7 @@ const VerificationEmail = () => {
         console.log(json);
         if (json.code == '1') {
             console.log("saving log in...");
-            await SecureStore.setItemAsync('user_jwt', json.token);
-            console.log('user data saved');
-            if (await SecureStore.getItemAsync('userData') != null) {
-                console.log('user data sucessfully saved & retrieved');
-            }
+            signUp(json.token);
         }
         setAlertMessage(json.msg);
     }

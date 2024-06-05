@@ -31,24 +31,8 @@ const RegisterForm = () => {
     const [isEmailTouched, setIsEmailTouched] = useState(false);
     const [isUsernameTouched, setIsUsernameTouched] = useState(false);
     const [isPasswordTouched, setIsPasswordTouched] = useState(false);
-
-
-    const logout = async () => {
-        try {
-            const condition = await SecureStore.getItemAsync('userData');
-            if (condition != null) {
-                console.log("User logged in");
-            }else{
-            }
-        } catch (e) {
-            console.log("Error logging out");
-            console.log(e);
-        }
-    }
-
-    useEffect(() => {
-        logout();
-    }, [])
+    const [errorMsg, setErrorMsg] = useState('');
+    const [errorCode, setErrorCode] = useState('');
 
     useEffect(() => {
         if (isChecked && isEmailValid && isUsernameValid && isPasswordValid) {
@@ -95,7 +79,8 @@ const RegisterForm = () => {
             });
             const json = await response.json();
             console.log(json);
-            setAuthStatus(json.msg);
+            setErrorCode(json.code);
+            setErrorMsg(json.msg);
         } catch (error) {
             console.error(error);
         } finally {
@@ -153,7 +138,9 @@ const RegisterForm = () => {
                     onFocus={() => handleFocus('email')}
                     onBlur={() => handleBlur('email')}
                 />
+                {errorCode == '300' ? <Text style={styles.errorMsg}>{errorMsg}</Text> : <></>}
             </View>
+
             <View style={{ marginVertical: 10 }}>
                 <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>Username</Text>
                 <TextInput
@@ -170,6 +157,7 @@ const RegisterForm = () => {
                     onFocus={() => handleFocus('username')}
                     onBlur={() => handleBlur('username')}
                 />
+                {errorCode == '301' ? <Text style={styles.errorMsg}>{errorMsg}</Text> : <></>}
             </View>
             <View>
                 <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>Password</Text>
@@ -216,6 +204,10 @@ const styles = StyleSheet.create({
     },
     focusedInput: {
         borderColor: colors.contrast,
+    },
+    errorMsg: {
+        color: colors.error,
+        fontFamily: fonts.K2D_B
     },
     validInput: {
         borderColor: 'green',

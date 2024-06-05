@@ -16,50 +16,33 @@ import colors from '../../utils/constants/colors';
 import { SECRET_KEY } from '@env';
 import * as Crypto from 'expo-crypto';
 import sjcl from 'sjcl';
+import { AuthContext } from '../../../App';
 
 const LoginForm = () => {
+
+    const {signIn} = React.useContext(AuthContext);
     const navigation = useNavigation();
     const [authStatus, setAuthStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const [username, onChangeUsername] = useState('');
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
-    const [isChecked, setChecked] = useState(false);
-    const [fieldsFilled, setFieldsFilled] = useState(false);
+    const [fieldsFilled, setFieldsFilled] = useState(true);
     const [focusedInput, setFocusedInput] = useState(null);
-    const [isEmailValid, setIsEmailValid] = useState(true);
-    const [isUsernameValid, setIsUsernameValid] = useState(true);
-    const [isPasswordValid, setIsPasswordValid] = useState(true);
+    const [isEmailValid, setIsEmailValid] = useState(false);
+    const [isPasswordValid, setIsPasswordValid] = useState(false);
     const [isEmailTouched, setIsEmailTouched] = useState(false);
-    const [isUsernameTouched, setIsUsernameTouched] = useState(false);
     const [isPasswordTouched, setIsPasswordTouched] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
+    const [errorCode, setErrorCode] = useState('');
 
     useEffect(() => {
-        if (isChecked && isEmailValid && isUsernameValid && isPasswordValid) {
+        console.log(email, password);
+        if (email !== '' && password !== '') {
             setFieldsFilled(true);
         } else {
             setFieldsFilled(false);
         }
-    }, [isChecked, username, email, password]);
-
-    useEffect(() => {
-        validateEmail(email);
-        validateUsername(username);
-        validatePassword(password);
-    }, [email, username, password]);
-
-    const validateEmail = (email) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        setIsEmailValid(emailRegex.test(email));
-    };
-
-    const validateUsername = (username) => {
-        setIsUsernameValid(username.length > 5);
-    };
-
-    const validatePassword = (password) => {
-        setIsPasswordValid(password.length > 5);
-    };
+    }, [email, password]);
 
     async function handleSignIn() {
         setAuthStatus(null);
@@ -69,16 +52,16 @@ const LoginForm = () => {
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'email': email,
+                    'password': password
                 },
-                body: JSON.stringify({
-                    email,
-                    password
-                })
             });
             const json = await response.json();
             console.log(json);
-            setAuthStatus(json.msg);
+            setErrorCode(json.code);
+            setErrorMsg(json.msg);
+            signIn(json.token);
         } catch (error) {
             console.error(error);
         } finally {
@@ -89,7 +72,6 @@ const LoginForm = () => {
     useEffect(() => {
         if (authStatus === 'OK') {
             console.log('Navigating to Login screen');
-            navigation.navigate(routes.VERIFICATION_EMAIL, { email });
         } else if (authStatus === 'USER_NOT_CREATED') {
             console.log('User not created');
         }
@@ -162,13 +144,13 @@ const LoginForm = () => {
                 />
                 <Text style={styles.text}>Remember me in this device</Text>
             </View> */}
+            <View style={styles.msgContainer}>
+                <Text style={errorCode != '1' ? styles.errorMsg : styles.successMsg}>{errorMsg}</Text>
+            </View>
             <View style={[styles.btnContainer, fieldsFilled ? styles.activeBtnContainer : styles.disabledBtnContainer]}>
                 <Pressable style={styles.btn} onPress={() => { if (fieldsFilled) { handleSignIn() } else { console.log('Fields are not filled yet') }; }}>
                     <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>SIGN IN</Text>
                 </Pressable>
-            </View>
-            <View style={{ marginTop: 15 }}>
-                {getAuthStatus()}
             </View>
         </View>
     )
@@ -177,6 +159,17 @@ const LoginForm = () => {
 const styles = StyleSheet.create({
     unfocusedInput: {
         borderColor: colors.lightPurple,
+    },
+    msgContainer:{
+        
+    },
+    errorMsg:{
+        color: colors.error,
+        fontFamily: fonts.K2D_B
+    },
+    successMsg:{
+        color: colors.success,
+        fontFamily: fonts.K2D_B
     },
     focusedInput: {
         borderColor: colors.contrast,
