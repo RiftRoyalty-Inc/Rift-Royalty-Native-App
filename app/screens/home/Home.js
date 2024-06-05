@@ -275,7 +275,7 @@ const Home = () => {
                         <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                             <Text style={{ flex: 1, color: 'white' }}>{item.id}</Text>
                             <View style={{ flex: 8, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: 10 }}>
-                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.9.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 36, height: 36 }} />
+                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 36, height: 36 }} />
                                 <Text style={{ color: 'white' }}>{`${item.gameName}#${item.tagLine}`}</Text>
                             </View>
                             <Text style={{ flex: 3, textAlign: 'center', color: 'white' }}>{`${item.wins}/${item.losses}`}</Text>

@@ -8,16 +8,16 @@ import React from 'react'
 import colors from '../../utils/constants/colors'
 import fonts from '../../utils/constants/fonts'
 import * as SecureStore from 'expo-secure-store';
-
+import { AuthContext } from '../../../App';
 const LogoutBtn = () => {
-
+    const { signOut } = React.useContext(AuthContext);
     const handleLogout = async() => {
-        const remove = await SecureStore.deleteItemAsync('user_jwt');
-        console.log(await SecureStore.getItemAsync('user_jwt'));
+        const remove = await SecureStore.deleteItemAsync('userToken');
+        console.log(await SecureStore.getItemAsync('userToken'));
     }
     return (
         <View style={styles.container}>
-            <Pressable style={styles.btn} onPress={handleLogout}>
+            <Pressable style={styles.btn} onPress={signOut}>
                 <Text style={styles.text}>Logout!</Text>
             </Pressable>
         </View>
