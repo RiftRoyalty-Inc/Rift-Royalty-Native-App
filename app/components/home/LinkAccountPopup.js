@@ -68,7 +68,6 @@ const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
         }
 
     }
-
     useEffect(() => {
         setActiveStep(1);
         setCurrentProfileIconId(null);

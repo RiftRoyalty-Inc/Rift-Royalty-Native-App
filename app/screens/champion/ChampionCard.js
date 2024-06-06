@@ -249,7 +249,6 @@ const ChampionCard = () => {
         "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3020.png",
     },
   ];
-
   const championsData = [
     {
       id: "jhin",

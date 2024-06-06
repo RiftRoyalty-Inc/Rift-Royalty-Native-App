@@ -46,7 +46,6 @@ const VerificationEmail = () => {
         }
         setAlertMessage(json.msg);
     }
-
     /**
      * Updates the code state with the new input text at the specified index.
      * If the input text is not empty and the index is less than 3, focuses on the next input.

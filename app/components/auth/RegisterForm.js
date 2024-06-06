@@ -117,7 +117,6 @@ const RegisterForm = () => {
         if (inputName === 'username') setIsUsernameTouched(true);
         if (inputName === 'password') setIsPasswordTouched(true);
     };
-
     return (
         <View>
             <View>

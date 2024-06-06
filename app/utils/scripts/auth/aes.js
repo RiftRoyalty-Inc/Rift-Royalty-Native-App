@@ -3,7 +3,7 @@ import { SECRET_KEY } from '@env';  // Import the secret key from the .env file
 import { Base64 } from "js-base64";
 
 export const Encrypt = (word) => {
-    // return CryptoJS.AES.encrypt(word, SECRET_KEY).toString();
+    // returnCryptoJS.AES.encrypt(word, SECRET_KEY).toString();
     return Base64.encode(word);
 };
 

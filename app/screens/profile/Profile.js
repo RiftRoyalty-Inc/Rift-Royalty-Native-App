@@ -419,7 +419,6 @@ const ProfileScreen = () => {
             isLinked();
         }, [isLinked])
     );
-
     const onRefresh = useCallback(() => {
         setRefreshing(true);
         setTimeout(() => {

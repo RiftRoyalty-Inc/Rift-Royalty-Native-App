@@ -381,7 +381,6 @@ const ProfileStats = () => {
 function teste() {
     console.log("buh");
 }
-
 const ProfileSearch = () => {
     const [matchData, setMatchData] = useState([]);
     const [refreshing, setRefreshing] = useState(false);

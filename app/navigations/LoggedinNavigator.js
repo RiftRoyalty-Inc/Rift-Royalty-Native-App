@@ -25,5 +25,4 @@ function LoggedInNavigator() {
         </Stack.Navigator>
     );
 }
-
 export default LoggedInNavigator;

@@ -82,7 +82,6 @@ const Home = () => {
         }
         fetchData();
     }, [search]);
-
     const renderImagenSegunTier = (item) => {
         let imagenSource = null;
         switch (item) {

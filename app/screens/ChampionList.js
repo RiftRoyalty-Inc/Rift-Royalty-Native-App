@@ -18,7 +18,6 @@ const ChampionListScreen = () => {
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
-
   const handleChampionPress = (champId) => {
     console.log("CHAMPID:",{champId});
     navigation.navigate("ChampionCard", { champId });
