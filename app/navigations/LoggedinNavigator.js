@@ -9,6 +9,7 @@ import fonts from '../utils/constants/fonts';
 import HeaderAuth from '../components/auth/HeaderAuth';
 import VerificationEmail from '../screens/verificationemail/VerificationEmail';
 import ChampionCard from '../screens/champion/ChampionCard';
+import ProfileSearch from '../screens/profilesearch/ProfileSearch';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ function LoggedInNavigator() {
             <Stack.Screen name={routes.CHAMPION_LIST} component={BottomTabNavigator} />
             <Stack.Screen name={routes.CHAMPION_CARD} component={ChampionCard} options={{header: () => HeaderAuth()}} />
             <Stack.Screen name={routes.ITEM_LIST} component={BottomTabNavigator}/>
+            <Stack.Screen name={routes.PROFILE_SEARCH} component={ProfileSearch}/>
         </Stack.Navigator>
     );
 }

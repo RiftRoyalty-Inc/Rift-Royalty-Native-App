@@ -141,7 +141,7 @@ const ChampionCard = () => {
       name: "Botas de Velocidad",
       description: "Aumenta levemente la velocidad de movimiento.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1001.png",
     },
     // cristal de rubi
     {
@@ -149,7 +149,7 @@ const ChampionCard = () => {
       name: "Cristal de Rubí",
       description: "Proporciona un poco de salud adicional.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1004.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1004.png",
     },
     // espada larga
     {
@@ -157,7 +157,7 @@ const ChampionCard = () => {
       name: "Espada Larga",
       description: "Aumenta el daño de ataque.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1011.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1011.png",
     },
     //capa de negatron
     {
@@ -165,7 +165,7 @@ const ChampionCard = () => {
       name: "Capa de Negatron",
       description: "Proporciona resistencia mágica.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1026.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1026.png",
     },
     //varita amplificadora
     {
@@ -173,7 +173,7 @@ const ChampionCard = () => {
       name: "Varita Amplificadora",
       description: "Aumenta el poder de habilidad.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1052.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1052.png",
     },
     //poción
     {
@@ -181,7 +181,7 @@ const ChampionCard = () => {
       name: "Poción Roja",
       description: "Restaura salud.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1054.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1054.png",
     },
     //poción
     {
@@ -189,7 +189,7 @@ const ChampionCard = () => {
       name: "Poción Azul",
       description: "Restaura maná.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1055.png",
     },
     //botas del errante
     {
@@ -197,7 +197,7 @@ const ChampionCard = () => {
       name: "Botas del Errante",
       description: "Aumenta la velocidad de movimiento.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1029.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1029.png",
     },
     //botas de mercurio
     {
@@ -205,7 +205,7 @@ const ChampionCard = () => {
       name: "Botas de Mercurio",
       description: "Proporciona resistencia a control de masas.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1033.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1033.png",
     },
     //cuchilla oscura
     {
@@ -213,7 +213,7 @@ const ChampionCard = () => {
       name: "Cuchilla Oscura",
       description: "Aumenta el daño de ataque y velocidad de ataque.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1053.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1053.png",
     },
     //heraldo
     {
@@ -221,7 +221,7 @@ const ChampionCard = () => {
       name: "Heraldo de Zeke",
       description: "Proporciona estadísticas adicionales a un aliado cercano.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1056.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1056.png",
     },
     //espada de doran
     {
@@ -229,7 +229,7 @@ const ChampionCard = () => {
       name: "Espada de Doran",
       description: "Proporciona estadísticas adicionales.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1082.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1082.png",
     },
     //cetro abisal
     {
@@ -238,7 +238,7 @@ const ChampionCard = () => {
       description:
         "Aumenta el poder de habilidad y proporciona resistencia mágica.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3001.png",
     },
     //sombrero de rabadon
     {
@@ -246,7 +246,7 @@ const ChampionCard = () => {
       name: "Sombrero de Rabadon",
       description: "Aumenta considerablemente el poder de habilidad.",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3020.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3020.png",
     },
   ];
 
@@ -268,7 +268,7 @@ const ChampionCard = () => {
           descripcion:
             "Cada ataque básico de Jhin es un crítico que inflige daño adicional basado en el porcentaje de vida restante del objetivo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Jhin_P.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/Jhin_P.png",
         },
         {
           id: "Q",
@@ -276,7 +276,7 @@ const ChampionCard = () => {
           descripcion:
             "Jhin lanza una granada que rebota entre los objetivos, infligiendo daño físico con cada rebote. La granada explota al impactar a un cuarto objetivo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JhinQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JhinQ.png",
         },
         {
           id: "W",
@@ -284,7 +284,7 @@ const ChampionCard = () => {
           descripcion:
             "Jhin coloca una trampa de flores mortales que se activa al ser pisada por un enemigo, infligiendo daño y ralentizando a los enemigos cercanos.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JhinW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JhinW.png",
         },
         {
           id: "E",
@@ -292,7 +292,7 @@ const ChampionCard = () => {
           descripcion:
             "Jhin lanza un abanico de cuchillas que daña y revela a los enemigos alcanzados. Si una trampa de flores mortales está dentro del área, esta explotará.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JhinE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JhinE.png",
         },
         {
           id: "R",
@@ -300,7 +300,7 @@ const ChampionCard = () => {
           descripcion:
             "Jhin desenfunda su arma y dispara a los campeones enemigos, infligiendo daño físico. Puede disparar hasta cuatro veces, con el cuarto disparo siendo un disparo crítico y con un rango extendido.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JhinR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JhinR.png",
         },
       ],
       skins: [
@@ -419,21 +419,21 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1055.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -443,7 +443,7 @@ const ChampionCard = () => {
             description:
               "Provides a massive amount of Attack Damage and enhances critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/227031.png",
           },
           item2: {
             name: "Essence Reaver",
@@ -451,7 +451,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Cooldown Reduction, and mana sustain. Good for extended fights.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3508.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3508.png",
           },
           item3: {
             name: "Stormrazor",
@@ -459,7 +459,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Attack Speed, and a burst of movement speed on critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3095.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3095.png",
           },
         },
         "4th": {
@@ -469,7 +469,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3072.png",
           },
           option2: {
             name: "Phantom Dancer",
@@ -477,7 +477,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3046.png",
           },
           option3: {
             name: "Guardian Angel",
@@ -485,7 +485,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3026.png",
           },
         },
         "5th": {
@@ -495,7 +495,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and increases damage against high health targets.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3036.png",
           },
           option2: {
             name: "Mortal Reminder",
@@ -503,7 +503,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3033.png",
           },
           option3: {
             name: "Rapid Firecannon",
@@ -511,7 +511,7 @@ const ChampionCard = () => {
             description:
               "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3094.png",
           },
         },
         boots: {
@@ -521,7 +521,7 @@ const ChampionCard = () => {
             description:
               "Provides movement speed and reduces the effectiveness of slows.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223009.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/223009.png",
           },
           option2: {
             name: "Berserker's Greaves",
@@ -529,7 +529,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed. Good for increasing damage output.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223006.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/223006.png",
           },
         },
       },
@@ -551,7 +551,7 @@ const ChampionCard = () => {
           descripcion:
             "Al tocar a un campeón aliado, Rakan recibe un escudo. Si Rakan toca a un campeón aliado que sea su compañera de equipo, ambos reciben un escudo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Rakan_P.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/Rakan_P.png",
         },
         {
           id: "Q",
@@ -559,7 +559,7 @@ const ChampionCard = () => {
           descripcion:
             "Rakan lanza una pluma que cura a sus aliados que estén cerca.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/RakanQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/RakanQ.png",
         },
         {
           id: "W",
@@ -567,7 +567,7 @@ const ChampionCard = () => {
           descripcion:
             "Rakan salta hacia un campeón enemigo, lo encanta y se mueve detrás de ellos.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/RakanW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/RakanW.png",
         },
         {
           id: "E",
@@ -575,7 +575,7 @@ const ChampionCard = () => {
           descripcion:
             "Rakan desata una ráfaga relampagueante que daña a los enemigos alcanzados y lo cura a él y a sus aliados cercanos.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/RakanE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/RakanE.png",
         },
         {
           id: "R",
@@ -583,7 +583,7 @@ const ChampionCard = () => {
           descripcion:
             "Rakan crea una tormenta de plumas alrededor de él que ralentiza a los enemigos y lo deja listo para lanzarse hacia adelante.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/RakanR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/RakanR.png",
         },
       ],
       skins: [
@@ -702,21 +702,21 @@ const ChampionCard = () => {
             description:
               "Provides health and executes minions. Good for supporting in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3302.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -726,7 +726,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2065.png",
           },
           item2: {
             name: "Zeke's Convergence",
@@ -734,7 +734,7 @@ const ChampionCard = () => {
             description:
               "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3050.png",
           },
           item3: {
             name: "Redemption",
@@ -742,7 +742,7 @@ const ChampionCard = () => {
             description:
               "Heals and shields allies in an area. Good for supporting in teamfights.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3107.png",
           },
         },
         "4th": {
@@ -752,7 +752,7 @@ const ChampionCard = () => {
             description:
               "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3504.png",
           },
           option2: {
             name: "Knight's Vow",
@@ -760,7 +760,7 @@ const ChampionCard = () => {
             description:
               "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3109.png",
           },
           option3: {
             name: "Mikael's Blessing",
@@ -768,7 +768,7 @@ const ChampionCard = () => {
             description:
               "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3222.png",
           },
         },
         "5th": {
@@ -778,7 +778,7 @@ const ChampionCard = () => {
             description:
               "Provides armor, magic resistance, and a shield to nearby allies when activated.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3190.png",
           },
           option2: {
             name: "Staff of Flowing Water",
@@ -786,7 +786,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6617.png",
           },
           option3: {
             name: "Abyssal Mask",
@@ -794,7 +794,7 @@ const ChampionCard = () => {
             description:
               "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3001.png",
           },
         },
         boots: {
@@ -804,7 +804,7 @@ const ChampionCard = () => {
             description:
               "Provides increased movement speed. Enhanced out of combat movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1001.png",
           },
           option2: {
             name: "Ionian Boots of Lucidity",
@@ -812,7 +812,7 @@ const ChampionCard = () => {
             description:
               "Grants Ability Haste and reduces the cooldown of summoner spells.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3158.png",
           },
         },
       },
@@ -834,7 +834,7 @@ const ChampionCard = () => {
           descripcion:
             "Pyke's health cannot be improved except through leveling up.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/PykeP.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/PykeP.png",
         },
         {
           id: "Q",
@@ -842,7 +842,7 @@ const ChampionCard = () => {
           descripcion:
             "Pyke hurls his harpoon forward, impaling the first enemy struck and pulling them a fixed distance towards him. The move will refund cooldown and mana if successfully used to pull an enemy.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/PykeQ.png",
         },
         {
           id: "W",
@@ -850,7 +850,7 @@ const ChampionCard = () => {
           descripcion:
             "Pyke dives into spectral waters, becoming invisible and gaining a significant increase in movement speed that decays over a few seconds.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/PykeW.png",
         },
         {
           id: "E",
@@ -858,7 +858,7 @@ const ChampionCard = () => {
           descripcion:
             "Pyke dashes, leaving behind a drowned phantom. After a delay, the phantom returns to Pyke, damaging and stunning enemy champions it passes through.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/PykeE.png",
         },
         {
           id: "R",
@@ -866,7 +866,7 @@ const ChampionCard = () => {
           descripcion:
             "Pyke strikes in an X-shaped area, executing enemies below a certain threshold of health and granting additional gold to an assisting ally.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/PykeR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/PykeR.png",
         },
       ],
       skins: [
@@ -990,21 +990,21 @@ const ChampionCard = () => {
             description:
               "Provides health and executes minions. Good for supporting in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3302.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -1014,7 +1014,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2065.png",
           },
           item2: {
             name: "Zeke's Convergence",
@@ -1022,7 +1022,7 @@ const ChampionCard = () => {
             description:
               "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3050.png",
           },
           item3: {
             name: "Redemption",
@@ -1030,7 +1030,7 @@ const ChampionCard = () => {
             description:
               "Heals and shields allies in an area. Good for supporting in teamfights.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3107.png",
           },
         },
         "4th": {
@@ -1040,7 +1040,7 @@ const ChampionCard = () => {
             description:
               "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3504.png",
           },
           option2: {
             name: "Knight's Vow",
@@ -1048,7 +1048,7 @@ const ChampionCard = () => {
             description:
               "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3109.png",
           },
           option3: {
             name: "Mikael's Blessing",
@@ -1056,7 +1056,7 @@ const ChampionCard = () => {
             description:
               "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3222.png",
           },
         },
         "5th": {
@@ -1066,7 +1066,7 @@ const ChampionCard = () => {
             description:
               "Provides armor, magic resistance, and a shield to nearby allies when activated.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3190.png",
           },
           option2: {
             name: "Staff of Flowing Water",
@@ -1074,7 +1074,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6617.png",
           },
           option3: {
             name: "Abyssal Mask",
@@ -1082,7 +1082,7 @@ const ChampionCard = () => {
             description:
               "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3001.png",
           },
         },
         boots: {
@@ -1092,7 +1092,7 @@ const ChampionCard = () => {
             description:
               "Provides increased movement speed. Enhanced out of combat movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1001.png",
           },
           option2: {
             name: "Ionian Boots of Lucidity",
@@ -1100,7 +1100,7 @@ const ChampionCard = () => {
             description:
               "Grants Ability Haste and reduces the cooldown of summoner spells.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3158.png",
           },
         },
       },
@@ -1122,7 +1122,7 @@ const ChampionCard = () => {
           descripcion:
             "Después de dos segundos de moverse, Yasuo obtiene un escudo que bloquea daño de próximo golpe. El daño del escudo aumenta con la velocidad de movimiento.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Yasuo_P.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/Yasuo_P.png",
         },
         {
           id: "Q",
@@ -1130,7 +1130,7 @@ const ChampionCard = () => {
           descripcion:
             "Yasuo golpea frente a él con su espada, infligiendo daño físico. Golpear con el borde del ataque aumenta el daño.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoQ1Wrapper.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/YasuoQ1Wrapper.png",
         },
         {
           id: "W",
@@ -1138,7 +1138,7 @@ const ChampionCard = () => {
           descripcion:
             "Yasuo crea un muro de viento que bloquea proyectiles entrantes durante varios segundos.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/YasuoW.png",
         },
         {
           id: "E",
@@ -1146,7 +1146,7 @@ const ChampionCard = () => {
           descripcion:
             "Yasuo se desliza hacia un enemigo, lanzándolo al aire y permitiéndole atacarlo en el aire.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/YasuoE.png",
         },
         {
           id: "R",
@@ -1154,7 +1154,7 @@ const ChampionCard = () => {
           descripcion:
             "Yasuo salta a un enemigo, lanzándolo al aire y siguiéndolo con una serie de golpes de espada. Al aterrizar, Yasuo inflige daño adicional según el número de golpes de espada lanzados durante la habilidad.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/YasuoR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/YasuoR.png",
         },
       ],
       skins: [
@@ -1273,21 +1273,21 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1055.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -1297,7 +1297,7 @@ const ChampionCard = () => {
             description:
               "Provides a massive amount of Attack Damage and enhances critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/227031.png",
           },
           item2: {
             name: "Phantom Dancer",
@@ -1305,7 +1305,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3046.png",
           },
           item3: {
             name: "Sterak's Gage",
@@ -1313,7 +1313,7 @@ const ChampionCard = () => {
             description:
               "Provides Health, Attack Damage, and a shield when taking a large amount of damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3053.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3053.png",
           },
         },
         "4th": {
@@ -1323,7 +1323,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3072.png",
           },
           option2: {
             name: "Guardian Angel",
@@ -1331,7 +1331,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3026.png",
           },
           option3: {
             name: "Mortal Reminder",
@@ -1339,7 +1339,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3033.png",
           },
         },
         "5th": {
@@ -1349,7 +1349,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and increases damage against high health targets.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3036.png",
           },
           option2: {
             name: "Mercurial Scimitar",
@@ -1357,7 +1357,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Magic Resist, and a Quicksilver active to remove crowd control effects.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3139.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3139.png",
           },
           option3: {
             name: "Rapid Firecannon",
@@ -1365,7 +1365,7 @@ const ChampionCard = () => {
             description:
               "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3094.png",
           },
         },
         boots: {
@@ -1375,7 +1375,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed. Good for increasing damage output.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3006.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3006.png",
           },
           option2: {
             name: "Ninja Tabi",
@@ -1383,7 +1383,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor and reduces damage taken from basic attacks.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3047.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3047.png",
           },
         },
       },
@@ -1405,7 +1405,7 @@ const ChampionCard = () => {
           descripcion:
             "Los ataques básicos de Vayne le otorgan un porcentaje de daño adicional basado en la vida máxima del enemigo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Vayne_P.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/Vayne_P.png",
         },
         {
           id: "Q",
@@ -1413,7 +1413,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne dispara rápidamente a un objetivo, infligiendo daño físico adicional y aumentando temporalmente su velocidad de movimiento.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneTumble.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/VayneTumble.png",
         },
         {
           id: "W",
@@ -1421,7 +1421,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne se desliza hacia una dirección, evadiendo cualquier daño en el camino y potenciando su próximo ataque básico.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneSilveredBolts.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/VayneSilveredBolts.png",
         },
         {
           id: "E",
@@ -1429,7 +1429,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne dispara un proyectil que aturde al primer enemigo impactado contra una pared cercana.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneCondemn.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/VayneCondemn.png",
         },
         {
           id: "R",
@@ -1437,7 +1437,7 @@ const ChampionCard = () => {
           descripcion:
             "Vayne fortalece su resolución, aumentando su daño de ataque y otorgándole invisibilidad parcial durante un corto periodo de tiempo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/VayneInquisition.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/VayneInquisition.png",
         },
       ],
       skins: [
@@ -1556,21 +1556,21 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1055.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -1580,7 +1580,7 @@ const ChampionCard = () => {
             description:
               "Provides a massive amount of Attack Damage and enhances critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/227031.png",
           },
           item2: {
             name: "Phantom Dancer",
@@ -1588,7 +1588,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3046.png",
           },
           item3: {
             name: "Sterak's Gage",
@@ -1596,7 +1596,7 @@ const ChampionCard = () => {
             description:
               "Provides Health, Attack Damage, and a shield when taking a large amount of damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3053.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3053.png",
           },
         },
         "4th": {
@@ -1606,7 +1606,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3072.png",
           },
           option2: {
             name: "Guardian Angel",
@@ -1614,7 +1614,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3026.png",
           },
           option3: {
             name: "Mortal Reminder",
@@ -1622,7 +1622,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3033.png",
           },
         },
         "5th": {
@@ -1632,7 +1632,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and increases damage against high health targets.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3036.png",
           },
           option2: {
             name: "Mercurial Scimitar",
@@ -1640,7 +1640,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Magic Resist, and a Quicksilver active to remove crowd control effects.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3139.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3139.png",
           },
           option3: {
             name: "Rapid Firecannon",
@@ -1648,7 +1648,7 @@ const ChampionCard = () => {
             description:
               "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3094.png",
           },
         },
         boots: {
@@ -1658,7 +1658,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed. Good for increasing damage output.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3006.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3006.png",
           },
           option2: {
             name: "Ninja Tabi",
@@ -1666,7 +1666,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor and reduces damage taken from basic attacks.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3047.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3047.png",
           },
         },
       },
@@ -1688,7 +1688,7 @@ const ChampionCard = () => {
           descripcion:
             "Thresh puede recolectar almas de los enemigos que mueren cerca de él, otorgándole armadura y poder de habilidad adicional.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/Thresh_Passive.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/Thresh_Passive.png",
         },
         {
           id: "Q",
@@ -1696,7 +1696,7 @@ const ChampionCard = () => {
           descripcion:
             "Thresh lanza su guadaña, enganchando al primer enemigo que golpea y lo atrae hacia él.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/ThreshQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/ThreshQ.png",
         },
         {
           id: "W",
@@ -1704,7 +1704,7 @@ const ChampionCard = () => {
           descripcion:
             "Thresh crea una prisión de paredes de espíritus que ralentiza y daña a los enemigos que la atraviesan.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/ThreshW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/ThreshW.png",
         },
         {
           id: "E",
@@ -1712,7 +1712,7 @@ const ChampionCard = () => {
           descripcion:
             "Thresh azota su cadena, dañando y empujando a los enemigos en una dirección específica.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/ThreshE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/ThreshE.png",
         },
         {
           id: "R",
@@ -1720,7 +1720,7 @@ const ChampionCard = () => {
           descripcion:
             "Thresh invoca una prisión de muros de espíritus a su alrededor, dañando y ralentizando a los enemigos atrapados dentro.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/ThreshRPenta.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/ThreshRPenta.png",
         },
       ],
       skins: [
@@ -1839,21 +1839,21 @@ const ChampionCard = () => {
             description:
               "Provides health and executes minions. Good for supporting in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3302.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -1863,7 +1863,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Haste, Health, and movement speed. Enhances allied movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2065.png",
           },
           item2: {
             name: "Zeke's Convergence",
@@ -1871,7 +1871,7 @@ const ChampionCard = () => {
             description:
               "Grants armor, magic resistance, and provides a burning AoE effect when you cast your ultimate.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3050.png",
           },
           item3: {
             name: "Redemption",
@@ -1879,7 +1879,7 @@ const ChampionCard = () => {
             description:
               "Heals and shields allies in an area. Good for supporting in teamfights.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3107.png",
           },
         },
         "4th": {
@@ -1889,7 +1889,7 @@ const ChampionCard = () => {
             description:
               "Enhances attack speed and grants bonus damage on-hit to allied champions affected by your shields or heals.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3504.png",
           },
           option2: {
             name: "Knight's Vow",
@@ -1897,7 +1897,7 @@ const ChampionCard = () => {
             description:
               "Binds you to an allied champion. If they take damage, you gain movement speed towards them and a portion of the damage taken is redirected to you.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3109.png",
           },
           option3: {
             name: "Mikael's Blessing",
@@ -1905,7 +1905,7 @@ const ChampionCard = () => {
             description:
               "Removes all crowd control debuffs from an allied champion and grants them slow resistance.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3222.png",
           },
         },
         "5th": {
@@ -1915,7 +1915,7 @@ const ChampionCard = () => {
             description:
               "Provides armor, magic resistance, and a shield to nearby allies when activated.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3190.png",
           },
           option2: {
             name: "Staff of Flowing Water",
@@ -1923,7 +1923,7 @@ const ChampionCard = () => {
             description:
               "Provides Ability Power, Mana Regeneration, and enhances allied movement speed and AP when you heal or shield them.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6617.png",
           },
           option3: {
             name: "Abyssal Mask",
@@ -1931,7 +1931,7 @@ const ChampionCard = () => {
             description:
               "Grants magic resistance, health, and increases magic damage dealt to enemies in an area.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3001.png",
           },
         },
         boots: {
@@ -1941,7 +1941,7 @@ const ChampionCard = () => {
             description:
               "Provides increased movement speed. Enhanced out of combat movement speed.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1001.png",
           },
           option2: {
             name: "Ionian Boots of Lucidity",
@@ -1949,7 +1949,7 @@ const ChampionCard = () => {
             description:
               "Grants Ability Haste and reduces the cooldown of summoner spells.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3158.png",
           },
         },
       },
@@ -1971,7 +1971,7 @@ const ChampionCard = () => {
           descripcion:
             "Los ataques básicos de Leona infligen daño adicional al activar habilidades y marcan a los enemigos, lo que les permite recibir daño adicional de aliados.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/LeonaSunlight.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/passive/LeonaSunlight.png",
         },
         {
           id: "Q",
@@ -1979,7 +1979,7 @@ const ChampionCard = () => {
           descripcion:
             "Leona enciende su espada con energía solar, lo que le otorga un ataque básico mejorado y aturde al enemigo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaShieldOfDaybreak.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/LeonaShieldOfDaybreak.png",
         },
         {
           id: "W",
@@ -1987,7 +1987,7 @@ const ChampionCard = () => {
           descripcion:
             "Leona invoca una explosión de energía solar, ganando armadura y resistencia mágica y dañando a los enemigos cercanos. Si los enemigos están marcados por Luz del Sol, se inflige daño adicional.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaSolarBarrier.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/LeonaSolarBarrier.png",
         },
         {
           id: "E",
@@ -1995,7 +1995,7 @@ const ChampionCard = () => {
           descripcion:
             "Leona lanza un rayo de energía solar, infligiendo daño y ralentizando al enemigo. Si el enemigo está marcado por Luz del Sol, Leona lo teleporta a su posición.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaZenithBlade.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/LeonaZenithBlade.png",
         },
         {
           id: "R",
@@ -2003,7 +2003,7 @@ const ChampionCard = () => {
           descripcion:
             "Leona invoca un rayo de energía solar, infligiendo daño y aturdindo a los enemigos en un área. Los enemigos marcados por Luz del Sol quedan inmovilizados durante más tiempo.",
           imagenUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/LeonaSolarFlare.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/LeonaSolarFlare.png",
         },
       ],
       skins: [
@@ -2122,7 +2122,7 @@ const ChampionCard = () => {
             description:
               "Proporciona salud y ejecuta súbditos. Bueno para apoyar en la calle.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3302.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3302.png",
           },
           item2: {
             name: "Health Potion",
@@ -2130,7 +2130,7 @@ const ChampionCard = () => {
             description:
               "Restaura salud con el tiempo. Ayuda a mantenerse en la calle.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
@@ -2138,7 +2138,7 @@ const ChampionCard = () => {
             description:
               "Restaura salud con el tiempo. Ayuda a mantenerse en la calle.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -2148,7 +2148,7 @@ const ChampionCard = () => {
             description:
               "Proporciona armadura, resistencia mágica y un escudo a los aliados cercanos cuando se activa.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3190.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3190.png",
           },
           item2: {
             name: "Knight's Vow",
@@ -2156,7 +2156,7 @@ const ChampionCard = () => {
             description:
               "Te vincula a un campeón aliado. Si recibe daño, ganas velocidad de movimiento hacia él y una parte del daño recibido se redirige a ti.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3109.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3109.png",
           },
           item3: {
             name: "Zeke's Convergence",
@@ -2164,7 +2164,7 @@ const ChampionCard = () => {
             description:
               "Otorga armadura, resistencia mágica y proporciona un efecto de área ardiente cuando lanzas tu definitiva.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3050.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3050.png",
           },
         },
         "4th": {
@@ -2174,7 +2174,7 @@ const ChampionCard = () => {
             description:
               "Cura y protege a los aliados en un área. Bueno para apoyar en peleas de equipo.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3107.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3107.png",
           },
           option2: {
             name: "Shurelya's Battlesong",
@@ -2182,7 +2182,7 @@ const ChampionCard = () => {
             description:
               "Proporciona rapidez de habilidad, salud y velocidad de movimiento. Mejora la velocidad de movimiento de los aliados.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2065.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2065.png",
           },
           option3: {
             name: "Ardent Censer",
@@ -2190,7 +2190,7 @@ const ChampionCard = () => {
             description:
               "Aumenta la velocidad de ataque y otorga daño adicional al golpear a campeones aliados afectados por tus escudos o curaciones.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3504.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3504.png",
           },
         },
         "5th": {
@@ -2200,7 +2200,7 @@ const ChampionCard = () => {
             description:
               "Elimina todos los efectos de control de masas de un campeón aliado y les otorga resistencia al ralentizamiento.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3222.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3222.png",
           },
           option2: {
             name: "Staff of Flowing Water",
@@ -2208,7 +2208,7 @@ const ChampionCard = () => {
             description:
               "Proporciona Poder de Habilidad, Regeneración de Maná y mejora la velocidad de movimiento y el AP de los aliados cuando los curas o proteges.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6617.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6617.png",
           },
           option3: {
             name: "Abyssal Mask",
@@ -2216,7 +2216,7 @@ const ChampionCard = () => {
             description:
               "Concede resistencia mágica, salud y aumenta el daño mágico infligido a los enemigos en un área.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3001.png",
           },
         },
         boots: {
@@ -2226,7 +2226,7 @@ const ChampionCard = () => {
             description:
               "Proporciona velocidad de movimiento aumentada. Velocidad de movimiento mejorada fuera de combate.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1001.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1001.png",
           },
           option2: {
             name: "Ionian Boots of Lucidity",
@@ -2234,7 +2234,7 @@ const ChampionCard = () => {
             description:
               "Concede rapidez de habilidad y reduce el enfriamiento de las habilidades de invocador.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3158.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3158.png",
           },
         },
       },
@@ -2243,31 +2243,31 @@ const ChampionCard = () => {
       id: "jinx",
       name: "Jinx",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/Jinx0.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/champion/Jinx0.png",
       abilities: [
         {
           id: "Q",
           name: "Cambiar de Armas!",
           imageUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxQ.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JinxQ.png",
         },
         {
           id: "W",
           name: "Zap!",
           imageUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxW.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JinxW.png",
         },
         {
           id: "E",
           name: "Zaparrastroso",
           imageUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxE.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JinxE.png",
         },
         {
           id: "R",
           name: "Supermegacohete Infernal",
           imageUri:
-            "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/JinxR.png",
+            "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/JinxR.png",
         },
       ],
       skins: [
@@ -2386,21 +2386,21 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Health, and Life Steal. Good for early game trading.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/1055.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/1055.png",
           },
           item2: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
           item3: {
             name: "Health Potion",
             category: "Potion",
             description: "Restores health over time. Helps sustain in lane.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/2003.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/2003.png",
           },
         },
         core: {
@@ -2410,7 +2410,7 @@ const ChampionCard = () => {
             description:
               "Provides a massive amount of Attack Damage and enhances critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/227031.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/227031.png",
           },
           item2: {
             name: "Essence Reaver",
@@ -2418,7 +2418,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Cooldown Reduction, and mana sustain. Good for extended fights.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3508.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3508.png",
           },
           item3: {
             name: "Stormrazor",
@@ -2426,7 +2426,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Attack Speed, and a burst of movement speed on critical strikes.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3095.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3095.png",
           },
         },
         "4th": {
@@ -2436,7 +2436,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage, Life Steal, and a shield that absorbs damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3072.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3072.png",
           },
           option2: {
             name: "Phantom Dancer",
@@ -2444,7 +2444,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed, Critical Strike Chance, and a shield when near enemies.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3046.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3046.png",
           },
           option3: {
             name: "Guardian Angel",
@@ -2452,7 +2452,7 @@ const ChampionCard = () => {
             description:
               "Provides Attack Damage and a unique passive that revives upon death with a portion of health and mana.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3026.png",
           },
         },
         "5th": {
@@ -2462,7 +2462,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and increases damage against high health targets.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3036.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3036.png",
           },
           option2: {
             name: "Mortal Reminder",
@@ -2470,7 +2470,7 @@ const ChampionCard = () => {
             description:
               "Provides Armor Penetration and applies Grievous Wounds on enemies hit.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3033.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3033.png",
           },
           option3: {
             name: "Rapid Firecannon",
@@ -2478,7 +2478,7 @@ const ChampionCard = () => {
             description:
               "Increases Attack Speed and Range. Energized attacks also gain bonus range and damage.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3094.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3094.png",
           },
         },
         boots: {
@@ -2488,7 +2488,7 @@ const ChampionCard = () => {
             description:
               "Provides movement speed and reduces the effectiveness of slows.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223009.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/223009.png",
           },
           option2: {
             name: "Berserker's Greaves",
@@ -2496,7 +2496,7 @@ const ChampionCard = () => {
             description:
               "Grants Attack Speed. Good for increasing damage output.",
             image:
-              "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/223006.png",
+              "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/223006.png",
           },
         },
       },

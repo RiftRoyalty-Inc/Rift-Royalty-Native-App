@@ -14,6 +14,8 @@ import Environment from '../../utils/constants/Environment';
 import { getRandomNumber } from '../../utils/RandomNumber';
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import * as SecureStore from 'expo-secure-store';
+
 
 const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
 
@@ -29,7 +31,6 @@ const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
     async function handleStepChange() {
         if (debug) {
             // setActiveStep(activeStep + 1);
-            console.log('it works')
             return 0;
         }
 
@@ -44,16 +45,15 @@ const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
         }
 
         if (activeStep == 2 && debug == false) {
-            console.log(`${Environment.RR_API}/summoners/linkaccount?region=${region}&gameName=${gameName}&tagLine=${tagLine}&profileIconId=${currentProfileIconId}&newIcon=${iconToChangeTo}`);
             const URL = `${Environment.RR_API}/summoners/linkaccount?region=${encodeURIComponent(region)}&gameName=${encodeURIComponent(gameName)}&tagLine=${encodeURIComponent(tagLine)}&profileIconId=${encodeURIComponent(currentProfileIconId)}&newIcon=${encodeURIComponent(iconToChangeTo)}`;
             console.log(URL);
-
             setIconChanged(
                 await fetch(URL, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'userToken': await SecureStore.getItemAsync('userToken'),
                     }
                 })
                     .then(response => response.json())
@@ -68,6 +68,16 @@ const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
         }
 
     }
+
+    useEffect(() => {
+        setActiveStep(1);
+        setCurrentProfileIconId(null);
+        setIconToChangeTo(null);
+        setIconChanged(false);
+        setValidName(false);
+        setTagLine('');
+        setGameName('');
+    }, [displayLinkAccount])
 
     useEffect(() => {
         if (iconChanged == 200 && activeStep == 2) {
@@ -111,12 +121,12 @@ const LinkAccountPopup = ({ displayLinkAccount, setDisplayLinkAccount }) => {
                 return (
                     <View style={styles.profileIconsContainer}>
                         <Image
-                            source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${currentProfileIconId}.png` }}
+                            source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${currentProfileIconId}.png` }}
                             style={styles.activeProfileIcon}
                         />
                         <Entypo name="arrow-with-circle-right" size={64} color={colors.contrast} />
                         <Image
-                            source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${iconToChangeTo}.png` }}
+                            source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${iconToChangeTo}.png` }}
                             style={styles.activeProfileIcon}
                         />
                     </View>

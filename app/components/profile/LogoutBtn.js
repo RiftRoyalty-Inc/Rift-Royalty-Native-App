@@ -11,10 +11,7 @@ import * as SecureStore from 'expo-secure-store';
 import { AuthContext } from '../../../App';
 const LogoutBtn = () => {
     const { signOut } = React.useContext(AuthContext);
-    const handleLogout = async() => {
-        const remove = await SecureStore.deleteItemAsync('userToken');
-        console.log(await SecureStore.getItemAsync('userToken'));
-    }
+
     return (
         <View style={styles.container}>
             <Pressable style={styles.btn} onPress={signOut}>

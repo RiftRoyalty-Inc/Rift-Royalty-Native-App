@@ -16,7 +16,6 @@ import { AuthContext } from "../../../App";
 import * as SecureStore from 'expo-secure-store';
 import { useCallback } from "react";
 import { useFocusEffect, useRoute } from "@react-navigation/native";
-import fonts from "../../utils/constants/fonts";
 
 const ProfileCard = ({ gameName, tagLine, region, iconId }) => {
     return (
@@ -30,7 +29,7 @@ const ProfileCard = ({ gameName, tagLine, region, iconId }) => {
                 <View style={styles.overlay}>
                     <Image
                         source={{
-                            uri: `https://ddragon.leagueoflegends.com/cdn/14.9.1/img/profileicon/${iconId}.png`,
+                            uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${iconId}.png`,
                         }}
                         style={styles.profilePicture}
                     />
@@ -383,42 +382,13 @@ function teste() {
     console.log("buh");
 }
 
-const ProfileScreen = () => {
+const ProfileSearch = () => {
     const [matchData, setMatchData] = useState([]);
-    const [gameName, setGameName] = useState("Alexoliete2315");
-    const [tagLine, setTagLine] = useState("1673");
-    const [region, setRegion] = useState("euw1");
     const [refreshing, setRefreshing] = useState(false);
     const [linked, setLinked] = useState(false);
-    const [iconId, setIconId] = useState(0);
-    const isLinked = useCallback(async () => {
-        const userToken = await SecureStore.getItemAsync('userToken');
-        const URL = `${Environment.RR_API}/users/gamelinked`;
-        const response = await fetch(URL, {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                'userToken': userToken,
-            }
-        });
-        const json = await response.json();
-        if (json.code == '1') {
-            console.log(json);
-            setGameName(json.gameName);
-            setTagLine(json.tagLine);
-            setRegion(json.region);
-            setIconId(json.iconId);
-            setLinked(true);
-        }
-        console.log(json);
-    }, []);
+    const route = useRoute();
 
-    useFocusEffect(
-        useCallback(() => {
-            isLinked();
-        }, [isLinked])
-    );
+    const { gameName, tagLine, region, profileIconId } = route.params;
 
     const onRefresh = useCallback(() => {
         setRefreshing(true);
@@ -430,7 +400,8 @@ const ProfileScreen = () => {
     useEffect(() => {
         const getMatches = async () => {
             try {
-                const URL = `${Environment.RR_API}/summoners/getmatches?gameName=${gameName}&tagLine=${tagLine}&region=${region}`;
+                const URL = `${Environment.RR_API}/summoners/getmatches?gameName=${encodeURIComponent(gameName)}&tagLine=${tagLine}&region=${region}`;
+                console.log(URL);
                 const response = await fetch(URL, {}).then(response => response.json()).catch(error => console.log(error));
                 setMatchData(response);
             } catch (e) {
@@ -441,25 +412,16 @@ const ProfileScreen = () => {
     }, [refreshing]);
 
     const getContent = () => {
-        if (linked) {
-            return (
-                <>
-                    <ProfileCard gameName={gameName} tagLine={tagLine} region={region} iconId={iconId} />
-                    <LogoutBtn />
-                    <ProfileStats />
-                    <View style={styles.section}>
-                        <MatchList matchData={matchData} />
-                    </View>
-                </>
-            );
-        } else {
-            return (
-                <>
-                    <LogoutBtn />
-                    <Text style={styles.begging}>Please link your account</Text>
-                </>
-            );
-        }
+        return (
+            <>
+                <ProfileCard gameName={gameName} tagLine={tagLine} region={region} iconId={profileIconId} />
+                <LogoutBtn />
+                <ProfileStats />
+                <View style={styles.section}>
+                    <MatchList matchData={matchData} />
+                </View>
+            </>
+        );
     }
 
     return (
@@ -476,13 +438,6 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         flex: 1,
-    },
-    begging:{
-        color: "#fff",
-        fontSize: 20,
-        textAlign: "center",
-        marginTop: 20,
-        fontFamily: fonts.K2D_B
     },
     overlay: {
         flex: 1,
@@ -810,4 +765,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default ProfileScreen;
+export default ProfileSearch;
