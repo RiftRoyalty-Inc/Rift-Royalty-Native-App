@@ -24,7 +24,6 @@ const ItemListScreen = () => {
     { name: "Marksman", imageUri: require("../../../assets/role_icon/MARKSMAN1.png") },
     { name: "Specialist", imageUri: require("../../../assets/role_icon/SPECIALIST.png") },
   ];
-
   const itemData = [
     {
       id: "1",

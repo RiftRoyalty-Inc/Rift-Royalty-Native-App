@@ -45,28 +45,18 @@ export default function App() {
             userToken: null,
         }
     );
-
     React.useEffect(() => {
         // Fetch the token from storage then navigate to our appropriate place
         const bootstrapAsync = async () => {
             let userToken;
-
             try {
                 // Restore token stored in `SecureStore` or any other encrypted storage
                 userToken = await SecureStore.getItemAsync('userToken');
             } catch (e) {
-                // Restoring token failed
+                console.log(e);
             }
-            console.log("USER_TOKEN")
-            console.log(userToken);
-
-            // After restoring token, we may need to validate it in production apps
-
-            // This will switch to the App screen or Auth screen and this loading
-            // screen will be unmounted and thrown away.
             dispatch({ type: 'RESTORE_TOKEN', token: userToken });
         };
-
         bootstrapAsync();
     }, []);
 
@@ -109,25 +99,14 @@ export default function App() {
         prepare();
     }, []);
 
-    // ignore this commented code
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const data = await SecureStore.getItemAsync('user_jwt');
-    //             setUserData(data);
-    //         } catch (error) {
-    //             console.error('Error fetching user data:', error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, [SecureStore.getItemAsync('user_jwt')]);
-
     if (!appIsReady) {
         return (
             <Text style={{ padding: 24 }}>Loading...</Text>
         );
     }
 
+    // This automatically returns either the AuthenticationNavigator for Signing In and Signing Up
+    // Or the LoggedInNavigator in the case a userToken is found, meaning there's a user currently signed in
     return (
         <AuthContext.Provider value={authContext}>
             <NavigationContainer>

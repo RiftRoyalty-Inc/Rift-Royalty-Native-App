@@ -42,7 +42,6 @@ const LoginForm = () => {
             setFieldsFilled(false);
         }
     }, [email, password]);
-
     async function handleSignIn() {
         setAuthStatus(null);
         setIsLoading(true);

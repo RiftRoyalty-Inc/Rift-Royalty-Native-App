@@ -20,7 +20,6 @@ const LogoutBtn = () => {
         </View>
     )
 }
-
 export default LogoutBtn
 
 const styles = StyleSheet.create({

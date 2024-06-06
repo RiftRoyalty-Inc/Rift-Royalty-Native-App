@@ -10,4 +10,5 @@ export default {
     PROFILE: 'Profile',
     PROFILE_SEARCH: 'ProfileSearch',
     VERIFICATION_EMAIL: 'VerificationEmail',
+    
 }
