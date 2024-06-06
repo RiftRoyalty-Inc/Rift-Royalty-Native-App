@@ -20,6 +20,7 @@ const ChampionListScreen = () => {
   };
 
   const handleChampionPress = (champId) => {
+    console.log("CHAMPID:",{champId});
     navigation.navigate("ChampionCard", { champId });
   };
 

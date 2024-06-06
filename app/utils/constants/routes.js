@@ -8,5 +8,6 @@ export default {
     ITEM_LIST_TAB: 'Items',
     LOGIN: 'Login',
     PROFILE: 'Profile',
+    PROFILE_SEARCH: 'ProfileSearch',
     VERIFICATION_EMAIL: 'VerificationEmail',
 }

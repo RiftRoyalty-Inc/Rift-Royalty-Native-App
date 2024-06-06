@@ -20,7 +20,7 @@ import { AuthContext } from '../../../App';
 
 const LoginForm = () => {
 
-    const {signIn} = React.useContext(AuthContext);
+    const { signIn } = React.useContext(AuthContext);
     const navigation = useNavigation();
     const [authStatus, setAuthStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +36,6 @@ const LoginForm = () => {
     const [errorCode, setErrorCode] = useState('');
 
     useEffect(() => {
-        console.log(email, password);
         if (email !== '' && password !== '') {
             setFieldsFilled(true);
         } else {
@@ -58,24 +57,17 @@ const LoginForm = () => {
                 },
             });
             const json = await response.json();
-            console.log(json);
             setErrorCode(json.code);
             setErrorMsg(json.msg);
-            signIn(json.token);
+            if (json.code == 1) {
+                signIn(json.token);
+            }
         } catch (error) {
             console.error(error);
         } finally {
             setIsLoading(false);
         }
     }
-
-    useEffect(() => {
-        if (authStatus === 'OK') {
-            console.log('Navigating to Login screen');
-        } else if (authStatus === 'USER_NOT_CREATED') {
-            console.log('User not created');
-        }
-    }, [authStatus]);
 
     const getAuthStatus = () => {
         if (isLoading) {
@@ -148,7 +140,7 @@ const LoginForm = () => {
                 <Text style={errorCode != '1' ? styles.errorMsg : styles.successMsg}>{errorMsg}</Text>
             </View>
             <View style={[styles.btnContainer, fieldsFilled ? styles.activeBtnContainer : styles.disabledBtnContainer]}>
-                <Pressable style={styles.btn} onPress={() => { if (fieldsFilled) { handleSignIn() } else { console.log('Fields are not filled yet') }; }}>
+                <Pressable style={styles.btn} onPress={() => { if (fieldsFilled) { handleSignIn() } }}>
                     <Text style={[styles.text, { fontFamily: fonts.K2D_B }]}>SIGN IN</Text>
                 </Pressable>
             </View>
@@ -160,14 +152,14 @@ const styles = StyleSheet.create({
     unfocusedInput: {
         borderColor: colors.lightPurple,
     },
-    msgContainer:{
-        
+    msgContainer: {
+
     },
-    errorMsg:{
+    errorMsg: {
         color: colors.error,
         fontFamily: fonts.K2D_B
     },
-    successMsg:{
+    successMsg: {
         color: colors.success,
         fontFamily: fonts.K2D_B
     },

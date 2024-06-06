@@ -57,6 +57,8 @@ export default function App() {
             } catch (e) {
                 // Restoring token failed
             }
+            console.log("USER_TOKEN")
+            console.log(userToken);
 
             // After restoring token, we may need to validate it in production apps
 
@@ -71,16 +73,19 @@ export default function App() {
     const authContext = React.useMemo(
         () => ({
             signIn: async (data) => {
-                console.log("signing in");
-                console.log(data);
                 await SecureStore.setItemAsync('userToken', data);
+                console.log("USER_TOWKEN")
+                console.log(data);
                 dispatch({ type: 'SIGN_IN', token: data });
             },
-            signOut: () => dispatch({ type: 'SIGN_OUT' }),
+            signOut: async () => {
+                await SecureStore.deleteItemAsync('userToken');
+                dispatch({ type: 'SIGN_OUT' })
+            },
             signUp: async (data) => {
-                console.log("signing up");
-                console.log(data);
                 await SecureStore.setItemAsync('userToken', data);
+                console.log("USER_TOKEN")
+                console.log(data);
                 dispatch({ type: 'SIGN_IN', token: data });
             },
         }),
@@ -126,9 +131,6 @@ export default function App() {
     return (
         <AuthContext.Provider value={authContext}>
             <NavigationContainer>
-                {console.log("buh")}
-                {console.log(state)}
-                {console.log(state.userToken)}
                 {state.userToken != null ? (<LoggedInNavigator />) : (<AuthNavigator />)}
             </NavigationContainer>
         </AuthContext.Provider>

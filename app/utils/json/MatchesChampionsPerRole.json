@@ -2,14 +2,14 @@
     {
         "top": [
             {
-                "id": "Rengar",
-                "name": "Rengar",
+                "id": "Aatrox",
+                "name": "Aatrox",
                 "image": {
-                    "full": "Rengar.png",
-                    "sprite": "Rengar_0.png"
+                    "full": "Aatrox.png",
+                    "sprite": "Aatrox_0.png"
                 },
-                "wins": 89,
-                "losses": 131
+                "wins": 195,
+                "losses": 98
             },
             {
                 "id": "Vayne",
@@ -22,14 +22,14 @@
                 "losses": 118
             },
             {
-                "id": "Aatrox",
-                "name": "Aatrox",
+                "id": "Rengar",
+                "name": "Rengar",
                 "image": {
-                    "full": "Aatrox.png",
-                    "sprite": "Aatrox_0.png"
+                    "full": "Rengar.png",
+                    "sprite": "Rengar_0.png"
                 },
-                "wins": 195,
-                "losses": 98
+                "wins": 89,
+                "losses": 131
             }
         ],
         "jungle": [
@@ -66,98 +66,98 @@
         ],
         "mid": [
             {
-                "id": "Khazix",
-                "name": "Kha'Zix",
+                "id": "Ahri",
+                "name": "Ahri",
                 "image": {
-                    "full": "Khazix.png",
-                    "sprite": "Khazix_0.png"
+                    "full": "Ahri.png",
+                    "sprite": "Ahri_0.png"
                 },
-                "wins": 192,
-                "losses": 52
+                "wins": 210,
+                "losses": 40
             },
             {
-                "id": "Nunu",
-                "name": "Nunu & Willump",
+                "id": "Zed",
+                "name": "Zed",
                 "image": {
-                    "full": "Nunu.png",
-                    "sprite": "Nunu_0.png"
+                    "full": "Zed.png",
+                    "sprite": "Zed_0.png"
                 },
-                "wins": 112,
-                "losses": 51
+                "wins": 150,
+                "losses": 100
             },
             {
-                "id": "Rell",
-                "name": "Rell",
+                "id": "Yasuo",
+                "name": "Yasuo",
                 "image": {
-                    "full": "Rell.png",
-                    "sprite": "Rell_0.png"
+                    "full": "Yasuo.png",
+                    "sprite": "Yasuo_0.png"
                 },
-                "wins": 171,
-                "losses": 126
+                "wins": 130,
+                "losses": 120
             }
         ],
         "adc": [
             {
-                "id": "Khazix",
-                "name": "Kha'Zix",
+                "id": "Jinx",
+                "name": "Jinx",
                 "image": {
-                    "full": "Khazix.png",
-                    "sprite": "Khazix_0.png"
+                    "full": "Jinx.png",
+                    "sprite": "Jinx_0.png"
                 },
-                "wins": 192,
-                "losses": 52
+                "wins": 200,
+                "losses": 50
             },
             {
-                "id": "Nunu",
-                "name": "Nunu & Willump",
+                "id": "Ezreal",
+                "name": "Ezreal",
                 "image": {
-                    "full": "Nunu.png",
-                    "sprite": "Nunu_0.png"
+                    "full": "Ezreal.png",
+                    "sprite": "Ezreal_0.png"
                 },
-                "wins": 112,
-                "losses": 51
+                "wins": 180,
+                "losses": 70
             },
             {
-                "id": "Rell",
-                "name": "Rell",
+                "id": "MissFortune",
+                "name": "Miss Fortune",
                 "image": {
-                    "full": "Rell.png",
-                    "sprite": "Rell_0.png"
+                    "full": "MissFortune.png",
+                    "sprite": "MissFortune_0.png"
                 },
-                "wins": 171,
-                "losses": 126
+                "wins": 160,
+                "losses": 90
             }
         ],
         "support": [
             {
-                "id": "Khazix",
-                "name": "Kha'Zix",
+                "id": "Thresh",
+                "name": "Thresh",
                 "image": {
-                    "full": "Khazix.png",
-                    "sprite": "Khazix_0.png"
+                    "full": "Thresh.png",
+                    "sprite": "Thresh_0.png"
                 },
-                "wins": 192,
-                "losses": 52
+                "wins": 190,
+                "losses": 60
             },
             {
-                "id": "Nunu",
-                "name": "Nunu & Willump",
+                "id": "Leona",
+                "name": "Leona",
                 "image": {
-                    "full": "Nunu.png",
-                    "sprite": "Nunu_0.png"
+                    "full": "Leona.png",
+                    "sprite": "Leona_0.png"
                 },
-                "wins": 112,
-                "losses": 51
+                "wins": 170,
+                "losses": 80
             },
             {
-                "id": "Rell",
-                "name": "Rell",
+                "id": "Lulu",
+                "name": "Lulu",
                 "image": {
-                    "full": "Rell.png",
-                    "sprite": "Rell_0.png"
+                    "full": "Lulu.png",
+                    "sprite": "Lulu_0.png"
                 },
-                "wins": 171,
-                "losses": 126
+                "wins": 160,
+                "losses": 100
             }
         ]
     }

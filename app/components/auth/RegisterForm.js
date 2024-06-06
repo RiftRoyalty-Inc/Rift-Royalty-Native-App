@@ -89,13 +89,11 @@ const RegisterForm = () => {
     }
 
     useEffect(() => {
-        if (authStatus === 'OK') {
+        if (errorMsg === 'OK') {
             console.log('Navigating to Login screen');
             navigation.navigate(routes.VERIFICATION_EMAIL, { email });
-        } else if (authStatus === 'USER_NOT_CREATED') {
-            console.log('User not created');
         }
-    }, [authStatus]);
+    }, [errorMsg]);
 
     const getAuthStatus = () => {
         if (isLoading) {

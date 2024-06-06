@@ -29,8 +29,6 @@ const VerificationEmail = () => {
     const handleSubmit = async () => {
         const enteredCode = code.join('');
         const url = Environment.RR_API + '/email-verification/verify';
-        console.log(url);
-        console.log(email, enteredCode);
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -43,9 +41,7 @@ const VerificationEmail = () => {
             })
         });
         const json = await response.json();
-        console.log(json);
         if (json.code == '1') {
-            console.log("saving log in...");
             signUp(json.token);
         }
         setAlertMessage(json.msg);

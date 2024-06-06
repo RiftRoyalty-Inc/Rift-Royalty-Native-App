@@ -30,7 +30,7 @@ const ItemListScreen = () => {
       id: "1",
       name: "Berserker's Greaves",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3006.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3006.png",
       type: "Marksman",
       price: 1100,
       sellPrice: 770,
@@ -41,7 +41,7 @@ const ItemListScreen = () => {
       id: "2",
       name: "Mercury's Treads",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3111.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3111.png",
       type: "Tank",
       price: 1100,
       sellPrice: 770,
@@ -52,7 +52,7 @@ const ItemListScreen = () => {
       id: "3",
       name: "Infinity Edge",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3031.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3031.png",
       type: "Marksman",
       price: 3400,
       sellPrice: 2380,
@@ -64,7 +64,7 @@ const ItemListScreen = () => {
       id: "4",
       name: "Sunfire Aegis",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3068.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3068.png",
       type: "Fighter",
       price: 3200,
       sellPrice: 2240,
@@ -76,7 +76,7 @@ const ItemListScreen = () => {
       id: "5",
       name: "Archangel's Staff",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3003.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3003.png",
       type: "Mage",
       price: 2600,
       sellPrice: 1820,
@@ -88,7 +88,7 @@ const ItemListScreen = () => {
       id: "6",
       name: "Dead Man's Plate",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3742.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3742.png",
       type: "Tank",
       price: 2900,
       sellPrice: 2030,
@@ -100,7 +100,7 @@ const ItemListScreen = () => {
       id: "7",
       name: "Zeal",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3086.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3086.png",
       type: "Marksman",
       price: 1050,
       sellPrice: 735,
@@ -111,7 +111,7 @@ const ItemListScreen = () => {
       id: "8",
       name: "Tiamat",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3077.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3077.png",
       type: "Fighter",
       price: 1200,
       sellPrice: 840,
@@ -123,7 +123,7 @@ const ItemListScreen = () => {
       id: "9",
       name: "Rod of Ages",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6657.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6657.png",
       type: "Mage",
       price: 2600,
       sellPrice: 1820,
@@ -135,7 +135,7 @@ const ItemListScreen = () => {
       id: "10",
       name: "Guardian Angel",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3026.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3026.png",
       type: "Tank",
       price: 2800,
       sellPrice: 1960,
@@ -147,7 +147,7 @@ const ItemListScreen = () => {
       id: "11",
       name: "Rylai's Crystal Scepter",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3116.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3116.png",
       type: "Mage",
       price: 2600,
       sellPrice: 1820,
@@ -159,7 +159,7 @@ const ItemListScreen = () => {
       id: "12",
       name: "Essence Reaver",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3508.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3508.png",
       type: "Marksman",
       price: 2900,
       sellPrice: 2030,
@@ -172,7 +172,7 @@ const ItemListScreen = () => {
       id: "13",
       name: "Trinity Force",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3078.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3078.png",
       type: "Fighter",
       price: 3333,
       sellPrice: 2333,
@@ -185,7 +185,7 @@ const ItemListScreen = () => {
       id: "14",
       name: "Hextech Rocketbelt",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3152.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3152.png",
       type: "Mage",
       price: 3200,
       sellPrice: 2240,
@@ -196,7 +196,7 @@ const ItemListScreen = () => {
     {
       "id": "15",
       "name": "Rabadon's Deathcap",
-      "imageUri": "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3089.png",
+      "imageUri": "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3089.png",
       "type": "Mage",
       "price": 3600,
       "sellPrice": 2520,
@@ -207,7 +207,7 @@ const ItemListScreen = () => {
       id: "16",
       name: "Sorcerer's Shoes",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3020.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3020.png",
       type: "Mage",
       price: 1100,
       sellPrice: 770,
@@ -218,7 +218,7 @@ const ItemListScreen = () => {
       id: "17",
       name: "Duskblade of Draktharr",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/6691.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/6691.png",
       type: "Assassin",
       price: 3400,
       sellPrice: 2380,
@@ -230,7 +230,7 @@ const ItemListScreen = () => {
       id: "18",
       name: "Rabadon's Deathcap",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3089.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3089.png",
       type: "Mage",
       price: 3600,
       sellPrice: 2520,
@@ -241,7 +241,7 @@ const ItemListScreen = () => {
       id: "19",
       name: "Blade of the Ruined King",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3153.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3153.png",
       type: "Marksman",
       price: 3300,
       sellPrice: 2310,
@@ -253,7 +253,7 @@ const ItemListScreen = () => {
       id: "20",
       name: "Zhonya's Hourglass",
       imageUri:
-        "https://ddragon.leagueoflegends.com/cdn/14.10.1/img/item/3157.png",
+        "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/item/3157.png",
       type: "Mage",
       price: 2600,
       sellPrice: 1820,

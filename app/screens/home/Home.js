@@ -8,7 +8,8 @@ import {
     Image,
     ImageBackground,
     ActivityIndicator,
-    ScrollView
+    ScrollView,
+    RefreshControl
 } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { getTop5Players } from '../../utils/scripts/home/Home';
@@ -20,6 +21,8 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { BackgroundImage } from '@rneui/base';
 import colors from '../../utils/constants/colors';
 import LinkAccountPopup from '../../components/home/LinkAccountPopup';
+import { useNavigation } from '@react-navigation/native';
+import routes from '../../utils/constants/routes';
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const Home = () => {
@@ -39,22 +42,6 @@ const Home = () => {
             fecha: '06/05/2024',
             parche: '14.9',
             fondo: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltcae83a0aa30a801d/662c40f9c9de4670e8d4ace6/043024_LoL_Patch_14_9_Notes_Banner.jpg?'
-        },
-        {
-            id: 3,
-            titulo: 'Smolder, The Fiery Fledling Releases Next Week',
-            cuerpo: '{$img:https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Smolder_0.jpg}',
-            fecha: '04/02/2024',
-            parche: '14.2',
-            fondo: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Smolder_0.jpg'
-        },
-        {
-            id: 4,
-            titulo: 'Patch Notes of Version 14.9',
-            cuerpo: '{$img:https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Smolder_0.jpg}',
-            fecha: '06/05/2024',
-            parche: '14.9',
-            fondo: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltcae83a0aa30a801d/662c40f9c9de4670e8d4ace6/043024_LoL_Patch_14_9_Notes_Banner.jpg?'
         }
     ]);
     function Capitalize(str) {
@@ -69,7 +56,7 @@ const Home = () => {
     const [championList, setChampionList] = React.useState(null);
     const [summonerList, setSummonerList] = React.useState(null);
     const [displayLinkAccount, setDisplayLinkAccount] = useState(false);
-
+    const navigation = useNavigation();
     const [foundSummoners, setFoundSummoners] = React.useState(null);
     useEffect(() => {
         async function fetchData() {
@@ -100,34 +87,34 @@ const Home = () => {
         let imagenSource = null;
         switch (item) {
             case "IRON":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Iron.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Iron.png' };
                 break;
             case "BRONZE":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Bronze.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Bronze.png' };
                 break;
             case "SILVER":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Silver.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Silver.png' };
                 break;
             case "GOLD":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Gold.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Gold.png' };
                 break;
             case "PLATINUM":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Platinum.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Platinum.png' };
                 break;
             case "EMERALD":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Emerald.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Emerald.png' };
                 break;
             case "DIAMOND":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Diamond.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Diamond.png' };
                 break;
             case "MASTER":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Master.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Master.png' };
                 break;
             case "GRANDMASTER":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Grandmaster.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Grandmaster.png' };
                 break;
             case "CHALLENGER":
-                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/tft-regalia/TFT_Regalia_Challenger.png' };
+                imagenSource = { uri: 'https://ddragon.leagueoflegends.com/cdn/14.11.1/img/tft-regalia/TFT_Regalia_Challenger.png' };
                 break;
             default:
                 // Aquí puedes manejar otros casos si es necesario
@@ -139,7 +126,14 @@ const Home = () => {
             return <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>UR</Text>
         }
     };
-    
+
+    const handleChampPress = (item) => () => {
+        const slug = item.champion.slug;
+        const s = { champId: slug };
+        console.log(s); // This prints: {"champId": "jhin"}
+        navigation.navigate("ChampionCard", s);
+    };
+
 
     useEffect(() => {
         // console.log(foundChampions);
@@ -151,31 +145,42 @@ const Home = () => {
                     data={foundChampions}
                     contentContainerStyle={{ gap: 10 }}
                     renderItem={({ item }) => (
-                        <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
-                            <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/${Capitalize(item.champion.slug)}.png` }} style={{ width: 34, height: 34, borderRadius: 99, borderWidth: 1, borderColor: colors.contrast }} />
-                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{Capitalize(item.champion.name)}</Text>
-                        </View>
+                        <Pressable onPress={handleChampPress(item)}>
+                            <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
+                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/champion/${Capitalize(item.champion.slug)}.png` }} style={{ width: 34, height: 34, borderRadius: 99, borderWidth: 1, borderColor: colors.contrast }} />
+                                <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{Capitalize(item.champion.name)}</Text>
+                            </View>
+                        </Pressable>
                     )}
                 />
             </View>
         );
     }, [foundChampions])
+
+
+    const handleSummonerPress = (item) => () => {
+        const s = { gameName: item.gameName, tagLine: item.tagLine, region: item.region, profileIconId: item.icon };
+        console.log(s);
+        navigation.navigate(routes.PROFILE_SEARCH, s);
+    };
+
     useEffect(() => {
-         console.log(foundSummoners);
         setSummonerList(
             <View style={{ marginHorizontal: 10, marginVertical: 10 }}>
                 <Text style={{ color: colors.text, fontSize: 16, fontFamily: fonts.K2D_B, marginBottom: 10 }}>Summoners</Text>
                 <FlatList
-                    scrollEnabled={false} 
+                    scrollEnabled={false}
                     data={foundSummoners}
                     contentContainerStyle={{ gap: 10 }}
                     renderItem={({ item }) => (
-                        <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
-                            <Image source={{uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${item.icon}.png`}} style={{width: 34,height: 34,borderRadius: 99,borderWidth: 1,borderColor: colors.contrast}}/>
-                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.gameName}</Text>
-                            {renderImagenSegunTier(item.queue.tier)}
-                            <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.queue.division}</Text>
-                        </View>
+                        <Pressable onPress={handleSummonerPress(item)}>
+                            <View style={{ display: 'flex', flexDirection: 'row', gap: 10, backgroundColor: colors.tertiaryPurple, padding: 10, borderRadius: 7, alignItems: 'center', borderWidth: 1, borderColor: colors.contrast }}>
+                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${item.icon}.png` }} style={{ width: 34, height: 34, borderRadius: 99, borderWidth: 1, borderColor: colors.contrast }} />
+                                <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.gameName}</Text>
+                                {renderImagenSegunTier(item.queue.tier)}
+                                <Text style={{ color: colors.text, fontFamily: fonts.K2D_R, fontSize: 16 }}>{item.queue.division}</Text>
+                            </View>
+                        </Pressable>
                     )}
                 />
             </View>
@@ -194,7 +199,7 @@ const Home = () => {
                     data={foundSummoners}
                     renderItem={({ item }) => (
                         <View>
-                            <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.10.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 22, height: 22 }} />
+                            <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 22, height: 22 }} />
                             <Text>{item.name}</Text>
                         </View>
                     )}
@@ -207,7 +212,7 @@ const Home = () => {
         { role: 'top', key: '1' },
         { role: 'jungle', key: '2' },
         { role: 'mid', key: '3' },
-        { role: 'adc', key: '4' }, 
+        { role: 'adc', key: '4' },
         { role: 'support', key: '5' }
     ]);
 
@@ -247,7 +252,12 @@ const Home = () => {
         return elements;
     }
 
+    const MAX_LENGTH = 9; // Replace with your desired max length
 
+    const TruncatedText = ({ text }) => {
+        const truncatedText = text.length > MAX_LENGTH ? `${text.substring(0, MAX_LENGTH)}...` : text;
+        return <Text style={{ color: 'white' }}>{truncatedText}</Text>;
+    };
     // Hara que cada vez que cambie la region, se actualice la lista de jugadores
     useEffect(() => {
         handleTopUsers(region).then(users => { setTopUsers(users); });
@@ -262,39 +272,6 @@ const Home = () => {
      *
      * @return {JSX.Element} The JSX element representing the top users list.
      */
-    const getTopUsers = () => {
-
-        if (topUsers !== null && topUsers !== undefined) {
-            return (
-                <FlatList
-                    scrollEnabled={false}
-                    data={topUsers}
-                    contentContainerStyle={{ gap: 10 }}
-                    keyExtractor={(item) => item.id}
-                    renderItem={({ item }) => (
-                        <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <Text style={{ flex: 1, color: 'white' }}>{item.id}</Text>
-                            <View style={{ flex: 8, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: 10 }}>
-                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 36, height: 36 }} />
-                                <Text style={{ color: 'white' }}>{`${item.gameName}#${item.tagLine}`}</Text>
-                            </View>
-                            <Text style={{ flex: 3, textAlign: 'center', color: 'white' }}>{`${item.wins}/${item.losses}`}</Text>
-                            <Text style={{ flex: 3, textAlign: 'center', color: 'white' }}>{item.leaguePoints}</Text>
-                        </View>
-                    )}
-                />
-            );
-        } else {
-            return (
-                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', minWidth: '100%', backgroundColor: '#252046', flex: 1, borderBottomLeftRadius: 7, borderBottomRightRadius: 7, padding: 10 }}>
-                    <View style={{ flex: 1, color: colors.text }}><Text style={{ color: '#E3E3E3', textAlign: 'center' }}>0</Text></View>
-                    <View style={{ flex: 6, color: colors.text, marginLeft: 5 }}><Text style={{ color: colors.text }}>N/A</Text></View>
-                    <View style={{ flex: 3, color: colors.text }}><Text style={{ color: colors.text, textAlign: 'center' }}>N/A</Text></View>
-                    <View style={{ flex: 3, }}><Text style={{ color: colors.text, textAlign: 'center' }}>N/A</Text></View>
-                </View>
-            );
-        }
-    }
 
     function SearchItems() {
         if (search != null && search != undefined && search.length > 0) {
@@ -332,9 +309,51 @@ const Home = () => {
         );
     }
 
+    const [refreshing, setRefreshing] = React.useState(false);
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 2000);
+    }, []);
     const formattedText = parseText(`{$img:https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Smolder_0.jpg}`);
+
+    const getTopUsers = () => {
+        if (topUsers !== null && topUsers !== undefined) {
+            return (
+                <FlatList
+                    scrollEnabled={false}
+                    data={topUsers}
+                    contentContainerStyle={{ gap: 10 }}
+                    keyExtractor={(item) => item.id}
+                    renderItem={({ item }) => (
+                        <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', paddingHorizontal: 8, gap: 10, backgroundColor: colors.bgLightPurple, paddingVertical: 5 }}>
+                            <Text style={{ flex: 1, color: 'white', textAlign: 'center' }}>{item.id}</Text>
+                            <View style={{ flex: 6, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: 7 }}>
+                                <Image source={{ uri: `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${item.profileIconId}.png` }} style={{ width: 36, height: 36, borderRadius: 99, borderColor: colors.contrast, borderWidth: 1 }} />
+                                <TruncatedText text={`${item.gameName}#${item.tagLine}`} />
+                            </View>
+                            <Text style={{ flex: 3, textAlign: 'center', color: 'white' }}>{`${item.wins}/${item.losses}`}</Text>
+                            <Text style={{ flex: 3, textAlign: 'center', color: 'white' }}>{item.leaguePoints}</Text>
+                        </View>
+                    )}
+                />
+            );
+        } else {
+            return (
+                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', minWidth: '100%', backgroundColor: '#252046', flex: 1, borderBottomLeftRadius: 7, borderBottomRightRadius: 7, padding: 10 }}>
+                    <View style={{ flex: 1, color: colors.text }}><Text style={{ color: '#E3E3E3', textAlign: 'center' }}>0</Text></View>
+                    <View style={{ flex: 6, color: colors.text, marginLeft: 5 }}><Text style={{ color: colors.text }}>N/A</Text></View>
+                    <View style={{ flex: 3, color: colors.text }}><Text style={{ color: colors.text, textAlign: 'center' }}>N/A</Text></View>
+                    <View style={{ flex: 3, }}><Text style={{ color: colors.text, textAlign: 'center' }}>N/A</Text></View>
+                </View>
+            );
+        }
+    }
+
     return (
         <ScrollView
+            refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
             style={{
                 backgroundColor: '#1A1635',
                 minWidth: '100%',
@@ -373,7 +392,7 @@ const Home = () => {
                         style={{ flex: 1, color: '#D3D3D3' }}
                         onChangeText={(text) => { setSearch(text); }}
                         onFocus={() => { SearchItems(); }}
-                        onBlur={() => { CloseSearchItems(); }}
+                    // onBlur={() => { CloseSearchItems(); }}
                     />
                     <Pressable style={{
                         borderColor: '#FFEFAE',
@@ -395,6 +414,10 @@ const Home = () => {
                         {
                             (foundChampions == null || foundSummoners == undefined) ? <ActivityIndicator size="large" color="#D0D0D0" /> : championList
                         }
+                        <Pressable style={styles.closeSearchTab} onPress={() => { isSearching(false) }}>
+                            {/* <AntDesign name="closecircleo" size={24} color={colors.contrast} /> */}
+                            <Text style={styles.closeSearchText}>Close</Text>
+                        </Pressable>
                     </View>
                 </View>
             </View>
@@ -415,11 +438,11 @@ const Home = () => {
                     borderColor: '#FCEFC6',
                     borderRadius: 7
                 }}>
-                <View style={{ display: 'flex', flex: 1, flexDirection: 'row', alignItems: 'center', paddingVertical: 10, paddingHorizontal: 10, minWidth: '100%', backgroundColor: '#595081', borderTopLeftRadius: 7, borderTopRightRadius: 7 }}>
+                <View style={{ display: 'flex', flex: 1, flexDirection: 'row', alignItems: 'center', minWidth: '100%', backgroundColor: '#595081', borderTopLeftRadius: 7, borderTopRightRadius: 7, paddingHorizontal: 8, gap: 10, paddingVertical: 10 }}>
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                         <Image source={require('../../assets/images/icons/trophy.png')} style={{ width: 22, height: 22 }} />
                     </View>
-                    <Text style={{ color: 'white', flex: 6, fontFamily: fonts.K2D_B, marginLeft: 5 }}>Summoner's Name</Text>
+                    <Text style={{ color: 'white', flex: 6, fontFamily: fonts.K2D_B }}>Summoner's Name</Text>
                     <Text style={{ color: 'white', flex: 3, textAlign: 'center', fontFamily: fonts.K2D_B }}>Win/Lose</Text>
                     <Text style={{ color: 'white', flex: 3, textAlign: 'center', fontFamily: fonts.K2D_B }}>LP</Text>
                 </View>
@@ -561,6 +584,22 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 7,
         minWidth: '70%',
+    },
+    linkAccountText: {
+        color: 'white',
+        fontFamily: fonts.K2D_B,
+    },
+    closeSearchTab: {
+        backgroundColor: colors.lightPurple,
+        padding: 5,
+        borderBottomRightRadius: 7,
+        borderBottomLeftRadius: 7,
+    },
+    closeSearchText:{
+        fontFamily: fonts.K2D_B,
+        color: 'white',
+        fontSize:16,
+        textAlign: 'center',
     },
     text: {
         fontSize: 16,
